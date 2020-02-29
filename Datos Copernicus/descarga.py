@@ -13,7 +13,7 @@ def carga_datos():
     datos['passwd'] = 'Kir@2110' 
     datos['latitud']  = ['-60','-10']
     datos['longitud']  = ['-120','-60']
-    datos['destino'] = os.getcwd() + '\\Datos Copernicus\\Datos'
+    datos['destino'] = 'D:\##DatosCopernicus'
     datos['fechas'] = ['2014-01-01 12:00:00' ,'2019-01-01 12:00:00']
     datos['servicio'] = 'GLOBAL_REANALYSIS_PHY_001_030-TDS'
     datos['producto'] = 'global-reanalysis-phy-001-030-daily'
@@ -36,7 +36,7 @@ def bajar_ficheros():
             break
         print(fecha)
         datos['fechas'] = [str(fecha),str(fechas[contador+1])]
-        datos['nombre'] = datos['producto'] + '-' + str(datos['fechas'] + '.nc')
+        datos['nombre'] = datos['producto'] + '-' + str(datos['fechas'][0]) + '.nc'
         comando = rellenar_comando()
         proceso1 = subprocess.Popen(comando)
         # proceso1.wait()
