@@ -10,30 +10,30 @@ from progressbar import AnimatedMarker, Bar, BouncingBar, Counter, ETA, \
     AdaptiveETA, FileTransferSpeed, FormatLabel, Percentage, \
     ProgressBar, ReverseBar, RotatingMarker, \
     SimpleProgress, Timer, UnknownLength
-    
-'''
-¿Todos los miércoles?
 
-Control Errores
-Documentar
-'''
+# MEJORAS -->   pedir por pantalla el lugar de descarga de los archvos
+#               cambio progress bar por libreria clint (https://likegeeks.com/es/descargar-archivos-usando-python/#Descargar-con-una-barra-de-progreso)
 
+# Declaración de variables
 datos = dict()
-
 pbar = ProgressBar()
 
 def carga_datos():
-    datos['FTP'] = 'my.cmems-du.eu'
-    datos['user'] = 'psantidriantuda'
-    datos['passwd'] = 'Kir@2110'
-    datos['latitud'] = ['-60', '-10']
-    datos['longitud'] = ['-120', '-60']
-    datos['destino'] = 'D:\##DatosCopernicus'
-    datos['fechas'] = pd.date_range(start='2014-01-01', end='2019-01-01', freq='Y')
-    datos['servicio'] = 'GLOBAL_REANALYSIS_PHY_001_030'
+    """
+    Función que carga en una variable de tipo diccionario los datos necesarios para 
+    descargar y filtrar los datos meteorológicos y oceánicos.
+    """
+    datos['FTP'] = 'my.cmems-du.eu' # dirección FTP
+    datos['user'] = 'psantidriantuda' # usuario de la cuenta FTP
+    datos['passwd'] = 'Kir@2110' # contraseña de la cuenta FTP
+    datos['latitud'] = ['-60', '-10'] # valores máximo y mínimo de la latitud para las coordenadas GPS
+    datos['longitud'] = ['-120', '-60'] # valores máximo y mínimo de la longitud para las coordenadas GPS
+    datos['destino'] = 'C:/Users/pablo/Downloads' #'D:\##DatosCopernicus' # ruta en la que se descargarán los archivo ".nc"
+    datos['fechas'] = pd.date_range(start='2014-01-01', end='2019-01-01', freq='Y') # rango de fechas a descargar
+    datos['servicio'] = 'GLOBAL_REANALYSIS_PHY_001_030' # nombre de las carpetas contenedoras de los datos
     datos['producto'] = 'global-reanalysis-phy-001-030-daily'
-    datos['nombre_inicio'] = 'mercatorglorys12v1_gl12_mean_'
-    datos['variables'] = {
+    datos['nombre_inicio'] = 'mercatorglorys12v1_gl12_mean_' # nombre parcial de los documentos a descargar
+    datos['variables'] = { # nombre las variables que se necesitan para el filtrado del fichero tras la descarga
         "bottomT":{
             "variable":"temperature_at_sea_floor",
             "extra_options":{}
@@ -69,19 +69,39 @@ def carga_datos():
     }
 
 def acceder_FTP():
+    '''
+    Se realiza la conexión al servidor FTP
+    '''
     global ftp
     ftp = FTP(host=datos['FTP'],user=datos['user'],passwd=datos['passwd'])
     ftp.cwd("Core" +'/'+ datos['servicio'] +'/'+ datos['producto'])
 
     
 def comprobar_fichero(fichero):
+    '''
+    Comprueba la existencia del fichero en local.
+
+    Recibe:
+        - fichero --> Nombre del archivo a comprobar
+    Devuelve:
+        - False --> En caso de no existir.
+        - True  --> En caso de existir.
+    '''
     ruta = datos['destino']
     if fichero in os.listdir(ruta): 
         print('Fichero: "{}" ya existe en local.'.format(fichero))
         return True
     return False
 
-def lanza_comando(año,mes,dia,tamano):
+def lanza_comando(dia,tamano):
+    '''
+    Se lanza el comando de descarga.
+
+    Recibe:
+        - dia --> día que se quiere descargar
+        - tamano --> tamaño del fichero
+
+    '''
     archivo = open(datos['destino'] + '\\' + dia,'wb')
     widgets = ['Downloading: ', Percentage(), ' ',
                     Bar(marker='#',left='[',right=']'),
@@ -90,23 +110,25 @@ def lanza_comando(año,mes,dia,tamano):
     pbar.start()
     def file_write(data):
         archivo.write(data) 
-        global pbar
-        pbar += len(data)
+        # global pbar
+        # pbar += len(data)
     
     ftp.retrbinary('RETR '+ dia ,file_write)
     archivo.close()
-    
-    
-    # comando = 'wget --user=' + datos['user'] + ' --password='+ datos['passwd'] +' --directory-prefix=' + datos['destino'] + ' ftp://'+ datos['FTP'] +'/Core/' + datos['servicio'] + '/' + datos['producto'] + '' + '/' + str(año) + '/' + str(mes) + '/' + str(dia)
-    # p = Popen(comando,shell=True, stdout=PIPE, stderr=PIPE)
-    # out, err = p.communicate()
-    # print(out)
-    # print(err)
+    print('Fin descarga.')
 
-def crop_datos(data, lat_bnds = [-60, -10], lon_bnds = [-120, -60]):
+def crop_datos(data):
     """
     Recorta la zona correspondiente a la costa de chile
+
+    Recibe:
+        - data --> fichero a recortar
+
+    Devuelve:
+        - croped_data --> fichero ya recortado
     """
+    lat_bnds = datos['latitud']
+    lon_bnds = datos['longitud']
     croped_data = data.sel(latitude=slice(*lat_bnds), 
                            longitude=slice(*lon_bnds))
     return croped_data
@@ -146,7 +168,7 @@ def procesar():
                 if not descargado:
                     tamano = ftp.size(dia)
                     print("Descargando {} // {}".format(dia,tamano))
-                    lanza_comando(año,mes,dia,tamano)
+                    lanza_comando(dia,tamano)
                     datos_nuevos = tratar_fichero(dia)
                     datos_nuevos.to_netcdf(datos['destino'] +'\\'+ dia.replace('.nc','__filtrados.nc'))
                     print('\nGuardado fichero modificado y borramos el anterior.')
