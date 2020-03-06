@@ -2,14 +2,8 @@ import pandas as pd
 import xarray
 from ftplib import FTP
 import os
-from datetime import datetime
-from subprocess import Popen, PIPE
 import wget
 from tqdm import tqdm
-from progressbar import AnimatedMarker, Bar, BouncingBar, Counter, ETA, \
-    AdaptiveETA, FileTransferSpeed, FormatLabel, Percentage, \
-    ProgressBar, ReverseBar, RotatingMarker, \
-    SimpleProgress, Timer, UnknownLength
 import sys
 
 # MEJORAS -->   pedir por pantalla el lugar de descarga de los archvos
@@ -17,7 +11,6 @@ import sys
 
 # Declaración de variables
 datos = dict()
-pbar = ProgressBar()
 
 def carga_datos():
     """
@@ -116,7 +109,7 @@ def lanza_comando(dia,tamano):
                 pbar.update(len(data))
                 fd.write(data)
             ftp.retrbinary('RETR {}'.format(p), cb)
-
+        fd.close()
 
 def crop_datos(data):
     """
@@ -189,7 +182,9 @@ def procesar():
                     datos_nuevos = tratar_fichero(dia)
                     datos_nuevos.to_netcdf(datos['destino'] +'\\'+ dia.replace('.nc','__filtrados.nc'))
                     print(' --> Guardado fichero modificado y borramos el anterior.\n')
-                    os.remove(datos['destino'] +'\\'+dia)
+                    # os.remove(datos['destino'] +'\\'+dia)
+                    # os.unlink(datos['destino'] +'\\'+dia)
+                    
             ftp.cwd("../")
         ftp.cwd("../")
     
