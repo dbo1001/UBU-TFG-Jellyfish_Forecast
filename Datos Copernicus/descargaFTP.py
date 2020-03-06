@@ -10,6 +10,7 @@ from progressbar import AnimatedMarker, Bar, BouncingBar, Counter, ETA, \
     AdaptiveETA, FileTransferSpeed, FormatLabel, Percentage, \
     ProgressBar, ReverseBar, RotatingMarker, \
     SimpleProgress, Timer, UnknownLength
+import sys
 
 # MEJORAS -->   pedir por pantalla el lugar de descarga de los archvos
 #               cambio progress bar por libreria clint (https://likegeeks.com/es/descargar-archivos-usando-python/#Descargar-con-una-barra-de-progreso)
@@ -26,8 +27,8 @@ def carga_datos():
     datos['FTP'] = 'my.cmems-du.eu' # dirección FTP
     datos['user'] = 'psantidriantuda' # usuario de la cuenta FTP
     datos['passwd'] = 'Kir@2110' # contraseña de la cuenta FTP
-    datos['latitud'] = ['-60', '-10'] # valores máximo y mínimo de la latitud para las coordenadas GPS
-    datos['longitud'] = ['-120', '-60'] # valores máximo y mínimo de la longitud para las coordenadas GPS
+    datos['latitud'] = [-60, -10] # valores máximo y mínimo de la latitud para las coordenadas GPS
+    datos['longitud'] = [-120, -60] # valores máximo y mínimo de la longitud para las coordenadas GPS
     datos['destino'] = 'C:/Users/pablo/Downloads' #'D:\##DatosCopernicus' # ruta en la que se descargarán los archivo ".nc"
     datos['fechas'] = pd.date_range(start='2014-01-01', end='2019-01-01', freq='Y') # rango de fechas a descargar
     datos['servicio'] = 'GLOBAL_REANALYSIS_PHY_001_030' # nombre de las carpetas contenedoras de los datos
@@ -100,22 +101,22 @@ def lanza_comando(dia,tamano):
     Recibe:
         - dia --> día que se quiere descargar
         - tamano --> tamaño del fichero
-
     '''
-    archivo = open(datos['destino'] + '\\' + dia,'wb')
-    widgets = ['Downloading: ', Percentage(), ' ',
-                    Bar(marker='#',left='[',right=']'),
-                    ' ', ETA(), ' ', FileTransferSpeed()]
-    pbar = ProgressBar(widgets=widgets, maxval=tamano)
-    pbar.start()
-    def file_write(data):
-        archivo.write(data) 
-        # global pbar
-        # pbar += len(data)
-    
-    ftp.retrbinary('RETR '+ dia ,file_write)
-    archivo.close()
-    print('Fin descarga.')
+    p = dia
+    with open(datos['destino'] + '\\' + p, 'wb') as fd:
+        total = ftp.size(p)
+        with tqdm(total=total,
+                unit_scale=True,
+                desc=p,
+                miniters=1,
+                file=sys.stdout,
+                leave=True
+                ) as pbar:
+            def cb(data):
+                pbar.update(len(data))
+                fd.write(data)
+            ftp.retrbinary('RETR {}'.format(p), cb)
+
 
 def crop_datos(data):
     """
@@ -137,6 +138,12 @@ def filtrar_datos(data,options_data):
     """
     Elimina todas aquellas variables que no queremos
     Elimina todas las profundidades excepto 3.
+    
+    Recibe:
+        - data --> archivo inicial 
+        - options_data --> diccionario con las variables
+    Devuelve:
+        - archivo filtrado con las varaibes deseadas
     """
     filtered_data = data.copy()
 
@@ -149,6 +156,13 @@ def filtrar_datos(data,options_data):
 
     
 def tratar_fichero(fichero):
+    """
+    LLama a las funciones de recorte y eliminación de las variables no deseadas
+    Recibe:
+        - fichero --> archivo inicial 
+    Devuelve:
+        - datos_filtrados --> archivo tratado
+    """
     datos_brutos = xarray.open_dataset(datos['destino'] + '\\' + fichero)
     datos_crop = crop_datos(datos_brutos)
     datos_filtrados = filtrar_datos(datos_crop,datos['variables'])
@@ -156,6 +170,9 @@ def tratar_fichero(fichero):
     
      
 def procesar():
+    '''
+    Recorre las carpetas del FTP entre las fechas requeridas
+    '''
     global ftp, tamano
     for año in datos['fechas'].year:
         ftp.cwd(str(año))
@@ -167,12 +184,12 @@ def procesar():
                 #Descargar
                 if not descargado:
                     tamano = ftp.size(dia)
-                    print("Descargando {} // {}".format(dia,tamano))
+                    print(' --> Descargando - Año: {} / Mes: {} / Día: {} - Nombre: {}'.format(año,mes,str(dia)[35:37],dia))
                     lanza_comando(dia,tamano)
                     datos_nuevos = tratar_fichero(dia)
                     datos_nuevos.to_netcdf(datos['destino'] +'\\'+ dia.replace('.nc','__filtrados.nc'))
-                    print('\nGuardado fichero modificado y borramos el anterior.')
-                    # os.remove(datos['destino'] +'\\'+dia)
+                    print(' --> Guardado fichero modificado y borramos el anterior.\n')
+                    os.remove(datos['destino'] +'\\'+dia)
             ftp.cwd("../")
         ftp.cwd("../")
     
