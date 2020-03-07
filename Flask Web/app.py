@@ -6,9 +6,13 @@ app = Flask(__name__)
 def paginaPrincipal():
     return render_template('welcome.html')
 
-@app.route('/about')
-def paginaAbout():
-    return render_template('about.html')
+@app.route('/pred')
+def paginaPrediccion():
+    return render_template('pred.html')
+
+@app.route('/contacto')
+def paginaContacto():
+    return render_template('contacto.html')
 
 if __name__ == '__main__':
     app.run(debug = True)

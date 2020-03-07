@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidebar">
+        <a><img src="../static/pics/logo.png" alt="logo"></a>
+        <a onclick="openNav()">&#9776;&nbsp;&nbsp;Open</a>
+        <a class="active" href="/"><img src="../static/pics/home-run.png">&nbsp;&nbsp;Home</a>
+        <a onclick="cambia()" href="/pred"><img src="../static/pics/pin.png">&nbsp;&nbsp;Predicción</a>
+        <a href="/contacto"><img src="../static/pics/contact.png">&nbsp;&nbsp;Contacto</a>
+    </div>
+
+    <div  class="content">
+        {% block body %}
+
+        {% endblock %}
+    </div>
+
+    <script>
+        function openNav() {
+            if (document.getElementById("mySidenav").style.width == "225px") {
+                document.getElementById("mySidenav").style.width = "55px";
+            } else {
+                document.getElementById("mySidenav").style.width = "225px";
+            }
+        }
+        function cambia(){
+            $(".active").removeClass("active")
+            $("a").addClass("active")
+        }
+    </script>
+
+
+</body>
+
+</html>

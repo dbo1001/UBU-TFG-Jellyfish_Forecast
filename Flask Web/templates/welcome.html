@@ -1,5 +1,16 @@
-{% extends 'index2.html' %}
+{% extends 'index.html' %}
+
+{% block lat %}
+<a class="active" href="/">Home</a>
+<a href="/pred">Predicción</a>
+<a href="/contacto">Contacto</a>
+<!-- <a href="#about">About</a> -->
+{% endblock %}
 
 {% block body %}
-<h1>hola</h1>
+<h1>Jellyfish Forecast<br></br></h1>
+
+<p>Proyecto de fin de carrerra sobre la predicción de la llegada de medusas a las playas en funciónde las condiciones
+    meteorológicas.</p>
+<p>Github del proyecto: <a>https://github.com/psnti/TFG-Pablo-Santidrian-Tudanca</a></p>
 {% endblock %}
