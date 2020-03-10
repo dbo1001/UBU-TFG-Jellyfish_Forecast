@@ -9,20 +9,20 @@ import sys
 # MEJORAS -->   pedir por pantalla el lugar de descarga de los archvos
 #               cambio progress bar por libreria clint (https://likegeeks.com/es/descargar-archivos-usando-python/#Descargar-con-una-barra-de-progreso)
 
-# Declaración de variables
+# Declaracion de variables
 datos = dict()
 
 def carga_datos():
     """
-    Función que carga en una variable de tipo diccionario los datos necesarios para 
-    descargar y filtrar los datos meteorológicos y oceánicos.
+    Funcion que carga en una variable de tipo diccionario los datos necesarios para 
+    descargar y filtrar los datos meteorologicos y oceanicos.
     """
-    datos['FTP'] = 'my.cmems-du.eu' # dirección FTP
+    datos['FTP'] = 'my.cmems-du.eu' # direccion FTP
     datos['user'] = 'psantidriantuda' # usuario de la cuenta FTP
-    datos['passwd'] = 'Kir@2110' # contraseña de la cuenta FTP
-    datos['latitud'] = [-60, -10] # valores máximo y mínimo de la latitud para las coordenadas GPS
-    datos['longitud'] = [-120, -60] # valores máximo y mínimo de la longitud para las coordenadas GPS
-    datos['destino'] = 'C:/Users/pablo/Downloads' #'D:\##DatosCopernicus' # ruta en la que se descargarán los archivo ".nc"
+    datos['passwd'] = 'Kir@2110' # contrasena de la cuenta FTP
+    datos['latitud'] = [-60, -10] # valores maximo y minimo de la latitud para las coordenadas GPS
+    datos['longitud'] = [-120, -60] # valores maximo y minimo de la longitud para las coordenadas GPS
+    datos['destino'] = os.getcwd()  #'C:/Users/pablo/Downloads' #'D:\##DatosCopernicus' # ruta en la que se descargaran los archivo ".nc"
     datos['fechas'] = pd.date_range(start='2014-01-01', end='2019-01-01', freq='Y') # rango de fechas a descargar
     datos['servicio'] = 'GLOBAL_REANALYSIS_PHY_001_030' # nombre de las carpetas contenedoras de los datos
     datos['producto'] = 'global-reanalysis-phy-001-030-daily'
@@ -34,7 +34,7 @@ def carga_datos():
         },
         "vo":{
                 "variable":"northward_sea_water_velocity",
-                # justo 0,5 y 10 no están presentes, pero uso 'nearest'
+                # justo 0,5 y 10 no estan presentes, pero uso 'nearest'
                 "extra_options": {"depth":[0,5,10]}
         },
         "uo":{
@@ -64,7 +64,7 @@ def carga_datos():
 
 def acceder_FTP():
     '''
-    Se realiza la conexión al servidor FTP
+    Se realiza la conexion al servidor FTP
     '''
     global ftp
     ftp = FTP(host=datos['FTP'],user=datos['user'],passwd=datos['passwd'])
@@ -92,8 +92,8 @@ def lanza_comando(dia,tamano):
     Se lanza el comando de descarga.
 
     Recibe:
-        - dia --> día que se quiere descargar
-        - tamano --> tamaño del fichero
+        - dia --> dia que se quiere descargar
+        - tamano --> tamano del fichero
     '''
     p = dia
     with open(datos['destino'] + '\\' + p, 'wb') as fd:
@@ -144,13 +144,13 @@ def filtrar_datos(data,options_data):
         if not var in options_data:
             #print("Deleting not necesary var",var)
             del filtered_data[var]
-    # Selecciona 3 profundidades más cercanas a las indicadas    
+    # Selecciona 3 profundidades mas cercanas a las indicadas    
     return filtered_data.sel({"depth":[0,5,10]},method='nearest')
 
     
 def tratar_fichero(fichero):
     """
-    LLama a las funciones de recorte y eliminación de las variables no deseadas
+    LLama a las funciones de recorte y eliminacion de las variables no deseadas
     Recibe:
         - fichero --> archivo inicial 
     Devuelve:
@@ -167,8 +167,8 @@ def procesar():
     Recorre las carpetas del FTP entre las fechas requeridas
     '''
     global ftp, tamano
-    for año in datos['fechas'].year:
-        ftp.cwd(str(año))
+    for anio in datos['fechas'].year:
+        ftp.cwd(str(anio))
         for mes in ftp.nlst():
             ftp.cwd(str(mes))
             for dia in ftp.nlst():
@@ -177,7 +177,7 @@ def procesar():
                 #Descargar
                 if not descargado:
                     tamano = ftp.size(dia)
-                    print(' --> Descargando - Año: {} / Mes: {} / Día: {} - Nombre: {}'.format(año,mes,str(dia)[35:37],dia))
+                    print(' --> Descargando - Ano: {} / Mes: {} / Dia: {} - Nombre: {}'.format(anio,mes,str(dia)[35:37],dia))
                     lanza_comando(dia,tamano)
                     datos_nuevos = tratar_fichero(dia)
                     datos_nuevos.to_netcdf(datos['destino'] +'\\'+ dia.replace('.nc','__filtrados.nc'))
