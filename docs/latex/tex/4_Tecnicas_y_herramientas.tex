@@ -1,29 +1,54 @@
 \capitulo{4}{Técnicas y herramientas}
 
+
 \begin{comment}
 Esta parte de la memoria tiene como objetivo presentar las técnicas metodológicas y las herramientas de desarrollo que se han utilizado para llevar a cabo el proyecto. Si se han estudiado diferentes alternativas de metodologías, herramientas, bibliotecas se puede hacer un resumen de los aspectos más destacados de cada alternativa, incluyendo comparativas entre las distintas opciones y una justificación de las elecciones realizadas. 
 No se pretende que este apartado se convierta en un capítulo de un libro dedicado a cada una de las alternativas, sino comentar los aspectos más destacados de cada opción, con un repaso somero a los fundamentos esenciales y referencias bibliográficas para que el lector pueda ampliar su conocimiento sobre el tema.
 \end{comment}
 
 \begin{comment}
-scrum
-git
-github,gitlab,bitbucket
-zenhub
-IDE:vs code, pycharm, editor latex
-latex,editor latex
-zotero
+
+IDE:vs code, pycharm, jupyter, editor latex
 
 lenguaje python,librerias
 \end{comment}
 
 Este apartado se plasman las diferentes técnicas metodológicas y herramientas de desarrollo que se han utilizado en la realización del proyecto así como las posibles alternativas que se han tenido en cuenta y el motivo de haberlas desechado.
 
-\section{Scrum}\label{Scrum}
+\section{Gestión del proyecto}\label{GesProyecto}
+\subsection{Scrum}\label{Scrum}
+Scrum se trata de un marco de trabajo ágil destinado al manejo de proyectos de desarrollo \emph{software}. Está destinado para equipos pequeños dividiendo el trabajo en objetivos que se van logrando de manera incremental a traces de iteraciones denominadas \emph{sprints}. \cite{wiki:scrm}
 
-\section{Git}\label{Git}
+\subsection{Git}\label{Git}
+Git se trata de un sistema de control de versiones gratuito y de codigo abierto para el manejo de proyecto. Se trata de un software de control de versiones de manera que se puede llevar un registro de cambios en los archivos y posibilita la coordinación de trabajos entre diferentes personas. \cite{}
 
-\section{GitHub}\label{GitHub}
+\subsection{GitHub}\label{GitHub}
+GitHub es un plataforma destinada a alojar proyecto basándose en el software de control de versiones Git. Esta plataforma utiliza un interfaz web desde la que se nos permite realizar control de código, documentación, gestión de tareas y otros muchas funcionalidades además de integración con otros servicios. GitHub es gratituito para proyectos \emph{open source}. \cite{}
 
-\section{ZenHub}\label{ZenHub}
+\subsubsection{Alternativas:}\label{AlternativasGitHub}
+Otras alternativas a GitHub fueron Gitlab y Bitbucket. Ambos servicios son bastante similares a GitHub en funcionalidades y basados en Git.
+
+Bitbucket fué rechazado rápidamente por la falta de familiaridad en su uso ya que no lo había usado nunca, únicamente había visto repositorios en la web.
+
+Gitlab es un entorno más conocido ya que es el software que he utilizado en las prácticas de empresa para el control de código dentro del equipo de trabajo del que formo parte.
+
+Finalmente se decidió usar GitHub por haber sido utilizado en clase de gestión de proyectos por lo que se tenia un mayor conocimiento de su funcionamiento asi como por su integración con ZenHub del que se hablará a continuación.
+
+\subsection{ZenHub}\label{ZenHub}
+ZenHub es un herramienta para gestión de proyectos que se integra con GitHub. Este complemento añade a GitHub un tablero canvas en el cual se representan las \emph{issues}. Es posible estimar tareas, así como darlas prioridades y visualizar gráficos como el gráfico \emph{burndown}. \cite{}
+
+\subsubsection{Alternativas:}\label{AlternativasZotero}
+Se plantearon otras alternativas como Trello o GitHub projects pero finalmente se elijió  ZenHub por su facilidad de uso y el haber sido usado anteriormente, requisito que las otras alternativas no cumplían.
+
+\section{Entorno de desarrollo:}\label{IDE}
+	\subsection{Python}\label{Python}
+
+\section{Documentación}\label{Documentación}
+	\subsection{LaTex}\label{LaTex}
+		\subsection{Texmaker}\label{Texmaker}
+	\subsection{Zotero}\label{zotero}
+La herramienta Zotero es un software gratuito para la gestión de referencias pudiendo recoger , organizar y citar creando referencias bibliográficas para cualquier editor. También cuenta con integración en le navegador. Una vez recopilados todas las citas, se puede exportar a un fichero BibTex para la utilizarse con LaTex.\cite{}
+
+\section{librerias}\label{librerias}
+flask
 
