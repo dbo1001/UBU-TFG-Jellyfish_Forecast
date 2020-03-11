@@ -6,9 +6,6 @@ import wget
 from tqdm import tqdm
 import sys
 
-# MEJORAS -->   pedir por pantalla el lugar de descarga de los archvos
-#               cambio progress bar por libreria clint (https://likegeeks.com/es/descargar-archivos-usando-python/#Descargar-con-una-barra-de-progreso)
-
 # Declaracion de variables
 datos = dict()
 
@@ -22,7 +19,7 @@ def carga_datos():
     datos['passwd'] = 'Kir@2110' # contrasena de la cuenta FTP
     datos['latitud'] = [-60, -10] # valores maximo y minimo de la latitud para las coordenadas GPS
     datos['longitud'] = [-120, -60] # valores maximo y minimo de la longitud para las coordenadas GPS
-    datos['destino'] = os.getcwd()  #'C:/Users/pablo/Downloads' #'D:\##DatosCopernicus' # ruta en la que se descargaran los archivo ".nc"
+    datos['destino'] = os.getcwd() + '/descargas' #'C:/Users/pablo/Downloads' #'D:\##DatosCopernicus' # ruta en la que se descargaran los archivo ".nc"
     datos['fechas'] = pd.date_range(start='2014-01-01', end='2019-01-01', freq='Y') # rango de fechas a descargar
     datos['servicio'] = 'GLOBAL_REANALYSIS_PHY_001_030' # nombre de las carpetas contenedoras de los datos
     datos['producto'] = 'global-reanalysis-phy-001-030-daily'
@@ -96,7 +93,7 @@ def lanza_comando(dia,tamano):
         - tamano --> tamano del fichero
     '''
     p = dia
-    with open(datos['destino'] + '\\' + p, 'wb') as fd:
+    with open(datos['destino'] + '/' + p, 'wb') as fd:
         total = ftp.size(p)
         with tqdm(total=total,
                 unit_scale=True,
@@ -156,7 +153,7 @@ def tratar_fichero(fichero):
     Devuelve:
         - datos_filtrados --> archivo tratado
     """
-    datos_brutos = xarray.open_dataset(datos['destino'] + '\\' + fichero)
+    datos_brutos = xarray.open_dataset(datos['destino'] + '/' + fichero)
     datos_crop = crop_datos(datos_brutos)
     datos_filtrados = filtrar_datos(datos_crop,datos['variables'])
     return datos_filtrados
@@ -180,9 +177,9 @@ def procesar():
                     print(' --> Descargando - Ano: {} / Mes: {} / Dia: {} - Nombre: {}'.format(anio,mes,str(dia)[35:37],dia))
                     lanza_comando(dia,tamano)
                     datos_nuevos = tratar_fichero(dia)
-                    datos_nuevos.to_netcdf(datos['destino'] +'\\'+ dia.replace('.nc','__filtrados.nc'))
+                    datos_nuevos.to_netcdf(datos['destino'] +'/'+ dia.replace('.nc','__filtrados.nc'))
                     print(' --> Guardado fichero modificado y borramos el anterior.\n')
-                    # os.remove(datos['destino'] +'\\'+dia)
+                    os.remove(datos['destino'] +'/'+dia)
                     # os.unlink(datos['destino'] +'\\'+dia)
                     
             ftp.cwd("../")
