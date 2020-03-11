@@ -1,18 +1,5 @@
 \capitulo{4}{Técnicas y herramientas}
 
-
-\begin{comment}
-Esta parte de la memoria tiene como objetivo presentar las técnicas metodológicas y las herramientas de desarrollo que se han utilizado para llevar a cabo el proyecto. Si se han estudiado diferentes alternativas de metodologías, herramientas, bibliotecas se puede hacer un resumen de los aspectos más destacados de cada alternativa, incluyendo comparativas entre las distintas opciones y una justificación de las elecciones realizadas. 
-No se pretende que este apartado se convierta en un capítulo de un libro dedicado a cada una de las alternativas, sino comentar los aspectos más destacados de cada opción, con un repaso somero a los fundamentos esenciales y referencias bibliográficas para que el lector pueda ampliar su conocimiento sobre el tema.
-\end{comment}
-
-\begin{comment}
-
-IDE:vs code, pycharm, jupyter, editor latex
-
-lenguaje python,librerias
-\end{comment}
-
 Este apartado se plasman las diferentes técnicas metodológicas y herramientas de desarrollo que se han utilizado en la realización del proyecto así como las posibles alternativas que se han tenido en cuenta y el motivo de haberlas desechado.
 
 \section{Gestión del proyecto}\label{GesProyecto}
@@ -42,13 +29,32 @@ Se plantearon otras alternativas como Trello o GitHub projects pero finalmente s
 
 \section{Entorno de desarrollo:}\label{IDE}
 	\subsection{Python}\label{Python}
+Para el desarrollo de el código en python se ha utilizado el IDE Visual Studio Code. se estudiaron otra alternativas como PyCharm o Jupyter Notebook pero finalmente se eligió vs Code por la familiaridad con la misma y gran compatibiliad con diferentes lenguajes.
+
+Vs Code es una aplicación totalmente gratuita basada en el framework Electron y posee gran cantidad de extensiones para facilitar la tarea a la hora de la programación como auto completado con IntelliSense. Además tiene integración con git para el control de versiones.
 
 \section{Documentación}\label{Documentación}
-	\subsection{LaTex}\label{LaTex}
-		\subsection{Texmaker}\label{Texmaker}
+	\subsection{LaTeX}\label{LaTex}
+LateX es un sistema de composición de texto plano destinado a la composición de textos con una calidad tipográfica alta. Incluye características diseñadas para la elaboración de documentación técnica y científica siendo un estándar en la publicación de documentos de investigación. Latex es totalmente gratuito.
+	\subsection{Texmaker}\label{Texmaker}
+Texmaker se trata de un editor de textos gratuito y multiplataforma, que ofrece diversas herramientas para elaborar documentación con LaTeX.
 	\subsection{Zotero}\label{zotero}
 La herramienta Zotero es un software gratuito para la gestión de referencias pudiendo recoger , organizar y citar creando referencias bibliográficas para cualquier editor. También cuenta con integración en le navegador. Una vez recopilados todas las citas, se puede exportar a un fichero BibTex para la utilizarse con LaTex.\cite{}
 
 \section{librerias}\label{librerias}
-flask
+\subsection{Flask}\label{Flask}
+Flask es un framework ligero para el desarrollo de aplicaciones web en Python bajo el modelo MVC. Está diseñado para desarrollar aplicaciones de manera rápida y sencilla y con capacidad de escalar a aplicaciones más complejas.
+\subsection{Xarray}\label{xarray}
+Xarray se trata de un proyecto de código abierto desarrollado para Python que facilita el trabajo con matrices multidimensionales etiquetadas utilizando la librería NumPy. Consta de una gran variedad de funciones para el análisis y la visualización de estructuras de datos. Está inspirado en el funcionamiento de la librería pandas y diseñado para funcionar con archivos de tipo netCDF.
+\subsection{Pandas}\label{pandas}
+Esta librería se trata de una extension de NumPy y está destinada a la manipulación y análisis de datos en lenguaje Python. Permite la trabajar con estructuras de datos y operaciones para su trasformación pudiendo estas ser tablas temporales o series numéricas.
+\subsection{FtpLib}\label{FtpLib}
+Liberia destinada a la implementación de la parte del cliente en el protocolo FTP. Desarrollada para el lenguaje Python, nos permite automatizar accesos a servidores FTP.
+\subsection{tqdm}\label{tqdm}
+Pequeña librería utilizada para mostrar una barra de progreso a la hora de realizar la descarga de los datos del FTP.
+\subsection{Módulos sys y os}\label{sys/os}
+Módulos de sistema proporcionados por Python para utilizar funcionalidades del sistema operativo.
 
+En el módulo "os" proporciona funcionalidades dependientes del sistema operativo. En especial las relacionadas con la estructura de directorios y ficheros pudiendo manipular la misma.
+
+En cuanto a "sys" nos permite obtener variables y funcionalidades relacionadas con el interprete.
