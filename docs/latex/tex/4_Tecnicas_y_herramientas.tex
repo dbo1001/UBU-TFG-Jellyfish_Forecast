@@ -1,60 +1,65 @@
 \capitulo{4}{Técnicas y herramientas}
 
-Este apartado se plasman las diferentes técnicas metodológicas y herramientas de desarrollo que se han utilizado en la realización del proyecto así como las posibles alternativas que se han tenido en cuenta y el motivo de haberlas desechado.
+Este apartado se plasman las diferentes técnicas metodológicas y herramientas de desarrollo que se han utilizado en la realización del proyecto, así como las posibles alternativas que se han tenido en cuenta y el motivo de haberlas desechado.
 
 \section{Gestión del proyecto}\label{GesProyecto}
 \subsection{Scrum}\label{Scrum}
-Scrum se trata de un marco de trabajo ágil destinado al manejo de proyectos de desarrollo \emph{software}. Está destinado para equipos pequeños dividiendo el trabajo en objetivos que se van logrando de manera incremental a traces de iteraciones denominadas \emph{sprints}. \cite{wiki:scrm}
+Scrum se trata de un marco de trabajo ágil destinado al manejo de proyectos de desarrollo \emph{software}. Está destinado para equipos pequeños dividiendo el trabajo en objetivos que se van logrando de manera incremental a través de iteraciones denominadas \emph{sprints}. \cite{wiki:scrm}
 
 \subsection{Git}\label{Git}
-Git se trata de un sistema de control de versiones gratuito y de codigo abierto para el manejo de proyecto. Se trata de un software de control de versiones de manera que se puede llevar un registro de cambios en los archivos y posibilita la coordinación de trabajos entre diferentes personas. \cite{}
+Git se trata de un sistema de control de versiones gratuito y de código abierto para el manejo de proyecto. Se trata de un software de control de versiones de manera que se puede llevar un registro de cambios en los archivos y posibilita la coordinación de trabajos entre diferentes personas. \cite{git_1,git_2}
 
 \subsection{GitHub}\label{GitHub}
-GitHub es un plataforma destinada a alojar proyecto basándose en el software de control de versiones Git. Esta plataforma utiliza un interfaz web desde la que se nos permite realizar control de código, documentación, gestión de tareas y otros muchas funcionalidades además de integración con otros servicios. GitHub es gratituito para proyectos \emph{open source}. \cite{}
+GitHub es un plataforma destinada a alojar proyecto basándose en el software de control de versiones Git. Esta plataforma utiliza un interfaz web desde la que se nos permite realizar control de código, documentación, gestión de tareas y otros muchas funcionalidades además de integración con otros servicios. GitHub es gratuito para proyectos \emph{open source}. \cite{wiki:github_wiki,github}
 
-\subsubsection{Alternativas:}\label{AlternativasGitHub}
-Otras alternativas a GitHub fueron Gitlab y Bitbucket. Ambos servicios son bastante similares a GitHub en funcionalidades y basados en Git.
+\subsubsection{Alternativas}\label{AlternativasGitHub}
+Otras alternativas a GitHub fueron, Gitlab y Bitbucket. Ambos servicios son bastante similares a GitHub en funcionalidades y basados en Git.
 
-Bitbucket fué rechazado rápidamente por la falta de familiaridad en su uso ya que no lo había usado nunca, únicamente había visto repositorios en la web.
+Bitbucket fue rechazado rápidamente por la falta de familiaridad en su uso ya que no lo había usado nunca, únicamente había visto repositorios en la web.
 
 Gitlab es un entorno más conocido ya que es el software que he utilizado en las prácticas de empresa para el control de código dentro del equipo de trabajo del que formo parte.
 
-Finalmente se decidió usar GitHub por haber sido utilizado en clase de gestión de proyectos por lo que se tenia un mayor conocimiento de su funcionamiento asi como por su integración con ZenHub del que se hablará a continuación.
+Finalmente se decidió usar GitHub por haber sido utilizado en clase de gestión de proyectos por lo que se tenia un mayor conocimiento de su funcionamiento, así como por su integración con ZenHub del que se hablará a continuación.
 
 \subsection{ZenHub}\label{ZenHub}
-ZenHub es un herramienta para gestión de proyectos que se integra con GitHub. Este complemento añade a GitHub un tablero canvas en el cual se representan las \emph{issues}. Es posible estimar tareas, así como darlas prioridades y visualizar gráficos como el gráfico \emph{burndown}. \cite{}
+ZenHub es una herramienta para gestión de proyectos que se integra con GitHub. Este complemento añade a GitHub un tablero canvas en el cual se representan las \emph{issues}. Es posible estimar tareas, así como darlas prioridades y visualizar gráficos como el gráfico \emph{burndown}. \cite{zenhub}
 
-\subsubsection{Alternativas:}\label{AlternativasZotero}
-Se plantearon otras alternativas como Trello o GitHub projects pero finalmente se elijió  ZenHub por su facilidad de uso y el haber sido usado anteriormente, requisito que las otras alternativas no cumplían.
+\subsubsection{Alternativas}\label{AlternativasZotero}
+Se plantearon otras alternativas como Trello o GitHub projects pero finalmente se eligió  ZenHub por su facilidad de uso y el haber sido usado anteriormente, requisito que las otras alternativas no cumplían.
 
-\section{Entorno de desarrollo:}\label{IDE}
+\section{Entorno de desarrollo}\label{IDE}
 	\subsection{Python}\label{Python}
-Para el desarrollo de el código en python se ha utilizado el IDE Visual Studio Code. se estudiaron otra alternativas como PyCharm o Jupyter Notebook pero finalmente se eligió vs Code por la familiaridad con la misma y gran compatibiliad con diferentes lenguajes.
+Para le desarrollo en Python se eligió Visual Studio Code.Esta es una aplicación totalmente gratuita basada en el framework Electron y posee gran cantidad de extensiones para facilitar la tarea a la hora de la programación como auto completado con IntelliSense. Además tiene integración con git para el control de versiones \cite{wiki:vscode_wiki,vscode}.
 
-Vs Code es una aplicación totalmente gratuita basada en el framework Electron y posee gran cantidad de extensiones para facilitar la tarea a la hora de la programación como auto completado con IntelliSense. Además tiene integración con git para el control de versiones.
+\subsection{Alternativas}\label{AlternativasIDE}
+Se estudiaron otras alternativas como PyCharm o Jupyter Notebook pero finalmente se eligió Visual Studio Code por la familiaridad con la misma y gran compatibilidad con diferentes lenguajes.
 
 \section{Documentación}\label{Documentación}
 	\subsection{LaTeX}\label{LaTex}
-LateX es un sistema de composición de texto plano destinado a la composición de textos con una calidad tipográfica alta. Incluye características diseñadas para la elaboración de documentación técnica y científica siendo un estándar en la publicación de documentos de investigación. Latex es totalmente gratuito.
-	\subsection{Texmaker}\label{Texmaker}
-Texmaker se trata de un editor de textos gratuito y multiplataforma, que ofrece diversas herramientas para elaborar documentación con LaTeX.
+LateX es un sistema de composición de texto plano destinado a la composición de textos con una calidad tipográfica alta. Incluye características diseñadas para la elaboración de documentación técnica y científica siendo un estándar en la publicación de documentos de investigación. Latex es totalmente gratuito \cite{latex}.
+	\subsubsection{Alternativas}\label{AlternativasLatex}
+Otras opciones valoradas fueron Microsoft Word y OpenOffice. La universidad proporciona una plantilla para LaTeX y OpenOffice por lo que Microsoft Word fue la primera descartada. Finalmente debido al enfoque más técnico que proporciona LaTeX frente a OpenOffice se decidió utilizarlo.
+
+	\subsection{TeXstudio}\label{Texmaker}
+TeXstudio se trata de un editor de textos gratuito, que ofrece diversas herramientas para elaborar documentación con LaTeX haciendo la escritura más confortable e intuitiva \cite{texstudio}.
+	\subsubsection{Alternativas}\label{AlternativasTexmaker}
+Las alternativas a este editor que se estudiaron fueron Texmaker y Overleaf. Se terminó eligiendo TeXstudio por ser un editor instado en local así como por ser más intuitivo y fácil de utilizar que Texmaker.
+
 	\subsection{Zotero}\label{zotero}
-La herramienta Zotero es un software gratuito para la gestión de referencias pudiendo recoger , organizar y citar creando referencias bibliográficas para cualquier editor. También cuenta con integración en le navegador. Una vez recopilados todas las citas, se puede exportar a un fichero BibTex para la utilizarse con LaTex.\cite{}
+La herramienta Zotero es un software gratuito para la gestión de referencias pudiendo recoger , organizar y citar creando referencias bibliográficas para cualquier editor. También cuenta con integración en le navegador. Una vez recopilados todas las citas, se puede exportar a un fichero BibTex para la utilizarse con LaTex \cite{zotero}.
 
-\section{librerias}\label{librerias}
-\subsection{Flask}\label{Flask}
-Flask es un framework ligero para el desarrollo de aplicaciones web en Python bajo el modelo MVC. Está diseñado para desarrollar aplicaciones de manera rápida y sencilla y con capacidad de escalar a aplicaciones más complejas.
-\subsection{Xarray}\label{xarray}
-Xarray se trata de un proyecto de código abierto desarrollado para Python que facilita el trabajo con matrices multidimensionales etiquetadas utilizando la librería NumPy. Consta de una gran variedad de funciones para el análisis y la visualización de estructuras de datos. Está inspirado en el funcionamiento de la librería pandas y diseñado para funcionar con archivos de tipo netCDF.
-\subsection{Pandas}\label{pandas}
-Esta librería se trata de una extension de NumPy y está destinada a la manipulación y análisis de datos en lenguaje Python. Permite la trabajar con estructuras de datos y operaciones para su trasformación pudiendo estas ser tablas temporales o series numéricas.
-\subsection{FtpLib}\label{FtpLib}
-Liberia destinada a la implementación de la parte del cliente en el protocolo FTP. Desarrollada para el lenguaje Python, nos permite automatizar accesos a servidores FTP.
-\subsection{tqdm}\label{tqdm}
+\section{Bibliotecas}\label{librerias}
+	\subsection{Flask}\label{Flask}
+Flask es un framework ligero para el desarrollo de aplicaciones web en Python bajo el modelo Modelo-Vista-Controlador (MVC). Está diseñado para desarrollar aplicaciones de manera rápida y sencilla y con capacidad de escalar a aplicaciones más complejas \cite{flask}.
+
+	\subsection{Xarray}\label{xarray}
+Xarray se trata de un proyecto de código abierto desarrollado para Python que facilita el trabajo con matrices multidimensionales etiquetadas utilizando la librería NumPy. Consta de una gran variedad de funciones para el análisis y la visualización de estructuras de datos. Está inspirado en el funcionamiento de la librería pandas y diseñado para funcionar con archivos de tipo netCDF \cite{xarray}.
+	
+	\subsection{Pandas}\label{pandas}
+Esta librería se trata de una extension de NumPy y está destinada a la manipulación y análisis de datos en lenguaje Python. Permite la trabajar con estructuras de datos y operaciones para su trasformación pudiendo estas ser tablas temporales o series numéricas \cite{pandas}.
+
+	\subsection{FtpLib}\label{FtpLib}
+Liberia destinada a la implementación de la parte del cliente en el protocolo FTP. Desarrollada para el lenguaje Python, nos permite automatizar accesos a servidores FTP \cite{ftp_lib}.
+
+	\subsection{tqdm}\label{tqdm}
 Pequeña librería utilizada para mostrar una barra de progreso a la hora de realizar la descarga de los datos del FTP.
-\subsection{Módulos sys y os}\label{sys/os}
-Módulos de sistema proporcionados por Python para utilizar funcionalidades del sistema operativo.
-
-En el módulo "os" proporciona funcionalidades dependientes del sistema operativo. En especial las relacionadas con la estructura de directorios y ficheros pudiendo manipular la misma.
-
-En cuanto a "sys" nos permite obtener variables y funcionalidades relacionadas con el interprete.
