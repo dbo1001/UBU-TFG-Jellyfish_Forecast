@@ -1,7 +1,32 @@
 \capitulo{5}{Aspectos relevantes del desarrollo del proyecto}
 
+\begin{comment}
 Este apartado pretende recoger los aspectos más interesantes del desarrollo del proyecto, comentados por los autores del mismo.
 Debe incluir desde la exposición del ciclo de vida utilizado, hasta los detalles de mayor relevancia de las fases de análisis, diseño e implementación.
 Se busca que no sea una mera operación de copiar y pegar diagramas y extractos del código fuente, sino que realmente se justifiquen los caminos de solución que se han tomado, especialmente aquellos que no sean triviales.
 Puede ser el lugar más adecuado para documentar los aspectos más interesantes del diseño y de la implementación, con un mayor hincapié en aspectos tales como el tipo de arquitectura elegido, los índices de las tablas de la base de datos, normalización y desnormalización, distribución en ficheros3, reglas de negocio dentro de las bases de datos (EDVHV GH GDWRV DFWLYDV), aspectos de desarrollo relacionados con el WWW...
 Este apartado, debe convertirse en el resumen de la experiencia práctica del proyecto, y por sí mismo justifica que la memoria se convierta en un documento útil, fuente de referencia para los autores, los tutores y futuros alumnos.
+\end{comment}
+
+\section{Inicio del proyecto}
+
+\section{Metodologías}
+En el desarrollo del proyecto se ha seguido una metodología de trabajo ágil, en concreto Scrum. Esta metodología se ha seguido con ciertas limitaciones al tratarse de un proyecto desarrollado por una sola persona.
+\begin{itemize}
+	\item Se ha seguido una estrategia de desarrollo incremental mediante iteraciones o \emph{Sprints}.
+	\item La duración de estos \emph{Sprints} fue de una o dos semanas.
+	\item Al final de cada \emph{Sprint} se realiza una reunión con los tutores para ver el avance y marcar nuevos objetivos que se estiman a través de una tablero canvas (\emph{ZenHub}).
+	\item El seguimiento de cada \emph{Sprint} se realiza a través de los gráficos burndown.
+\end{itemize}
+	 
+\section{Formación}
+
+\section{Establecimiento de requisitos}
+
+
+\section{Recogida de datos}
+La obtención de los datos necesarios para el posterior análisis, se obtuvieron a través de la organización europea \emph{Copernicus}. Esta cuenta con una serie de datos recopilados por satélites de todo el mundo.
+
+Para la descarga de estos datos, se encontraban disponibles dos alternativas. Por un lado, podían ser descargados a través de un servidor FTP y por el otro, había disponible una API de reciente lanzamiento.
+
+En un principio se priorizó la opción de la descarga a través de la API ya que podían descargarse los datos ya tratados reduciendo el trabajo previo al análisis. Finalmente se descartó esta idea por la lentitud de respuesta del servicio así como diferentes errores que se producían haciendo que la descarga de la totalidad de los datos no estuviese asegurada por lo que se descargaron los datos a través del servidor FTP y posteriormente eran tratados eliminando las variables y las zonas geográficas que no eran necesarias.
