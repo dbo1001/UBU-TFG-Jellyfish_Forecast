@@ -1,0 +1,11 @@
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "nombre": ["Playa1","Playa2","Playa3"],
+    "coordinates": [[-34.536267, -72.406639],[-35.536267, -74.406639],[-36.536267, -75.406639]]
+  },
+  "properties": {
+    "name": "punto de prueba"
+  }
+}
