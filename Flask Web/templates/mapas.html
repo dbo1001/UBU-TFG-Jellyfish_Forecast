@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+
+{% block body %}
+    {{super()}}
+    <h1>Mapas</h1>
+    Eleccion fechas
+    <input type="date" id="birthday" name="birthday"><br><br>
+
+    {% include "mapita.html" %}
+    
+
+{% endblock %}
+
