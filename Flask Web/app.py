@@ -11,6 +11,9 @@ def paginaPrincipal():
 
 @app.route('/mapas')
 def paginaPrediccion():
+    start_coords = (-34.536267, -72.406639)
+    folium_map = folium.Map(location=start_coords, zoom_start=5)
+    folium_map.save('templates/mapita.html')
     return render_template('mapas.html')
 
 @app.route('/contacto')
@@ -20,10 +23,7 @@ def paginaContacto():
 
 @app.route('/pruebas')
 def index():
-    start_coords = (-34.536267, -72.406639)
-    folium_map = folium.Map(location=start_coords, zoom_start=5)
-    folium_map.save('templates/mapita.html')
-    return render_template('mapas.html')
+    return render_template('pruebas.html')
 
 if __name__ == '__main__':
     app.run(debug = True)

@@ -1,15 +1,38 @@
 {% extends 'base.html' %}
 
+{% block styles %}
+{{super()}}
+<style>
+ body, html { height:100%;
+	margin:0;
+	padding:0;
+	width:100%;
+	background-color:silver;
+}
+ 
+.recuadro {
+	width:49.5%;
+	display:inline-block;
+	height:85%;
+	overflow:hidden;
+}
+</style>
+
+{% endblock %}
 
 
 {% block body %}
     {{super()}}
-    <h1>Mapas</h1>
-    Eleccion fechas
-    <input type="date" id="birthday" name="birthday"><br><br>
-
-    {% include "mapita.html" %}
-    
+    <div class='recuadro' style="color: aliceblue;" ">
+        <div style="position:relative; left:20%; top:40%">
+            <h1>Mapas</h1>
+            Eleccion fechas
+            <input type="date" id="fecha" name="fecah"> 	    
+        </div>
+    </div>
+	<div class='recuadro' >
+        {% include "mapita.html" %}
+	</div>
 
 {% endblock %}
 

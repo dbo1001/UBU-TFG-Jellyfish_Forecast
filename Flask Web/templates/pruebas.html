@@ -1,31 +1,36 @@
-{% extends "bootstrap/base.html" %}
-{% import "bootstrap/wtf.html" as wtf %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd"><head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+ 
+body, html { height:100%;
+	margin:0;
+	padding:0;
+	width:100%;
+	background-color:silver;
+	}
+ 
 
-{% block title %}This is an example page{% endblock %}
-
-{% block head %}
-  {{ super() }}
-  <link type="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
-{% endblock %}
-
-{% block content %}
-  <div class="container">
-    <h1>Hello, Bootstrap</h1>
-    <div class="row">
-      <div class='col-sm-6'>
-        {{ wtf.quick_form(form) }}
-      </div>
-    </div>
-  </div>
-{% endblock %}
-
-{% block scripts %}
-  {{ super() }}
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-  <script type="text/javascript">
-    $(function () {
-      $('#datepick').datetimepicker();
-    });
-  </script>
-{% endblock %}
+#tres{ border:1px solid black;
+	width:49.5%;
+	display:inline-block;
+	height:49.5%;
+	background-color:yellow;
+	}
+#cuatro{ border:1px solid black;
+	width:49.5%;
+	display:inline-block;
+	height:49.5%;
+	background-color:red;
+	}
+</style>
+</head>
+<body>
+	<div id="uno">1</div>
+	<div id="dos">2</div>
+	<br>
+	<div id="tres">3</div>
+	<div id="cuatro">4</div>
+</body>
+</html>
