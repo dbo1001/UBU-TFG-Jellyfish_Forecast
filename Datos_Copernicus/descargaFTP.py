@@ -79,7 +79,7 @@ def comprobar_fichero(fichero):
         - True  --> En caso de existir.
     '''
     ruta = datos['destino']
-    if fichero in os.listdir(ruta) or fichero.replace('.nc','__filtrados.nc') in os.listdir(ruta)): 
+    if fichero in os.listdir(ruta) or fichero.replace('.nc','__filtrados.nc') in os.listdir(ruta): 
         print('Fichero: "{}" ya existe en local.'.format(fichero))
         return True
     return False
