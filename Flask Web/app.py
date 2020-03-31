@@ -16,7 +16,7 @@ def paginaPrincipal():
 def paginaPrediccion():
     start_coords = (-34.536267, -72.406639)
     folium_map = folium.Map(location=start_coords, zoom_start=5)
-    folium_map.save('templates/mapita.html')
+    folium_map.save('Flask Web\\templates\\mapaChile.html')
     return render_template('mapas.html')
 
 @app.route('/contacto')
@@ -42,7 +42,7 @@ def index():
             popup=w["nombre"][x]
         ).add_to(folium_map)
         
-    folium_map.save('templates/mapita.html')
+    folium_map.save('Flask Web\\templates\\mapaChile.html')
     return render_template('mapas.html')
 
 if __name__ == '__main__':
