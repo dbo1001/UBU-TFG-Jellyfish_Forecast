@@ -5,8 +5,8 @@ En este apéndice se recogerán los diferentes objetivos del proyecto con sus co
 
 \section{Objetivos generales}
 
-Este proyecto tiene como objetivo el desarrollo de un modelo que nos permita predecir la presencia de medusas en las costas de Chile en funciones de las condiciones marítimas.\\
-El modelo resultante se implementará en un aplicación web con la que poder consultar la predicción de la fecha requerida ayudando a su visualización mediante representaciones gráficas.
+Este proyecto tiene como objetivo el desarrollo de un modelo que nos permita predecir la presencia de medusas en las costas de Chile en función de las condiciones marítimas.\\
+El modelo resultante se utilizará en un aplicación web con la que poder consultar la predicción de la fecha requerida ayudando a su visualización mediante representaciones gráficas.
 
 \section{Catálogo de requisitos}
 
@@ -14,15 +14,13 @@ El modelo resultante se implementará en un aplicación web con la que poder con
 
 \begin{description}
 	\item[RF-1 Obtención de los datos:] Se debe ser capaz de descargar los datos necesarios de manera automática a través de un servidor FTP.
-	\item[RF-2 Filtrado de los datos:] Los datos descargados han de ser tratados descartando las zonas geográficas distintas al lugar de estudio así como las variables ambientales que no sean de utilidad.
-	\item[RF-3 Cruce de datos:] Los datos filtrados se han de cruzar con los de avistamientos, obteniendo una estructura de los avistamientos con su respectiva fecha, localización y variables marítimas.
-	
+	\item[RF-2 Filtrado de los datos:] Los datos descargados han de ser tratados, descartando las zonas geográficas distintas al lugar de estudio así como las variables ambientales que no sean de utilidad.
+	\item[RF-3 Cruce de datos:] Los datos filtrados se han de cruzar con los de avistamientos, obteniendo una estructura de los avistamientos con su respectiva fecha, localización y variables marítimas.	
 	\item[RF-X Mostrar mapa:] La aplicación debe ser capaz de mostrar un mapa con el que poder interactuar.
-	\item[RF-X Elección de fechas:] Se debe poder seleccionar una fecha de la que obtener información.
-	\item[RF-X Elección de playa:] Se debe poder elegir una playa de la que obtener información.
-	\item[RF-X Visualzación de resultados:] El usuario debe ser capaz de visualizar los resultados de una playa en la fecha especificada.
-	\item[RF-X] ¿Fechas valida? ¿nombre de las playa valido?
-	
+	\item[RF-4 Introduccion de datos para su visualización:] El usuario debe poder seleccionar una serie de datos con los que realizar las consultas.
+	\subitem[RF-4.1 Elección de fechas:] Se debe poder seleccionar una fecha de la que obtener información.
+	\subitem[RF-4.2 Elección de playa:] Se debe poder elegir una playa de la que obtener información.
+	\subitem[RF-4.3 Visualización de resultados:] El usuario debe ser capaz de visualizar los resultados de una playa en la fecha especificada.	
 \end{description}
 
 	\subsection{Requisitos no funcionales}
@@ -49,7 +47,7 @@ Solo existe un tipo de actor, aquel usuario que consulta las predicciones.
 }
 {
 	Descripción                            & \multicolumn{2}{p{10.25cm}}{Descripción} \\\cline{1-3}
-	Precondiciones                         & \multicolumn{2}{p{10.25cm}}{Precondiciones} \\\cline{1-3}
+	Pre-condiciones                         & \multicolumn{2}{p{10.25cm}}{Precondiciones} \\\cline{1-3}
 	Requisitos                         	   & \multicolumn{2}{p{10.25cm}}{Requisitos} \\\cline{1-3}
 	Usuario                         	   & \multicolumn{2}{p{10.25cm}}{Usuario} \\\cline{1-3}
 	\multirow{3}{3.5cm}{Secuencia normal}  & Paso & Acción \\\cline{2-3}
