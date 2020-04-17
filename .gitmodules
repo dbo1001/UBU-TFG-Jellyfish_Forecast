@@ -1,0 +1,3 @@
+[submodule "web/WebJellyfishForecast"]
+	path = web/WebJellyfishForecast
+	url = https://github.com/psnti/WebJellyfishForecast.git
