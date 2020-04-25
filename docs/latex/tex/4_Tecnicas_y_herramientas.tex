@@ -29,12 +29,25 @@ ZenHub es una herramienta para gestión de proyectos que se integra con GitHub. 
 \subsubsection{Alternativas}\label{AlternativasZotero}
 Se plantearon otras alternativas como Trello o GitHub projects, pero finalmente se eligió  ZenHub por su facilidad de uso y el haber sido usado anteriormente, requisito que las otras alternativas no cumplían.
 
-\section{Entorno de desarrollo}\label{IDE}
+\section{Herramientas}
+
 	\subsection{Python}\label{Python}
 Para le desarrollo en Python se eligió Visual Studio Code. Esta es una aplicación totalmente gratuita basada en el framework Electron y posee gran cantidad de extensiones para facilitar la tarea a la hora de la programación como auto completado con IntelliSense. Además tiene integración con Git para el control de versiones \cite{wiki:vscode_wiki,vscode}.
-
-\subsection{Alternativas}\label{AlternativasIDE}
+		\subsubsection{Alternativas}\label{AlternativasIDE}
 Se estudiaron otras alternativas como PyCharm o Jupyter Notebook pero finalmente se eligió Visual Studio Code por la familiaridad con la misma y gran compatibilidad con diferentes lenguajes.
+
+	\subsection{Jupyter Notebook}\label{jupyterNotebook}
+También se ha utilizado Jupyter Noteebook para el desarrollo con Python. Esta herramienta se ha utilizado para realizar todas las pruebas debido a su facilidad para documentar el código y la segmentación del mismo en apartados separados. 
+
+	\subsection{tmux}\label{tmux}
+Se trata de un herramienta que permite lanzar múltiples terminales en una misma ventana, cada uno de manera independiente y corriendo en segundo plano. Esta herramienta se ha utilizado para la descarga de los datos obtenidos de \emph{Copernicus}. En un principio se utilizó unicamente una conexión ssh con un equipo de cómputo de Universidad. Esto daba varios errores, por una parte, la conexión se cerraba perdiendo el proceso de descarga. También era necesario que un equipo personal estuviese encendido constantemente durante la descarga para que no se detuviera la conexión. Para solucionar estos problemas se abrió una sesión de tmux corriendo en segundo plano, pudiendo así cerrar a conexión ssh y abrirla para consultar el proceso.\\
+\textcolor{red}{Añadir si se usa para la ejecucion del modelo.}
+
+	\subsection{Pencil}
+Software gratuito para la realización de prototipos de interfaces gráficas. Permite la instalación de paquetes para crear maquetas de múltiples plataformas. 
+	
+	\subsection{Creately}
+Aplicación web utilizada en la fase de modelado para la creación de los diagramas de uso. Dispone de una versión gratuita con opciones reducidas.
 
 \section{Documentación}\label{Documentación}
 	\subsection{\LaTeX}\label{LaTex}
@@ -55,8 +68,13 @@ Flask es un framework ligero para el desarrollo de aplicaciones web en Python ba
 	\subsection{Xarray}\label{xarray}
 Xarray se trata de un proyecto de código abierto desarrollado para Python que facilita el trabajo con matrices multidimensionales etiquetadas utilizando la librería NumPy. Consta de una gran variedad de funciones para el análisis y la visualización de estructuras de datos. Está inspirado en el funcionamiento de la librería pandas y diseñado para funcionar con archivos de tipo netCDF \cite{xarray}.	
 	\subsection{Pandas}\label{pandas}
-Esta librería se trata de una extension de NumPy y está destinada a la manipulación y análisis de datos en lenguaje Python. Permite trabajar con estructuras de datos y operaciones para su trasformación pudiendo estas ser tablas temporales o series numéricas \cite{pandas}.
+Esta biblioteca se trata de una extension de NumPy y está destinada a la manipulación y análisis de datos en lenguaje Python. Permite trabajar con estructuras de datos y operaciones para su trasformación pudiendo estas ser tablas temporales o series numéricas \cite{pandas}.
 	\subsection{FtpLib}\label{FtpLib}
-Libería destinada a la implementación de la parte del cliente en el protocolo FTP. Desarrollada para el lenguaje Python, nos permite automatizar accesos a servidores FTP \cite{ftp_lib}.
+Biblioteca destinada a la implementación de la parte del cliente en el protocolo FTP. Desarrollada para el lenguaje Python, nos permite automatizar accesos a servidores FTP \cite{ftp_lib}.
 	\subsection{tqdm}\label{tqdm}
 Pequeña librería utilizada para mostrar una barra de progreso a la hora de realizar la descarga de los datos del FTP.
+	\subsection{Folium}
+Se trata de una biblioteca que nos permite la visualización de mapas, pudiendo superponer elementos en los mismos. Folium utiliza a su vez una biblioteca de javaScript llamada \emph{leaflet}.
+
+	\section{Bootstrap}
+Bootstrap es un conjunto de herramientas para facilitar el desarrollo en HTML, CSS y JavaScript.
