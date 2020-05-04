@@ -44,3 +44,14 @@ Esta estructura inicial, contiene poca información pues no se puede predecir co
 
 \textcolor{red}{CrossCorelation}
 
+
+\section{Despliegue de la aplicación web}
+Al tratarse se una aplicación web, un aspecto importante es el despliegue de la misma en un servidor.
+
+Como se ha mencionado en la sección de herramientas (\ref{HerokuHerrramientas}), se ha utilizado la aplicación \emph{Heroku}.
+
+Esta nos ofrece hosting gratuito, además de autodesplegarse cada vez de que se realiza un \emph{push} en el repositorio, si este está asociado a la cuenta de heroku. Por este motivo, se tuvo que realizar un segundo repositorio en Github en el que incluir unicamente la parte de la aplicación web, ya que para poder realizar el autodespliegue los archivos deben estar en el directorio raíz de nuestro repositorio.
+
+Se añadió un referencia desde el repositorio principal a este segundo ya que \emph{Git} lo permite además de incluir el enlace también en el README. El repositorio se encuentra  \href{https://github.com/psnti/WebJellyfishForecast#tfg---pablo-santidrian-tudanca}{aquí}.
+
+
