@@ -16,7 +16,7 @@ El modelo resultante se utilizará en un aplicación web con la que poder consul
 	\item[RF-1 Obtención de los datos:] Se debe ser capaz de descargar los datos necesarios de manera automática a través de un servidor FTP.
 	\item[RF-2 Filtrado de los datos:] Los datos descargados han de ser tratados, descartando las zonas geográficas distintas al lugar de estudio así como las variables ambientales que no sean de utilidad.
 	\item[RF-3 Cruce de datos:] Los datos filtrados se han de cruzar con los de avistamientos, obteniendo una estructura de los avistamientos con su respectiva fecha, localización y variables marítimas.	
-	\item[RF -4 Consultar modelo:] La aplicación debe ser capaz de realizar una consulta al modelo predictivo a partir de los datos introducidos por el usuario.
+	\item[RF-4 Consultar modelo:] La aplicación debe ser capaz de realizar una consulta al modelo predictivo a partir de los datos introducidos por el usuario.
 	\item[RF-5 Mostrar mapa:] La aplicación debe ser capaz de mostrar un mapa con el que poder interactuar.
 	\item[RF-6 Introduccion de datos para su visualización:] El usuario debe poder seleccionar una serie de datos con los que realizar las consultas.
 	\subitem RF-6.1 Elección de fechas: Se debe poder seleccionar una fecha de la que obtener información.
@@ -51,10 +51,10 @@ Solo existe un tipo de actor, aquel usuario que consulta las predicciones.
 {
 	Descripción                            & \multicolumn{2}{p{10.25cm}}{Permite al usuario visualizar toda la información relativa a la consulta realizada.} \\\cline{1-3}
 	\multirow{0}{3.5cm}{Pre-condiciones} &\multicolumn{2}{p{10.25cm}}{La fecha introducida, es una fecha válida.} \\\cline{2-3}
-	&\multicolumn{2}{p{10.25cm}}{El nombre de la playa introducida, es una nombre valido.} \\\cline{1-3}
+	&\multicolumn{2}{p{10.25cm}}{El nombre de la playa introducida, es una nombre válido.} \\\cline{1-3}
 	Requisitos                         	   & \multicolumn{2}{p{10.25cm}}{RF-5, RF-6} \\\cline{1-3}
 	\multirow{0}{3.5cm}{Secuencia normal}  & Paso & Acción \\\cline{2-3}
-	& 1    & El usuario debe acceder a la pestaña "Mapas". \\\cline{2-3}
+	& 1    & El usuario debe acceder a la pestaña <<Mapas>>. \\\cline{2-3}
 	& 2    & El usuario introduce una fecha.  \\\cline{2-3}
 	& 3	   & El usuario podría elegir una playa en particular si lo desea o hacer una búsqueda general. \\\cline{2-3}
 	& 4	   & El usuario pulsa el botón de búsqueda. \\\cline{2-3}
@@ -71,10 +71,10 @@ Solo existe un tipo de actor, aquel usuario que consulta las predicciones.
 {
 	Descripción                            & \multicolumn{2}{p{10.25cm}}{Permite al usuario descargar el resultado de la consulta.} \\\cline{1-3}
 	\multirow{0}{3.5cm}{Pre-condiciones} &\multicolumn{2}{p{10.25cm}}{La fecha introducida, es una fecha válida.} \\\cline{2-3}
-    &\multicolumn{2}{p{10.25cm}}{El nombre de la playa introducida, es una nombre valido.} \\\cline{1-3}
+    &\multicolumn{2}{p{10.25cm}}{El nombre de la playa introducida, es una nombre válido.} \\\cline{1-3}
 	Requisitos                         	   & \multicolumn{2}{p{10.25cm}}{RF-6, RF-7} \\\cline{1-3}
 	\multirow{3}{3.5cm}{Secuencia normal}  & Paso & Acción \\\cline{2-3}
-	& 1    & El usuario debe acceder a la pestaña "Mapas". \\\cline{2-3}
+	& 1    & El usuario debe acceder a la pestaña <<Mapas>>. \\\cline{2-3}
 	& 2    & El usuario introduce una fecha.  \\\cline{2-3}
 	& 3	   & El usuario podría elegir una playa en particular si lo desea o hacer una búsqueda general. \\\cline{2-3}
 	& 4	   & El usuario pulsa el botón de búsqueda. \\\cline{2-3}
@@ -98,7 +98,7 @@ Solo existe un tipo de actor, aquel usuario que consulta las predicciones.
 	& 1    & El usuario debe acceder a la pestaña "Mapas". \\\cline{2-3}
 	& 2    & Se muestra la ventana de consultas en la que aparece el mapa. \\\cline{1-3}
 	Excepciones							   & - \\\cline{1-3}
-	Frecuencia                             & Alta \\
+	Frecuencia                             & Alta \\\cline{1-3}
 	Importancia                            & Alta \\
 }
 
@@ -108,7 +108,7 @@ Solo existe un tipo de actor, aquel usuario que consulta las predicciones.
 {
 	Descripción                            & \multicolumn{2}{p{10.25cm}}{Permite al usuario realizar una consulta.} \\\cline{1-3}
 	\multirow{0}{3.5cm}{Pre-condiciones} &\multicolumn{2}{p{10.25cm}}{La fecha introducida, es una fecha válida.} \\\cline{2-3}
-	&\multicolumn{2}{p{10.25cm}}{El nombre de la playa introducida, es una nombre valido.} \\\cline{1-3}
+	&\multicolumn{2}{p{10.25cm}}{El nombre de la playa introducida, es una nombre válido.} \\\cline{1-3}
 	Requisitos                         	   & \multicolumn{2}{p{10.25cm}}{RF-4} \\\cline{1-3}
 	\multirow{0}{3.5cm}{Secuencia normal}  & Paso & Acción \\\cline{2-3}
 	& 1    & El usuario debe acceder a la pestaña "Mapas". \\\cline{2-3}
@@ -131,7 +131,7 @@ Solo existe un tipo de actor, aquel usuario que consulta las predicciones.
 	\multirow{0}{3.5cm}{Secuencia normal}  & Paso & Acción \\\cline{2-3}
 	& 1    & La aplicación web realiza una llamada al modelo predictivo. \\\cline{2-3}
 	& 2    & El modelo devuelve el resultado de la consulta.  \\\cline{2-3}
-	& 3	   & La aplicación web imprime por pantalla dichos resultados.. \\\cline{1-3}
+	& 3	   & La aplicación web imprime por pantalla dichos resultados. \\\cline{1-3}
 	\multirow{0}{3.5cm}{Excepciones} & 1 & Fecha introducida no válida. \\\cline{2-3}
 	& 2 & Las coordenadas no existen o no son válidas.  \\\cline{1-3}
 	Frecuencia                             & Alta \\\cline{1-3}
@@ -139,7 +139,7 @@ Solo existe un tipo de actor, aquel usuario que consulta las predicciones.
 }
 
 \tablaSmallSinColores{Caso de uso 4.2: Selección de la fecha a consultar}{p{3cm} p{.75cm} p{9cm}}{tablaCUX}{
-	\multicolumn{3}{p{10.25cm}}{CU-4.2: Selección de la fecha a consultar} \\
+	\multicolumn{3}{p{10.25cm}}{CU-4.2: Selección de la fecha la consultar} \\
 }
 {
 	Descripción                            & \multicolumn{2}{p{10.25cm}}{El usuario elige una fecha en la que realizar a consulta.} \\\cline{1-3}
