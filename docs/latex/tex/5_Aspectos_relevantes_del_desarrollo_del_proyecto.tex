@@ -34,27 +34,32 @@ Para la ejecución de las diferentes pruebas, se utilizado la conexión ssh lanz
 
 Existían casos en los que la conexión ssh se cerraba o se caía la conexión VPN, por lo que se perdía el proceso de ejecución o los últimos cambios realizados en los notebooks no se guardaban. Para eso se utilizó la herramienta tmux permitiendo, que aunque la conexión se perdiera, los procesos en segundo plano no se perdían y así poder continuar con el trabajo.
 
-\section{Preparación de los datos}
-Tras haber descargado los datos oceánicos, disponemos de dos fuentes de datos. Por una lado, estos datos del estado de los océanos en las diferentes fechas y coordenadas, y por otro, un registro de avistamientos de medusas.
+\section{Preparación de los datos}\textsl{}
+Tras haber descargado los datos oceánicos, disponemos de dos fuentes de datos. Por una lado, el estado de los océanos en las diferentes fechas y coordenadas, y por otro, un registro de avistamientos de medusas.
 
 Los datos oceánicos están agrupados por cuadrantes separados cada \num{0,0833} grados. Por esto se redondearon las coordenadas de los avistamientos para coincidir con estos pasos. 
 
-A continuación se enlazan en un solo DataFrame los avistamientos con la variables oceánicas recogidas de ese cuadrante y en la fecha del avistamiento quedando la siguiente estructura de datos:\\
-\textcolor{red}{Foto estructura 1}
+A continuación se enlazan en un solo DataFrame los avistamientos con la variables oceánicas recogidas de ese cuadrante y en la fecha del avistamiento quedando la siguiente estructura de datos como la que encontramos en la figura \ref{est_datos}.
 
-Esta estructura inicial, contiene poca información pues no se puede predecir con exactitud la aparición de medusas observando unicamente las zonas más próximas a las playas. Por ello se añadieron más lecturas de los cuadrantes adyacentes mar adentro.
+\imagenflotante{estructura_datos.png}{Estructura de datos resultante.}\label{est_datos}
 
+Esta estructura inicial, contiene poca información, pues no se puede predecir con exactitud la aparición de medusas observando unicamente el cuadrante más próximo a las playas. Por ello se añadieron más lecturas de los cuadrantes adyacentes mar adentro. Estos nuevos cuadrantes fueron incluidos a la estructura inicial modificando el nombre con una etiqueta al final de las mismas para poder identificarlos. El resultado de como se organizan estas etiquetas se puede observar en la figura \ref{croquis_cuadrantes}.
+
+\imagenflotante{croquis_cuadrantes.png}{Croquis de referencia sobre los cuadrantes y el nombre de las variables asociadas.}\label{croquis_cuadrantes}
+
+Tras unir todos los cuadrantes nos encontramos que ciertas celdas no contenían información. Esto se debe principalmente por dos causas: Las profundidades se toman a 0, 5 y 10 metros, esto hace que en los cuadrantes más cercanos a las costas existiesen zonas con una profundidad inferior. También debido a la forma de la linea de costa, existen zonas en las que ya sean cuadrantes inferiores o superiores, están situados tierra adentro.
+
+La solución que se busco a este problema, fue la de coger los datos del cuadrante más cercano por la izquierda que tenga información válida.
 
 \textcolor{red}{CrossCorelation}
 
-
 \section{Despliegue de la aplicación web}
-Al tratarse se una aplicación web, un aspecto importante es el despliegue de la misma en un servidor.
+Al tratarse se una aplicación web, un aspecto importante es el despliegue de la misma en un servidor al que poder acceder desde cualquier lugar.
 
 Como se ha mencionado en la sección de herramientas (\ref{HerokuHerrramientas}), se ha utilizado la aplicación \emph{Heroku}.
 
-Esta nos ofrece hosting gratuito, además de autodesplegarse cada vez de que se realiza un \emph{push} en el repositorio, si este está asociado a la cuenta de heroku. Por este motivo, se tuvo que realizar un segundo repositorio en Github en el que incluir unicamente la parte de la aplicación web, ya que para poder realizar el autodespliegue los archivos deben estar en el directorio raíz de nuestro repositorio.
+Esta nos ofrece hosting gratuito, además de desplegarse automáticamente cada vez de que se realiza un \emph{push} en el repositorio, si este está asociado a la cuenta de heroku. Por este motivo, se tuvo que realizar un segundo repositorio en Github en el que incluir unicamente la parte de la aplicación web, ya que para poder realizar el autodespliegue los archivos deben estar en el directorio raíz de nuestro repositorio.
 
-Se añadió un referencia desde el repositorio principal a este segundo ya que \emph{Git} lo permite además de incluir el enlace también en el README. El repositorio se encuentra  \href{https://github.com/psnti/WebJellyfishForecast#tfg---pablo-santidrian-tudanca}{aquí}.
+Se añadió una referencia desde el repositorio principal a este segundo ya que \emph{Git} lo permite, además de incluir el enlace también en el archivo README. El repositorio se encuentra  \href{https://github.com/psnti/WebJellyfishForecast#tfg---pablo-santidrian-tudanca}{aquí}.
 
 
