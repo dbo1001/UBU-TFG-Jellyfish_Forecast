@@ -28,24 +28,32 @@ El aumento de materia orgánica provocado por vertidos como podrían ser los de 
 Teniendo en cuenta todo esto,diferentes estudios concluyen que estas alteraciones aleatorias del medio, tiene poca influencia en el desarrollo de las colonias de medusas, mientras que las condiciones ambientales que se repiten anualmente tiene una mayor importancia en comparación. Esto remarca la importancia de un análisis de las condiciones ambientales que provocan estos brotes para poder anticiparse a ellos.\cite{art:ArticuloCanepa_1}
 
 \section{Knowledge Discovery in Databases (KDD)}
-\textcolor{red}{Explicación}
+
+Actualmente se recopila una gran cantidad de información de todos los ámbitos y es necesario darla un uso práctico. La \textbf{minería de datos} es un campo de las ciencias de la computación por el cual se tratan de descubrir nuevos patrones o relaciones en conjuntos de datos de manera automática. Con estas nuevas relaciones se trata de explicar comportamientos actuales o predecir resultados futuros~ \cite{mineria_tecnicas_herramientas}. 
+
+Sin embargo, la minería de datos es solo una fase del proceso de descubrimiento del conocimiento (KDD).
+
+El \emph{Knowledge Discovery} se trata de la búsqueda de conocimiento en los datos. Su objetivo es la extracción de información útil y previamente desconocida de conjuntos de datos.
+
+Estos los podemos obtener de multitud de formas diferentes por lo que es necesario un proceso de preparación de los mismos.
+
+Posteriormente es cuando podremos utilizar algoritmos de minería de datos para lograr un modelo resultante en forma de reglas o patrones, que siendo interpretados, obtendremos nuevo conocimiento.\textcolor{red}{citar}
+
+Un resumen de todo el proceso del KDD se puede observar en la Figura \ref{fasesKDD}.
+
+\imagenflotante{esquemaMineria.png}{Fases del proceso de KDD~\cite{mineria_tecnicas_herramientas}.}\label{fasesKDD}
+
 \subsection{Preprocesamiento de los datos}
-Los datos obtenidos inicialmente en bruto no pueden ser utilizados directamente para la minería de datos. Estos datos deben ser preprocesados para eliminar posibles variables que no son necesarias o datos incorrectos y así conseguir transformar nuestro conjunto de datos iniciales, en un conjunto más útil y menos pesado por lo que el algoritmo de análisis posterior, tendrá una menor carga de trabajo. 
-\textcolor{red}{Reescribir con más puntos}
+Se trata del primer paso una vez obtenido el conjunto de datos a utilizar. Estos datos en bruto no pueden ser utilizados en los algoritmos de minería de datos sin un tratamiento previo. El conjunto de datos inicial debe ser transformado a un formato estándar para poder ser analizado.
+
+Una vez conseguido un formato estándar, no se puede asumir que la información que contiene sea válida o correcta. Pueden existir variables que introduzcan ruido en la muestra o campos que se hayan introducido de manera errónea. También puede ocurrir que no se necesite la totalidad de la información contenida en el dataSet, sino que unicamente se requiera parte de la misma. Como ocurre en este caso, solo es de interés la el área geográfica de Chile y el área de océanos cercana a sus costas.
+
+Otro problema que se encuentra, son los valores nulos o la falta de los mismos. Ya sea por fallos es el grabado de la información o falta de la misma, es necesario corregir esos valores vacíos pudiendo descartar esas instancias o reemplazarlas por otros valores razonables teniendo en cuenta su contexto.\textcolor{red}{citar}
+
+
 \subsection{Minería de datos}
-Actualmente se recopila una gran cantidad de información de todos los ámbitos y es necesario darla un uso práctico. La \textbf{minería de datos} es un campo de las \textcolor{red}{ciencias de la computación por el cual se tratan de descubrir nuevos patrones o relaciones en conjuntos de datos y así, conseguir un conocimiento obtenido de manera automática (\emph{Machine Learning}}). Con estas nuevas relaciones se trata de explicar comportamientos actuales o predecir resultados futuros~ \cite{mineria_tecnicas_herramientas}. 
 
-Sin embargo, la minería de datos es solo una fase del proceso de descubrimiento del conocimiento (KDD) pues es necesario tratar los datos antes de analizarlos así como validarlos posteriormente. Este proceso podemos obtener las siguientes fases:
 
-\imagenflotante{esquemaMineria.png}{Fases del proceso de KDD~\cite{mineria_tecnicas_herramientas}.}
-
-%
-%
-%Mirar correccion
-%
-%
-
-\subsection{Machine learning}
 
 
 
