@@ -33,31 +33,41 @@ Actualmente se recopila una gran cantidad de información de todos los ámbitos 
 
 Sin embargo, la minería de datos es solo una fase del proceso de descubrimiento del conocimiento (KDD).
 
-El \emph{Knowledge Discovery} se trata de la búsqueda de conocimiento en los datos. Su objetivo es la extracción de información útil y previamente desconocida de conjuntos de datos.
+El \emph{Knowledge Discovery} se trata de la búsqueda de conocimiento en los datos. Su objetivo es la extracción de información útil y previamente desconocida de conjuntos de datos.Estos los podemos obtener de multitud de formas diferentes por lo que es necesario un proceso de preparación de los mismos.
 
-Estos los podemos obtener de multitud de formas diferentes por lo que es necesario un proceso de preparación de los mismos.
-
-Posteriormente es cuando podremos utilizar algoritmos de minería de datos para lograr un modelo resultante en forma de reglas o patrones, que siendo interpretados, obtendremos nuevo conocimiento.\textcolor{red}{citar}
+Posteriormente, es cuando podremos utilizar algoritmos de minería de datos para lograr un modelo resultante en forma de reglas o patrones, que siendo interpretados, obtendremos nuevo conocimiento.\textcolor{red}{citar}
 
 Un resumen de todo el proceso del KDD se puede observar en la Figura \ref{fasesKDD}.
 
 \imagenflotante{esquemaMineria.png}{Fases del proceso de KDD~\cite{mineria_tecnicas_herramientas}.}\label{fasesKDD}
 
 \subsection{Preprocesamiento de los datos}
-Se trata del primer paso una vez obtenido el conjunto de datos a utilizar. Estos datos en bruto no pueden ser utilizados en los algoritmos de minería de datos sin un tratamiento previo. El conjunto de datos inicial debe ser transformado a un formato estándar para poder ser analizado.
+Se trata del primer paso una vez obtenido el conjunto de datos a utilizar. Estos datos en bruto no pueden ser utilizados en los algoritmos de minería sin un tratamiento previo. El conjunto de datos inicial debe ser transformado a un formato estándar para poder ser analizado.
 
-Una vez conseguido un formato estándar, no se puede asumir que la información que contiene sea válida o correcta. Pueden existir variables que introduzcan ruido en la muestra o campos que se hayan introducido de manera errónea. También puede ocurrir que no se necesite la totalidad de la información contenida en el dataSet, sino que unicamente se requiera parte de la misma. Como ocurre en este caso, solo es de interés la el área geográfica de Chile y el área de océanos cercana a sus costas.
+Una vez conseguido, no se puede asumir que la información que contiene sea válida o correcta. Pueden existir variables que introduzcan ruido en la muestra o campos que se hayan introducido de manera errónea. También puede ocurrir que no se necesite la totalidad de la información contenida en el dataSet, sino que unicamente se requiera parte de la misma. Como ocurre en este caso, solo es de interés la el área geográfica de Chile y el área de los océanos cercana a sus costas.
 
-Otro problema que se encuentra, son los valores nulos o la falta de los mismos. Ya sea por fallos es el grabado de la información o falta de la misma, es necesario corregir esos valores vacíos pudiendo descartar esas instancias o reemplazarlas por otros valores razonables teniendo en cuenta su contexto.\textcolor{red}{citar}
+Otro problema que se encuentra, son los valores nulos o la falta de los mismos. Ya sea por fallos es el grabado de la información o falta de la misma, es necesario corregir esos valores vacíos pudiendo descartar esas instancias o reemplazarlas por otros valores razonables teniendo en cuenta su contexto~\cite{libro_mineria}.
 
+Finalmente se pueden aplicar al conjunto otras técnicas como la normalización de los datos.
 
 \subsection{Minería de datos}
+Como se ha comentado anteriormente, la minería de datos se trata de obtener patrones o relaciones a partir de conjuntos de datos.
+
+En nuestro caso, se pretende conseguir un modelo capaz de encontrar relaciones entre el estado de la mar y la aparición de medusas en la costa. Para ello el modelo debe ser capaz de aprender a partir de los datos de entrada. Se pueden definir dos tipos de aprendizaje principales: supervisado y no supervisado.
+
+\subsubsection{Aprendizaje supervisado}
+Se trata de modelo que se elaboran a partir de conjuntos de datos etiquetados, es decir cada instancia tiene un atributo que es el valor a predecir. Este atributo será una clase (mucho, poco, alto, bajo...) si se trata de un problema de clasificación, mientras que si se trata de un problema de regresión será un valor numérico.
+
+Una vez entrenado el modelo, este podrá etiquetar o predecir el valor de para nuevas instancias.
+En este caso tenemos un problema de regresión pues se intenta entrenar un modelo que prediga el número de avistamientos de medusas.
+
+\subsubsection{Aprendizaje no supervisado}
+En este caso, el entrenamiento del modelo no se hace con datos etiquetados sino que se les asignan características. A partir de los datos de entrada, se agrupa a los datos en conjuntos en función de estas características. Estos grupos se denominan \emph{clusters} de instancias.
 
 
 
 
-
-
+\subsection{Evaluación del modelo}
 
 
 
