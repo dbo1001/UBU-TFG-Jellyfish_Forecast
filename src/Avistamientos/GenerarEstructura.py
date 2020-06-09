@@ -308,17 +308,18 @@ def crea_estr(df):
 
 
 # creo estructura de datos
-df_resultados = crea_estr(df_playas)
-df_resultados.head()
+
+# df_resultados = crea_estr(df_playas)
+# df_resultados.head()
 
 
 # In[18]:
 
 
-df_resultados.head()
+# df_resultados.head()
 
 
-# In[19]:
+# In[ ]:
 
 
 # #Guardo la estructura
@@ -328,7 +329,7 @@ df_resultados.head()
 # df_resultados.head()
 
 
-# In[20]:
+# In[ ]:
 
 
 # for i in [0,7,14,30,45,60]:
@@ -341,7 +342,7 @@ df_resultados.head()
 
 # ## Estructura sin rellenar huecos sin datos
 
-# In[21]:
+# In[ ]:
 
 
 # def crea_estr():
@@ -380,19 +381,19 @@ df_resultados.head()
 #     return df_resultados
 
 
-# In[22]:
+# In[ ]:
 
 
 # df_resultados_con_vacios = crea_estr()
 
 
-# In[23]:
+# In[ ]:
 
 
 # df_resultados_con_vacios.head()
 
 
-# In[24]:
+# In[ ]:
 
 
 # df_resultados_con_vacios.to_excel('3EstructuraCoordEnTierra.xlsx')
@@ -401,7 +402,7 @@ df_resultados.head()
 # # Rellenar datos de celdas vacios
 # Con datos de la coordenada más cercana por la izquierda
 
-# In[25]:
+# In[ ]:
 
 
 def comprueba_datos_thetao(latitud,longitud,ds):
@@ -412,7 +413,7 @@ def comprueba_datos_thetao(latitud,longitud,ds):
     return latitud,longitud # devuelvo las coordenadas con datos
 
 
-# In[26]:
+# In[ ]:
 
 
 # datos_excel = pd.read_excel('EstructuraFinal.xlsx').reset_index() # leo estructura de datos que contiene huecos sin informacion
@@ -422,13 +423,13 @@ def comprueba_datos_thetao(latitud,longitud,ds):
 # datos = datos_excel.sort_values(by=['Latitud','Longitud','Fecha']) 
 
 
-# In[27]:
+# In[ ]:
 
 
 # datos
 
 
-# In[28]:
+# In[ ]:
 
 
 def rellenar_huecos(df):
@@ -442,7 +443,7 @@ def rellenar_huecos(df):
         elem = fila.isna() # columnas con valores nan
         for index, value in elem.items():
             if value:
-                nombre_original= index
+                nombre_original = index
                 nombre = 'Coord'
                 try:
                     nombre_original = index[:index.index('_')] # nombre de la columna en el DataSet
@@ -462,27 +463,27 @@ def rellenar_huecos(df):
     return datos_copia
 
 
-# In[29]:
+# In[ ]:
 
 
 # datos_sin_huecos = rellenar_huecos(datos)
 
 
-# In[30]:
+# In[ ]:
 
 
 # filas_nan_2 = datos_sin_huecos[datos_sin_huecos.isna().any(axis=1)] # compruebo que se hayan rellenado todos los vacios
 # filas_nan_2.head()
 
 
-# In[31]:
+# In[ ]:
 
 
 # datos_sin_huecos = datos_sin_huecos.reset_index().set_index(['Latitud','Longitud','Fecha','Avistamientos','Profundidad']).drop(['index'],axis = 1)
 # datos_sin_huecos.to_excel('4EstructuraFinalSinMissings.xlsx')
 
 
-# In[32]:
+# In[ ]:
 
 
 # datos_sin_huecos
@@ -490,7 +491,7 @@ def rellenar_huecos(df):
 
 # ## Ajustes estructura + normalización
 
-# In[33]:
+# In[ ]:
 
 
 # Estructura quitando las columnas de las coordenadas pues no nos sirven
@@ -505,7 +506,7 @@ def cargar(nombre):
     return df_inicial
 
 
-# In[34]:
+# In[ ]:
 
 
 profundidades = ['_0','_5','_10']
@@ -521,7 +522,7 @@ def renombra_atributos(df):
 # df_atributos
 
 
-# In[35]:
+# In[ ]:
 
 
 def unifica_lineas(df):
@@ -546,7 +547,7 @@ def unifica_lineas(df):
     return df_atributos
 
 
-# In[36]:
+# In[ ]:
 
 
 # def normaliza_normalize(df_atributos):
@@ -560,7 +561,7 @@ def unifica_lineas(df):
 #     guarda_dataframe(df_norm,'dfAtributosNormalizado_{}dias_{}celdas.xlsx'.format(dias_desfase,cuadrantes['izquierda']))
 
 
-# In[41]:
+# In[ ]:
 
 
 def normaliza_min_max(df_atributos,nombre,dias,celdas):
@@ -574,7 +575,7 @@ def normaliza_min_max(df_atributos,nombre,dias,celdas):
     return df_norm
 
 
-# In[38]:
+# In[ ]:
 
 
 def lista_avistamientos(nombre):
@@ -587,7 +588,7 @@ def lista_avistamientos(nombre):
     return df_avistamientos
 
 
-# In[49]:
+# In[ ]:
 
 
 # coloca las tres profundidades en una misma linea
@@ -601,10 +602,10 @@ def ejecuta(nombre,dias,celdas):
 
 # # Proceso completo con diferentes configuraciones
 
-# In[50]:
+# In[ ]:
 
 
-configs = {'num_dias':[0,7,15,30,45,60],
+configs = {'num_dias':[60],
            'celdas':[0,1,2,3,4,5]}
 
 df = pd.read_pickle('2_avistamientos_redondeo.pkl')
@@ -612,11 +613,11 @@ inicio = time()
 for d in configs['num_dias']:
     dias_desfase = d # dias de desfase respecto la fecha de avistamiento
     for c in configs['celdas']:
-        print(time() - inicio)
+        print('{} minutos'.format((time() - inicio)/60))
         cuadrantes['izquierda'],cuadrantes['arriba'],cuadrantes['abajo'] = c,c,c
         print('{}dias {}celdas'.format(d,c))
         df_res = crea_estr(df)
-        df_res = df_res.sort_values(by=['Latitud','Longitud','Fecha'])
+        df_res = df_res.sort_values(by=['Fecha','Latitud','Longitud'])
 #         print(df_res)
         df_res = rellenar_huecos(df_res)
         guarda_dataframe(df_res,'3estruct_{}dias_{}celdas'.format(d,c),True)
