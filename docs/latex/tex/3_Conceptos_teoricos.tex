@@ -62,6 +62,37 @@ En este caso tenemos un problema de regresión pues se intenta entrenar un model
 \subsubsection{Aprendizaje no supervisado}
 En este caso, el entrenamiento del modelo no se hace con datos etiquetados sino que se les asignan características. A partir de los datos de entrada, se agrupa a los datos en conjuntos en función de estas características. Estos grupos se denominan \emph{clusters} de instancias.
 
+\subsubsection{Series temporales}
+Las series temporales son sucesiones de datos que han sido tomados o medidos  secuencialmente a lo largo del tiempo~\cite{SeriesTempUBU}.
+Estas tienen una serie de características:
+\begin{itemize}
+	\item El valor medido o magnitud.
+	\item La periodicidad, se trata de la repetición en el tiempo de los valores de manera cíclica.
+	\item La tendencia es la variación que se observa en la media de los valores a largo plazo.
+	\item El ruido son valores aleatorios sin explicación.
+\end{itemize}
+
+Con estos componentes, podríamos separa una serie en sus diferentes partes (Figura \ref{descomposicion_series})
+\imagenflotante{descomposicion_series.png}{Descomposición de una serie temporal~\cite{SeriesTemp}.}\label{descomposicion_series}
+
+Las series temporales pueden ser regulares o irregulares, es decir, serán regulares cuando la separación (distancia temporal) entre las diferentes medidas es constante, mientras que la irregulares esta separación es variable.
+
+Un punto importante es el de la estacionariedad. Una serie temporal puede ser estacionaria cuando su media y varianza se mantienen constantes con el paso del tiempo, es decir, no dependen de este y ademas no presentan tendencia. Por otro lado, en una serie no estacionaria, estos valores si cambian a lo largo del tiempo pudiendo encontrar variaciones de tendencia, varianza o co-varianza.
+
+Tres ejemplos de esto podrían ser los reflejados en la figura \ref{series_no_estacionarias}.
+
+\imagenflotante{estacionariedad_no.png}{Ejemplo de series temporales no estacionarias~\cite{SeriesTempIMG}.}\label{series_no_estacionarias}
+
+\begin{itemize}
+	\item En el primer gráfico podemos observar como la media aumenta con el transcurso del tiempo, esto provoca una tendencia creciente, por lo que estamos frente a una serie no estacionaria.
+	\item En el segundo caso la varianza de la serie no es constante por lo que tampoco es una serie estacionaria.
+	\item Por último caso, la co-varianza varia en función del tiempo por lo que no es una serie estacionaria. 
+\end{itemize}
+
+\imagenflotante{estacionariedad_si.png}{Ejemplo de serie temporal estacionaria~\cite{SeriesTempIMG}.}\label{serie_si_estacionaria}
+
+En el caso de la figura \ref{serie_si_estacionaria}, encontramos una serie con media, varianza y co-varianza constante por lo que si que podríamos hablar de una serie estacionaria. 
+
 \subsection{Evaluación del modelo}
 
 
