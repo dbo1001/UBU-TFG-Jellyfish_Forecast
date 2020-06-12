@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[2]:
 
 
 import pandas as pd
@@ -16,7 +16,7 @@ from sklearn import preprocessing
 from time import time
 
 
-# In[2]:
+# In[3]:
 
 
 def guarda_dataframe(df,nombre,subcarpeta = False):
@@ -33,10 +33,10 @@ def guarda_dataframe(df,nombre,subcarpeta = False):
 
 # ## con primer grupo de datos
 
-# In[3]:
+# In[4]:
 
 
-avistamientos_df = pd.read_excel("./ExcelsAvistamientosIniciales/Physalia_Ambiental_R.xlsx")
+avistamientos_df = pd.read_excel("./#ExcelsAvistamientosIniciales/Physalia_Ambiental_R.xlsx")
 # avistamientos_df = pd.read_excel("../Physala_Data/Datos_Physalia_20171010.xls")
 
 columnas = avistamientos_df.iloc[0]
@@ -59,12 +59,27 @@ avistamientos_df=avistamientos_df[["Latitud","Longitud","Fecha","Avistamientos"]
 avistamientos_df
 
 
+# In[5]:
+
+
+import matplotlib.pyplot as plt
+plot_size = (15, 8)
+# ordeno valores 
+a = avistamientos_df.sort_values(by='Fecha')[['Fecha','Avistamientos']]
+a = a.set_index('Fecha')
+
+# gráfica de la serie temporal
+ax = a.plot(figsize=plot_size, marker='o', legend=False)
+ax.set(xlabel='', ylabel='Avistamientos')
+plt.show()
+
+
 # ## con segundo grupo de datos
 
-# In[4]:
+# In[6]:
 
 
-avistamientos_2_df = pd.read_excel("./ExcelsAvistamientosIniciales/Datos_Physalia_20171010.xls")
+avistamientos_2_df = pd.read_excel("./#ExcelsAvistamientosIniciales/Datos_Physalia_20171010.xls")
 
 # elimino filas con tipo de atributo "Categoria" que van del 1 al tres y no siguen la mismas reglas que los numericos
 avistamientos_2_df = avistamientos_2_df[avistamientos_2_df['Tipo.Abund'] == 'numero']
@@ -77,7 +92,7 @@ avistamientos_2_df = avistamientos_2_df[['Lat.dec','Long.dec','Date','Abundancia
 avistamientos_2_df.columns = ['Latitud','Longitud','Fecha','Avistamientos']
 
 
-# In[5]:
+# In[7]:
 
 
 #filas sin datos
@@ -87,7 +102,22 @@ print(filas_nan)
 avistamientos_2_df = avistamientos_2_df.drop(filas_nan.index.values)
 
 
-# In[6]:
+# In[8]:
+
+
+import matplotlib.pyplot as plt
+plot_size = (15, 8)
+# ordeno valores 
+a = avistamientos_2_df.sort_values(by='Fecha')[['Fecha','Avistamientos']]
+a = a.set_index('Fecha')
+
+# gráfica de la serie temporal
+ax = a.plot(figsize=plot_size, marker='o', legend=False)
+ax.set(xlabel='', ylabel='Avistamientos')
+plt.show()
+
+
+# In[9]:
 
 
 #guarda df
@@ -96,7 +126,7 @@ guarda_dataframe(avistamientos_2_df,'1_avistamientos_origen')
 avistamientos_2_df
 
 
-# In[7]:
+# In[10]:
 
 
 ## para leer los .pkl
@@ -108,7 +138,7 @@ avistamientos_2_df
 # 
 # Se exporta el dataframe generado a un excel
 
-# In[8]:
+# In[11]:
 
 
 base = 1/4
@@ -118,13 +148,13 @@ x = redondeo(37.1707222222222,-73.2053333333333)
 x
 
 
-# In[9]:
+# In[12]:
 
 
 df_avistamientos  = pd.read_pickle('1_avistamientos_origen.pkl')
 
 
-# In[10]:
+# In[13]:
 
 
 base=1/12
@@ -157,7 +187,7 @@ df_join = df_join.sort_values(by=['Fecha','Lat_floor','Long_floor' ]).reset_inde
 guarda_dataframe(df_join,'2_avistamientos_redondeo')
 
 
-# In[11]:
+# In[14]:
 
 
 df_join
@@ -165,13 +195,13 @@ df_join
 
 # # Estructura uniendo avistamientos y condiciones oceánicas
 
-# In[12]:
+# In[15]:
 
 
 df_join = pd.read_pickle('2_avistamientos_redondeo.pkl')
 
 
-# In[13]:
+# In[16]:
 
 
 '''
@@ -190,7 +220,7 @@ guarda_dataframe(df=df_playas,nombre='2_avistamientos_redondeo')
 
 # ### características
 
-# In[14]:
+# In[19]:
 
 
 df_playas # DataFrame con avistamientos en cada playa
@@ -201,7 +231,7 @@ cuadrantes = { # Numero de cuadrantes que se concatenarán con las playas
 }
 dias_desfase = 15
 salto = 1/12 # Salto de coordenadas entre los cuadrantes
-listado_archivos = os.listdir('../../descargas') # Listo todos los archivos de Copernicus
+listado_archivos = os.listdir('W:\DatosCopernicusTFG\descargas') # Listo todos los archivos de Copernicus
 variables = ['Coord','Profundidad','mlotst','zos','bottomT','thetao','so','uo','vo']
 
 
@@ -211,7 +241,7 @@ variables = ['Coord','Profundidad','mlotst','zos','bottomT','thetao','so','uo','
 def busca_archivo(fecha):
     texto ='_{}_'.format(str(fecha).split()[0].replace('-',''))
     archivo = [x for x in listado_archivos if str(texto) in x]
-    data = xr.open_dataset('../../descargas/{}'.format(archivo[0])) # cargo el archivo
+    data = xr.open_dataset('W:\DatosCopernicusTFG\descargas\{}'.format(archivo[0])) # cargo el archivo
     return data # devuelvo dataset
 
 def dame_datos(latitud,longitud,ds):
@@ -313,7 +343,7 @@ def crea_estr(df):
 # df_resultados.head()
 
 
-# In[18]:
+# In[10]:
 
 
 # df_resultados.head()
@@ -605,8 +635,8 @@ def ejecuta(nombre,dias,celdas):
 # In[ ]:
 
 
-configs = {'num_dias':[60],
-           'celdas':[0,1,2,3,4,5]}
+configs = {'num_dias':[0,7,14,30,60],
+           'celdas':[0,2,4]}
 
 df = pd.read_pickle('2_avistamientos_redondeo.pkl')
 inicio = time()
