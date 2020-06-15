@@ -14,11 +14,11 @@ Este apartado, debe convertirse en el resumen de la experiencia práctica del pr
 %Comentar que no he cursado mineria y he ido aprendiendo sobre el tema
 
 \section{Recogida de datos}
-La obtención de los datos necesarios para el posterior análisis, se obtuvieron a través de la organización europea \emph{Copernicus}. Esta cuenta con una serie de datos recopilados por satélites de todo el mundo.
+La obtención de los datos necesarios para el posterior análisis, se realizó a través de la organización europea \emph{Copernicus}. Esta cuenta con una serie de datos recopilados por satélites de todo el mundo.
 
 Para la descarga de estos datos, se encontraban disponibles dos alternativas. Por un lado, podían ser descargados a través de un servidor FTP y por el otro, había disponible una API de reciente lanzamiento.
 
-En un principio se priorizó la opción de la descarga a través de la API ya que podían descargarse los datos ya tratados reduciendo el trabajo previo al análisis. Finalmente se descartó esta idea por la lentitud de respuesta del servicio, así como diferentes errores que se producían, haciendo que la descarga de la totalidad de los datos no estuviese asegurada.Por este motivo se descargaron los datos a través del servidor FTP y posteriormente, eran tratados eliminando las variables y zonas geográficas que no eran necesarias.
+En un principio se priorizó la opción de la descarga a través de la API ya que podían descargarse los datos ya tratados reduciendo el trabajo previo al análisis. Finalmente se descartó esta idea por la lentitud de respuesta del servicio, así como diferentes errores que se producían, haciendo que la descarga de la totalidad de los datos no estuviese asegurada. Por este motivo se descargaron los datos a través del servidor FTP y posteriormente, eran tratados eliminando las variables y zonas geográficas que no eran necesarias.
 
 \section{Ejecución remota}
 Para la ejecución de los scripts utilizados para la descarga de los datos, la ejecución del modelo y la realización de las diferentes pruebas, se ha utilizado un equipo de cómputo de la Universidad mediante una conexión ssh y una VPN. Todo esto ha hecho que surjan diferentes problemas.
@@ -37,9 +37,9 @@ Existían casos en los que la conexión ssh se cerraba o se caía la conexión V
 \section{Preparación de los datos}\textsl{}
 Tras haber descargado los datos oceánicos, disponemos de dos fuentes de datos. Por una lado, el estado de los océanos en las diferentes fechas y coordenadas, y por otro, un registro de avistamientos de medusas.
 
-Los datos oceánicos están agrupados por cuadrantes separados cada \num{0,0833} grados. Por esto se redondearon las coordenadas de los avistamientos para coincidir con estos pasos. 
+Los datos oceánicos están agrupados por cuadrantes separados cada \num{0,0833}  grados (1/12). Por esto se redondearon las coordenadas de los avistamientos para coincidir con estos pasos. 
 
-A continuación se enlazan en un solo DataFrame los avistamientos con la variables oceánicas recogidas de ese cuadrante y en la fecha del avistamiento quedando la siguiente estructura de datos como la que encontramos en la figura \ref{est_datos}.
+A continuación se enlazan en un solo DataFrame (\textcolor{green}{Describir dataframe}) los avistamientos con la variables oceánicas recogidas de ese cuadrante y en la fecha del avistamiento quedando la siguiente estructura de datos como la que encontramos en la figura \ref{est_datos}.
 
 \imagenflotante{estructura_datos.png}{Estructura de datos resultante.}\label{est_datos}
 
@@ -58,6 +58,6 @@ Al tratarse se una aplicación web, un aspecto importante es el despliegue de la
 
 Esta nos ofrece hosting gratuito, además de desplegarse automáticamente cada vez de que se realiza un \emph{push} en el repositorio, si este está asociado a la cuenta de heroku. Por este motivo, se tuvo que realizar un segundo repositorio en Github en el que incluir unicamente la parte de la aplicación web, ya que para poder realizar el autodespliegue los archivos deben estar en el directorio raíz de nuestro repositorio.
 
-Se añadió una referencia desde el repositorio principal a este segundo ya que \emph{Git} lo permite, además de incluir el enlace también en el archivo README. El repositorio se encuentra  \href{https://github.com/psnti/WebJellyfishForecast#tfg---pablo-santidrian-tudanca}{aquí}.
+Se añadió una referencia desde el repositorio principal a este segundo ya que \emph{Git} lo permite, además de incluir el enlace también en el archivo README. El repositorio se encuentra en \href{https://github.com/psnti/WebJellyfishForecast}{https://github.com/psnti/WebJellyfishForecast}.
 
 
