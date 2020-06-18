@@ -1,522 +1,382 @@
-2020-06-10 00:37:02.556494 --------- dfAtributosNormalizado_30_dias_5_celdas.pkl
---> Random Forest ['16.280702491601307 minutos \n', {'max_depth': 12, 'max_features': 9, 'n_estimators': 189}, -0.043823036314449164]
---> Vecino mas cercano ['0.15851815144220988 minutos \n', {'n_neighbors': 59}, 0.022061446685872625]
---> Vecino mas cercano gridSearch ['0.13691683212916056 minutos \n', {'n_neighbors': 59}, 0.022061446685872625]
---> SVR ['0.21736327409744263 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.03448705039853295]
---> SVR_grid ['0.19308869043986002 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.03448705039853295]
---> arbol_decision ['0.24743815660476684 minutos \n', {'max_features': 'log2', 'max_depth': 39}, 0.002772360139454144]
---> arbol_decision_grid ['0.5080136179924011 minutos \n', {'max_depth': 48, 'max_features': 'sqrt'}, -0.0029343022403808816]
---> Boosting ['52.164461767673494 minutos \n', {'max_depth': 72, 'n_estimators': 1}, -0.005724942514330311]
-2020-06-10 01:46:57.012667 --------- dfAtributosNormalizado_30_dias_5_celdas.pkl
---> Random Forest ['34.87160995403926 minutos \n', {'max_depth': 79, 'max_features': 25, 'n_estimators': 149}, -0.5617950169697811]
---> Vecino mas cercano ['0.21143312056859334 minutos \n', {'n_neighbors': 4}, -0.0270312926947955]
---> Vecino mas cercano gridSearch ['0.21093382040659586 minutos \n', {'n_neighbors': 4}, -0.0270312926947955]
---> SVR ['0.5157952070236206 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 0.5}, -0.06426640721622726]
---> SVR_grid ['0.4964165488878886 minutos \n', {'svr__C': 0.5, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.06426640721622726]
---> arbol_decision ['0.6457055687904358 minutos \n', {'max_features': 'sqrt', 'max_depth': 1}, -0.2375220136293002]
---> arbol_decision_grid ['1.2588448405265809 minutos \n', {'max_depth': 48, 'max_features': 'log2'}, -0.051907670583808116]
---> Boosting ['128.20886351664862 minutos \n', {'max_depth': 3, 'n_estimators': 4}, -7.78342113762496]
-2020-06-10 04:33:22.251389 --------- dfAtributosNormalizado_30_dias_5_celdas.pkl
---> Random Forest ['76.97078250646591 minutos \n', {'max_depth': 95, 'max_features': 95, 'n_estimators': 127}, -0.7145843622682344]
---> Vecino mas cercano ['0.2880128026008606 minutos \n', {'n_neighbors': 6}, -0.28157510678294173]
---> Vecino mas cercano gridSearch ['0.27246230443318686 minutos \n', {'n_neighbors': 6}, -0.28157510678294173]
---> SVR ['0.861427362759908 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.11263065293511487]
---> SVR_grid ['1.0898212234179179 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.11263065293511487]
---> arbol_decision ['1.2967017571131387 minutos \n', {'max_features': 'sqrt', 'max_depth': 1}, -0.22020053809328405]
---> arbol_decision_grid ['2.55574049949646 minutos \n', {'max_depth': 1, 'max_features': 'sqrt'}, -0.09784729610838398]
---> Boosting ['293.44733850161236 minutos \n', {'max_depth': 3, 'n_estimators': 17}, -1.5062697959419487]
-2020-06-10 10:50:09.238743 --------- dfAtributosNormalizado_0_dias_0_celdas.pkl
---> Random Forest ['0.3604097048441569 minutos \n', {'max_depth': 55, 'max_features': 1, 'n_estimators': 46}, 0.05371222452506019]
---> Vecino mas cercano ['0.008073262373606364 minutos \n', {'n_neighbors': 55}, 0.013223592676343265]
---> Vecino mas cercano gridSearch ['0.006146709124247233 minutos \n', {'n_neighbors': 55}, 0.013223592676343265]
---> SVR ['0.006511688232421875 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.005043974183109756]
---> SVR_grid ['0.007183400789896647 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.005043974183109756]
---> arbol_decision ['0.007587027549743652 minutos \n', {'max_features': 'log2', 'max_depth': 18}, 0.05552536404363007]
---> arbol_decision_grid ['0.01644578774770101 minutos \n', {'max_depth': 35, 'max_features': 'log2'}, 0.019185351684686325]
---> Boosting ['0.6823142011960347 minutos \n', {'max_depth': 75, 'n_estimators': 5}, -0.030309783816887204]
-2020-06-10 10:51:14.953060 --------- dfAtributosNormalizado_0_dias_0_celdas.pkl
---> Random Forest ['0.7251192331314087 minutos \n', {'max_depth': 25, 'max_features': 13, 'n_estimators': 4}, -0.9033671012923978]
---> Vecino mas cercano ['0.014589873949686687 minutos \n', {'n_neighbors': 59}, -5.944239367337188]
---> Vecino mas cercano gridSearch ['0.01922964652379354 minutos \n', {'n_neighbors': 59}, -5.944239367337188]
---> SVR ['0.018092672030131023 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.05485011071588286]
---> SVR_grid ['0.01773917277654012 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.05485011071588286]
---> arbol_decision ['0.020901461442311604 minutos \n', {'max_features': 'sqrt', 'max_depth': 32}, -0.5484523128014216]
---> arbol_decision_grid ['0.0301384170850118 minutos \n', {'max_depth': 11, 'max_features': 'sqrt'}, -0.5307897975972999]
---> Boosting ['1.5735848943392436 minutos \n', {'max_depth': 47, 'n_estimators': 12}, -0.7887557847347277]
-2020-06-10 10:53:40.169806 --------- dfAtributosNormalizado_0_dias_0_celdas.pkl
---> Random Forest ['1.7175062537193297 minutos \n', {'max_depth': 19, 'max_features': 9, 'n_estimators': 167}, -0.6077698841258304]
---> Vecino mas cercano ['0.02710493008295695 minutos \n', {'n_neighbors': 59}, -3.5650945505499356]
---> Vecino mas cercano gridSearch ['0.026635909080505372 minutos \n', {'n_neighbors': 59}, -3.5650945505499356]
---> SVR ['0.022864301999409992 minutos \n', {'svr__kernel': 'linear', 'svr__epsilon': 0.2, 'svr__C': 10}, -0.10189844544382658]
---> SVR_grid ['0.020272990067799885 minutos \n', {'svr__C': 10, 'svr__epsilon': 0.2, 'svr__kernel': 'linear'}, -0.10189844544382658]
---> arbol_decision ['0.03416815996170044 minutos \n', {'max_features': 'log2', 'max_depth': 16}, -0.6575301459970992]
---> arbol_decision_grid ['0.0811166008313497 minutos \n', {'max_depth': 4, 'max_features': 'auto'}, -0.6267854276201676]
---> Boosting ['2.9080573360125226 minutos \n', {'max_depth': 11, 'n_estimators': 196}, -0.6785006000837617]
-2020-06-10 10:58:30.474608 --------- dfAtributosNormalizado_7_dias_1_celdas.pkl
---> Random Forest ['0.8800251483917236 minutos \n', {'max_depth': 52, 'max_features': 3, 'n_estimators': 64}, 0.00970883996261368]
---> Vecino mas cercano ['0.013898313045501709 minutos \n', {'n_neighbors': 59}, 0.0075150005910678]
---> Vecino mas cercano gridSearch ['0.017595815658569335 minutos \n', {'n_neighbors': 59}, 0.0075150005910678]
---> SVR ['0.04520941178003947 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.027528103454017572]
---> SVR_grid ['0.04041128158569336 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.027528103454017572]
---> arbol_decision ['0.015869279702504475 minutos \n', {'max_features': 'log2', 'max_depth': 49}, 0.0158092063310053]
---> arbol_decision_grid ['0.031615622838338214 minutos \n', {'max_depth': 7, 'max_features': 'sqrt'}, 0.08023627434115405]
---> Boosting ['2.4765700777371724 minutos \n', {'max_depth': 45, 'n_estimators': 1}, -0.008907489230156274]
-2020-06-10 11:02:01.793655 --------- dfAtributosNormalizado_7_dias_1_celdas.pkl
---> Random Forest ['2.101107347011566 minutos \n', {'max_depth': 35, 'max_features': 11, 'n_estimators': 18}, -1.4162955465581042]
---> Vecino mas cercano ['0.025182716051737466 minutos \n', {'n_neighbors': 56}, -6.83035862267802]
---> Vecino mas cercano gridSearch ['0.021603103478749594 minutos \n', {'n_neighbors': 56}, -6.83035862267802]
---> SVR ['0.09180498123168945 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.056180729793318965]
---> SVR_grid ['0.1018809715906779 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.056180729793318965]
---> arbol_decision ['0.045734310150146486 minutos \n', {'max_features': 'sqrt', 'max_depth': 30}, -0.4488088566512859]
---> arbol_decision_grid ['0.0803977886835734 minutos \n', {'max_depth': 30, 'max_features': 'sqrt'}, -0.35457253814459644]
---> Boosting ['6.464173197746277 minutos \n', {'max_depth': 7, 'n_estimators': 49}, -1.3226064417797792]
-2020-06-10 11:10:57.754191 --------- dfAtributosNormalizado_7_dias_1_celdas.pkl
---> Random Forest ['4.116412019729614 minutos \n', {'max_depth': 28, 'max_features': 1, 'n_estimators': 182}, -0.9071854070859574]
---> Vecino mas cercano ['0.027915072441101075 minutos \n', {'n_neighbors': 5}, -1.5497731074887129]
---> Vecino mas cercano gridSearch ['0.03841108481089274 minutos \n', {'n_neighbors': 5}, -1.5497731074887129]
---> SVR ['0.14028354485829672 minutos \n', {'svr__kernel': 'linear', 'svr__epsilon': 0.2, 'svr__C': 0.5}, -0.10383838373156562]
---> SVR_grid ['0.11802276770273844 minutos \n', {'svr__C': 0.5, 'svr__epsilon': 0.2, 'svr__kernel': 'linear'}, -0.10383838373156562]
---> arbol_decision ['0.079838498433431 minutos \n', {'max_features': 'log2', 'max_depth': 43}, -0.5839274736724314]
---> arbol_decision_grid ['0.17032790978749593 minutos \n', {'max_depth': 11, 'max_features': 'sqrt'}, -0.6907244153576657]
---> Boosting ['12.216764664649963 minutos \n', {'max_depth': 1, 'n_estimators': 63}, -1.3987195968786383]
-2020-06-10 11:27:52.277220 --------- dfAtributosNormalizado_30_dias_3_celdas.pkl
---> Random Forest ['5.129318169752756 minutos \n', {'max_depth': 1, 'max_features': 323, 'n_estimators': 55}, -0.009823046966399906]
---> Vecino mas cercano ['0.044854851563771565 minutos \n', {'n_neighbors': 56}, 0.02762582970557581]
---> Vecino mas cercano gridSearch ['0.04388965368270874 minutos \n', {'n_neighbors': 56}, 0.02762582970557581]
---> SVR ['0.26936792929967246 minutos \n', {'svr__kernel': 'linear', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.027913370584956465]
---> SVR_grid ['0.2579281091690063 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'linear'}, -0.027913370584956465]
---> arbol_decision ['0.09306252797444661 minutos \n', {'max_features': 'log2', 'max_depth': 9}, -0.003021287960396579]
---> arbol_decision_grid ['0.1642891724904378 minutos \n', {'max_depth': 25, 'max_features': 'log2'}, -0.011706346361117725]
---> Boosting ['16.18366287946701 minutos \n', {'max_depth': 45, 'n_estimators': 1}, 0.020266736337337776]
-2020-06-10 11:50:03.500249 --------- dfAtributosNormalizado_30_dias_3_celdas.pkl
---> Random Forest ['12.31994069814682 minutos \n', {'max_depth': 86, 'max_features': 6, 'n_estimators': 190}, -0.48445968261875694]
---> Vecino mas cercano ['0.06987233559290568 minutos \n', {'n_neighbors': 6}, -0.17307146360638936]
---> Vecino mas cercano gridSearch ['0.08092570304870605 minutos \n', {'n_neighbors': 6}, -0.17307146360638936]
---> SVR ['0.5215787688891093 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.06006191482185319]
---> SVR_grid ['0.5193623224894206 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.06006191482185319]
---> arbol_decision ['0.20786523818969727 minutos \n', {'max_features': 'log2', 'max_depth': 43}, -0.33827024045469933]
---> arbol_decision_grid ['0.4022247354189555 minutos \n', {'max_depth': 21, 'max_features': 'sqrt'}, -0.18504426543489466]
---> Boosting ['41.98203209241231 minutos \n', {'max_depth': 1, 'n_estimators': 25}, -1.104934368899173]
-2020-06-10 12:46:09.764619 --------- dfAtributosNormalizado_30_dias_3_celdas.pkl
---> Random Forest ['21.955130032698314 minutos \n', {'max_depth': 2, 'max_features': 39, 'n_estimators': 153}, -0.6105256090790754]
---> Vecino mas cercano ['0.1235141118367513 minutos \n', {'n_neighbors': 14}, -0.3248316011451814]
---> Vecino mas cercano gridSearch ['0.1022115707397461 minutos \n', {'n_neighbors': 14}, -0.3248316011451814]
---> SVR ['1.0532292604446412 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.10152466718021136]
---> SVR_grid ['1.0561535477638244 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.10152466718021136]
---> arbol_decision ['0.4283616860707601 minutos \n', {'max_features': 'log2', 'max_depth': 30}, -0.32629912333667255]
---> arbol_decision_grid ['0.8252654472986857 minutos \n', {'max_depth': 23, 'max_features': 'sqrt'}, -0.36733019388801225]
---> Boosting ['77.65787477493286 minutos \n', {'max_depth': 4, 'n_estimators': 44}, -3.8796802667025476]
-2020-06-10 14:29:21.921928 --------- dfAtributosNormalizado_45_dias_5_celdas.pkl
---> Random Forest ['13.018478425343831 minutos \n', {'max_depth': 2, 'max_features': 4, 'n_estimators': 140}, -0.00395795145372263]
---> Vecino mas cercano ['0.14725494384765625 minutos \n', {'n_neighbors': 59}, 0.022061446685872625]
---> Vecino mas cercano gridSearch ['0.15644479990005494 minutos \n', {'n_neighbors': 59}, 0.022061446685872625]
---> SVR ['0.1824605623881022 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.03448705039853295]
---> SVR_grid ['0.19032083749771117 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.03448705039853295]
---> arbol_decision ['0.23842002153396608 minutos \n', {'max_features': 'log2', 'max_depth': 3}, 0.08958834205391009]
---> arbol_decision_grid ['0.5005239129066468 minutos \n', {'max_depth': 45, 'max_features': 'log2'}, 0.11703606146462608]
---> Boosting ['56.78800312280655 minutos \n', {'max_depth': 13, 'n_estimators': 4}, -0.0571886516299428]
-2020-06-10 15:40:35.272262 --------- dfAtributosNormalizado_45_dias_5_celdas.pkl
---> Random Forest ['40.61020306348801 minutos \n', {'max_depth': 15, 'max_features': 61, 'n_estimators': 118}, -0.6123371574488136]
---> Vecino mas cercano ['0.21380874713261921 minutos \n', {'n_neighbors': 4}, -0.0270312926947955]
---> Vecino mas cercano gridSearch ['0.21279317140579224 minutos \n', {'n_neighbors': 4}, -0.0270312926947955]
---> SVR ['0.5212173104286194 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 0.5}, -0.06426640721622726]
---> SVR_grid ['0.5182685931523641 minutos \n', {'svr__C': 0.5, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.06426640721622726]
---> arbol_decision ['0.6767799735069275 minutos \n', {'max_features': 'log2', 'max_depth': 37}, -0.2948099399440635]
---> arbol_decision_grid ['1.267742097377777 minutos \n', {'max_depth': 49, 'max_features': 'log2'}, -0.09046257879596989]
---> Boosting ['135.67835295995076 minutos \n', {'max_depth': 54, 'n_estimators': 1}, -3.04783661915106]
-2020-06-10 18:40:17.262943 --------- dfAtributosNormalizado_45_dias_5_celdas.pkl
---> Random Forest ['67.77900457382202 minutos \n', {'max_depth': 39, 'max_features': 17, 'n_estimators': 118}, -0.44512548871298174]
---> Vecino mas cercano ['0.3006846865018209 minutos \n', {'n_neighbors': 6}, -0.28157510678294173]
---> Vecino mas cercano gridSearch ['0.27255434592564903 minutos \n', {'n_neighbors': 6}, -0.28157510678294173]
---> SVR ['0.862063197294871 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.11263065293511487]
---> SVR_grid ['0.8480322480201721 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.11263065293511487]
---> arbol_decision ['1.4627765536308288 minutos \n', {'max_features': 'sqrt', 'max_depth': 1}, -0.22085932855039517]
---> arbol_decision_grid ['2.6006844798723856 minutos \n', {'max_depth': 5, 'max_features': 'log2'}, -0.18542675678171722]
---> Boosting ['290.02669734954833 minutos \n', {'max_depth': 3, 'n_estimators': 26}, -1.8356683733274373]
-2020-06-11 00:44:26.473950 --------- dfAtributosNormalizado_45_dias_0_celdas.pkl
---> Random Forest ['0.3207217295964559 minutos \n', {'max_depth': 42, 'max_features': 3, 'n_estimators': 129}, 0.034923087597672875]
---> Vecino mas cercano ['0.008631885051727295 minutos \n', {'n_neighbors': 55}, 0.013223592676343265]
---> Vecino mas cercano gridSearch ['0.008970514933268229 minutos \n', {'n_neighbors': 55}, 0.013223592676343265]
---> SVR ['0.008246827125549316 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.005043974183109756]
---> SVR_grid ['0.007673835754394532 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.005043974183109756]
---> arbol_decision ['0.004493606090545654 minutos \n', {'max_features': 'log2', 'max_depth': 36}, 0.020506926077812404]
---> arbol_decision_grid ['0.010123948256174723 minutos \n', {'max_depth': 38, 'max_features': 'log2'}, 0.004770562449113724]
---> Boosting ['0.585800309975942 minutos \n', {'max_depth': 8, 'n_estimators': 1}, 0.0018224184594737292]
-2020-06-11 00:45:23.805494 --------- dfAtributosNormalizado_45_dias_0_celdas.pkl
---> Random Forest ['0.7797146121660868 minutos \n', {'max_depth': 99, 'max_features': 5, 'n_estimators': 24}, -0.6397986558838368]
---> Vecino mas cercano ['0.0090812881787618 minutos \n', {'n_neighbors': 59}, -5.944239367337188]
---> Vecino mas cercano gridSearch ['0.012492461999257406 minutos \n', {'n_neighbors': 59}, -5.944239367337188]
---> SVR ['0.015228148301442463 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.05485011071588286]
---> SVR_grid ['0.014553201198577882 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.05485011071588286]
---> arbol_decision ['0.019498566786448162 minutos \n', {'max_features': 'log2', 'max_depth': 36}, -0.4807594624956689]
---> arbol_decision_grid ['0.04656659364700318 minutos \n', {'max_depth': 26, 'max_features': 'log2'}, -0.23272486875243198]
---> Boosting ['1.533652412891388 minutos \n', {'max_depth': 7, 'n_estimators': 109}, -0.6754169457094565]
-2020-06-11 00:47:49.689521 --------- dfAtributosNormalizado_45_dias_0_celdas.pkl
---> Random Forest ['1.6178678711255392 minutos \n', {'max_depth': 97, 'max_features': 3, 'n_estimators': 50}, -0.5807726467052855]
---> Vecino mas cercano ['0.028097383181254067 minutos \n', {'n_neighbors': 59}, -3.5650945505499356]
---> Vecino mas cercano gridSearch ['0.028947738806406657 minutos \n', {'n_neighbors': 59}, -3.5650945505499356]
---> SVR ['0.02308777968088786 minutos \n', {'svr__kernel': 'linear', 'svr__epsilon': 0.2, 'svr__C': 10}, -0.10189844544382658]
---> SVR_grid ['0.01764650344848633 minutos \n', {'svr__C': 10, 'svr__epsilon': 0.2, 'svr__kernel': 'linear'}, -0.10189844544382658]
---> arbol_decision ['0.036861495176951094 minutos \n', {'max_features': 'log2', 'max_depth': 42}, -0.44946029287849154]
---> arbol_decision_grid ['0.06953194141387939 minutos \n', {'max_depth': 20, 'max_features': 'log2'}, -0.5319491239406695]
---> Boosting ['3.1340833862622577 minutos \n', {'max_depth': 87, 'n_estimators': 15}, -0.8384516961141338]
-2020-06-11 00:52:47.100257 --------- dfAtributosNormalizado_60_dias_1_celdas.pkl
---> Random Forest ['0.822664757569631 minutos \n', {'max_depth': 1, 'max_features': 1, 'n_estimators': 99}, 0.000568980561279353]
---> Vecino mas cercano ['0.016915512084960938 minutos \n', {'n_neighbors': 59}, 0.0075150005910678]
---> Vecino mas cercano gridSearch ['0.01503583590189616 minutos \n', {'n_neighbors': 59}, 0.0075150005910678]
---> SVR ['0.04120237429936727 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.027528103454017572]
---> SVR_grid ['0.03936456441879273 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.027528103454017572]
---> arbol_decision ['0.019494207700093587 minutos \n', {'max_features': 'log2', 'max_depth': 4}, -0.02949054643242366]
---> arbol_decision_grid ['0.03952948252360026 minutos \n', {'max_depth': 43, 'max_features': 'sqrt'}, 0.0044984504811355144]
---> Boosting ['2.2595095157623293 minutos \n', {'max_depth': 32, 'n_estimators': 2}, -0.013643517434021257]
-2020-06-11 00:56:02.373026 --------- dfAtributosNormalizado_60_dias_1_celdas.pkl
---> Random Forest ['2.3557594815889993 minutos \n', {'max_depth': 89, 'max_features': 81, 'n_estimators': 36}, -1.4341841880805997]
---> Vecino mas cercano ['0.024404017130533855 minutos \n', {'n_neighbors': 56}, -6.83035862267802]
---> Vecino mas cercano gridSearch ['0.018425166606903076 minutos \n', {'n_neighbors': 56}, -6.83035862267802]
---> SVR ['0.10329190492630005 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.056180729793318965]
---> SVR_grid ['0.09287875493367513 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.056180729793318965]
---> arbol_decision ['0.045542625586191814 minutos \n', {'max_features': 'sqrt', 'max_depth': 19}, -0.3868689405400983]
---> arbol_decision_grid ['0.09442470868428549 minutos \n', {'max_depth': 14, 'max_features': 'log2'}, -0.424369089711991]
---> Boosting ['6.1250944375991825 minutos \n', {'max_depth': 5, 'n_estimators': 12}, -1.6214471345363042]
-2020-06-11 01:04:54.002317 --------- dfAtributosNormalizado_60_dias_1_celdas.pkl
---> Random Forest ['4.475205926100413 minutos \n', {'max_depth': 98, 'max_features': 1, 'n_estimators': 69}, -0.8873173038702312]
---> Vecino mas cercano ['0.03284122149149577 minutos \n', {'n_neighbors': 5}, -1.5497731074887129]
---> Vecino mas cercano gridSearch ['0.04556972583134969 minutos \n', {'n_neighbors': 5}, -1.5497731074887129]
---> SVR ['0.11070518096288046 minutos \n', {'svr__kernel': 'linear', 'svr__epsilon': 0.2, 'svr__C': 0.5}, -0.10383838373156562]
---> SVR_grid ['0.14795396327972413 minutos \n', {'svr__C': 0.5, 'svr__epsilon': 0.2, 'svr__kernel': 'linear'}, -0.10383838373156562]
---> arbol_decision ['0.09180370171864828 minutos \n', {'max_features': 'log2', 'max_depth': 45}, -0.8539311830804402]
---> arbol_decision_grid ['0.15797763268152873 minutos \n', {'max_depth': 7, 'max_features': 'log2'}, -0.6627637338466165]
---> Boosting ['12.587182990709941 minutos \n', {'max_depth': 63, 'n_estimators': 1}, -2.746629741291283]
-2020-06-11 01:22:33.022681 --------- dfAtributosNormalizado_0_dias_1_celdas.pkl
---> Random Forest ['0.9444079756736755 minutos \n', {'max_depth': 81, 'max_features': 4, 'n_estimators': 47}, 0.026207097513371858]
---> Vecino mas cercano ['0.013155126571655273 minutos \n', {'n_neighbors': 59}, 0.0075150005910678]
---> Vecino mas cercano gridSearch ['0.011871818701426189 minutos \n', {'n_neighbors': 59}, 0.0075150005910678]
---> SVR ['0.04046347935994466 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.027528103454017572]
---> SVR_grid ['0.04346121549606323 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.027528103454017572]
---> arbol_decision ['0.022904558976491293 minutos \n', {'max_features': 'sqrt', 'max_depth': 48}, 0.0734762760112453]
---> arbol_decision_grid ['0.038661789894104 minutos \n', {'max_depth': 46, 'max_features': 'log2'}, -0.005562069468141806]
---> Boosting ['2.531868402163188 minutos \n', {'max_depth': 61, 'n_estimators': 3}, -0.013745548437913424]
-2020-06-11 01:26:11.868570 --------- dfAtributosNormalizado_0_dias_1_celdas.pkl
---> Random Forest ['2.0490548610687256 minutos \n', {'max_depth': 56, 'max_features': 4, 'n_estimators': 55}, -1.5997016965114967]
---> Vecino mas cercano ['0.019361452261606852 minutos \n', {'n_neighbors': 56}, -6.83035862267802]
---> Vecino mas cercano gridSearch ['0.020037174224853516 minutos \n', {'n_neighbors': 56}, -6.83035862267802]
---> SVR ['0.10300869146982829 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.056180729793318965]
---> SVR_grid ['0.09825075467427571 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.056180729793318965]
---> arbol_decision ['0.05401535431543986 minutos \n', {'max_features': 'log2', 'max_depth': 15}, -0.2952403285233095]
---> arbol_decision_grid ['0.08159372011820475 minutos \n', {'max_depth': 30, 'max_features': 'log2'}, -0.41508737138709356]
---> Boosting ['6.534829302628835 minutos \n', {'max_depth': 6, 'n_estimators': 75}, -1.044018426552611]
-2020-06-11 01:35:09.519061 --------- dfAtributosNormalizado_0_dias_1_celdas.pkl
---> Random Forest ['3.876830728848775 minutos \n', {'max_depth': 68, 'max_features': 2, 'n_estimators': 81}, -1.044319049616672]
---> Vecino mas cercano ['0.032377541065216064 minutos \n', {'n_neighbors': 5}, -1.5497731074887129]
---> Vecino mas cercano gridSearch ['0.03187765280405681 minutos \n', {'n_neighbors': 5}, -1.5497731074887129]
---> SVR ['0.1136400580406189 minutos \n', {'svr__kernel': 'linear', 'svr__epsilon': 0.2, 'svr__C': 0.5}, -0.10383838373156562]
---> SVR_grid ['0.14274850686391194 minutos \n', {'svr__C': 0.5, 'svr__epsilon': 0.2, 'svr__kernel': 'linear'}, -0.10383838373156562]
---> arbol_decision ['0.09646696249643961 minutos \n', {'max_features': 'log2', 'max_depth': 10}, -1.072647830542544]
---> arbol_decision_grid ['0.17186302741368611 minutos \n', {'max_depth': 16, 'max_features': 'log2'}, -0.6514370678635649]
---> Boosting ['12.54231603940328 minutos \n', {'max_depth': 84, 'n_estimators': 1}, -2.605939808414052]
-2020-06-11 01:52:10.053458 --------- dfAtributosNormalizado_45_dias_2_celdas.pkl
---> Random Forest ['2.307894245783488 minutos \n', {'max_depth': 27, 'max_features': 1, 'n_estimators': 97}, 0.03172589034565054]
---> Vecino mas cercano ['0.02487788995107015 minutos \n', {'n_neighbors': 45}, 0.018989196262394592]
---> Vecino mas cercano gridSearch ['0.020950440565745035 minutos \n', {'n_neighbors': 45}, 0.018989196262394592]
---> SVR ['0.12312664985656738 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.03474429641123555]
---> SVR_grid ['0.11656568050384522 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.03474429641123555]
---> arbol_decision ['0.04866898059844971 minutos \n', {'max_features': 'sqrt', 'max_depth': 9}, 0.04648125964056582]
---> arbol_decision_grid ['0.07237111330032349 minutos \n', {'max_depth': 37, 'max_features': 'sqrt'}, 0.17867911490372834]
---> Boosting ['7.345166726907094 minutos \n', {'max_depth': 1, 'n_estimators': 106}, -0.026133363635219342]
-2020-06-11 02:02:13.664737 --------- dfAtributosNormalizado_45_dias_2_celdas.pkl
---> Random Forest ['5.513799409071605 minutos \n', {'max_depth': 99, 'max_features': 39, 'n_estimators': 42}, -0.9128164379004401]
---> Vecino mas cercano ['0.03704680601755778 minutos \n', {'n_neighbors': 9}, -3.6456533631383268]
---> Vecino mas cercano gridSearch ['0.03552063306172689 minutos \n', {'n_neighbors': 9}, -3.6456533631383268]
---> SVR ['0.3058521866798401 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.05785493531122081]
---> SVR_grid ['0.3129845420519511 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.05785493531122081]
---> arbol_decision ['0.09065932035446167 minutos \n', {'max_features': 'log2', 'max_depth': 23}, -0.3801813276532531]
---> arbol_decision_grid ['0.2082246979077657 minutos \n', {'max_depth': 4, 'max_features': 'log2'}, -0.2729944724989464]
---> Boosting ['16.52425652742386 minutos \n', {'max_depth': 5, 'n_estimators': 100}, -1.6152418067800607]
-2020-06-11 02:25:15.411677 --------- dfAtributosNormalizado_45_dias_2_celdas.pkl
---> Random Forest ['11.565410808722179 minutos \n', {'max_depth': 43, 'max_features': 3, 'n_estimators': 48}, -1.0033388207653917]
---> Vecino mas cercano ['0.0723806103070577 minutos \n', {'n_neighbors': 1}, -0.4045194879533886]
---> Vecino mas cercano gridSearch ['0.06068803469340007 minutos \n', {'n_neighbors': 1}, -0.4045194879533886]
---> SVR ['0.46661072174708046 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.1118636958163866]
---> SVR_grid ['0.45505211353302 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.1118636958163866]
---> arbol_decision ['0.2161251147588094 minutos \n', {'max_features': 'log2', 'max_depth': 5}, -0.454675258076778]
---> arbol_decision_grid ['0.4069788336753845 minutos \n', {'max_depth': 11, 'max_features': 'log2'}, -1.165456307288998]
---> Boosting ['36.924639475345614 minutos \n', {'max_depth': 1, 'n_estimators': 34}, -0.9563787217621286]
-2020-06-11 03:15:25.531898 --------- dfAtributosNormalizado_60_dias_2_celdas.pkl
---> Random Forest ['2.1423079411188763 minutos \n', {'max_depth': 31, 'max_features': 1, 'n_estimators': 89}, -0.00463086322085382]
---> Vecino mas cercano ['0.028227603435516356 minutos \n', {'n_neighbors': 45}, 0.018989196262394592]
---> Vecino mas cercano gridSearch ['0.0327584981918335 minutos \n', {'n_neighbors': 45}, 0.018989196262394592]
---> SVR ['0.11488187710444132 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.03474429641123555]
---> SVR_grid ['0.11919821898142496 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.03474429641123555]
---> arbol_decision ['0.03987025817235311 minutos \n', {'max_features': 'sqrt', 'max_depth': 16}, 0.08500469933598387]
---> arbol_decision_grid ['0.08389689524968465 minutos \n', {'max_depth': 27, 'max_features': 'log2'}, 0.011968266481534484]
---> Boosting ['7.368133167425792 minutos \n', {'max_depth': 89, 'n_estimators': 2}, -0.0028871065075246616]
-2020-06-11 03:25:21.320888 --------- dfAtributosNormalizado_60_dias_2_celdas.pkl
---> Random Forest ['5.611693080266317 minutos \n', {'max_depth': 28, 'max_features': 57, 'n_estimators': 9}, -0.7105188891531973]
---> Vecino mas cercano ['0.0488460381825765 minutos \n', {'n_neighbors': 9}, -3.6456533631383268]
---> Vecino mas cercano gridSearch ['0.04416336218516032 minutos \n', {'n_neighbors': 9}, -3.6456533631383268]
---> SVR ['0.32141117254892987 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.05785493531122081]
---> SVR_grid ['0.31410104433695474 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.05785493531122081]
---> arbol_decision ['0.10320742527643839 minutos \n', {'max_features': 'sqrt', 'max_depth': 28}, -0.2928587273444309]
---> arbol_decision_grid ['0.20283684730529786 minutos \n', {'max_depth': 2, 'max_features': 'log2'}, -0.3214251393477201]
---> Boosting ['17.586647474765776 minutos \n', {'max_depth': 6, 'n_estimators': 164}, -2.0385996488348006]
-2020-06-11 03:49:35.326861 --------- dfAtributosNormalizado_60_dias_2_celdas.pkl
---> Random Forest ['10.770384041468303 minutos \n', {'max_depth': 17, 'max_features': 2, 'n_estimators': 135}, -0.8412541575220294]
---> Vecino mas cercano ['0.06849894126256308 minutos \n', {'n_neighbors': 1}, -0.4045194879533886]
---> Vecino mas cercano gridSearch ['0.06815067529678345 minutos \n', {'n_neighbors': 1}, -0.4045194879533886]
---> SVR ['0.45971313714981077 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.1118636958163866]
---> SVR_grid ['0.4540139635403951 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.1118636958163866]
---> arbol_decision ['0.2309930642445882 minutos \n', {'max_features': 'log2', 'max_depth': 31}, -1.022478969373885]
---> arbol_decision_grid ['0.4150078495343526 minutos \n', {'max_depth': 3, 'max_features': 'log2'}, -0.35243224059773337]
---> Boosting ['35.11853406429291 minutos \n', {'max_depth': 1, 'n_estimators': 102}, -1.3147414477883843]
-2020-06-11 04:37:10.487790 --------- dfAtributosNormalizado_30_dias_4_celdas.pkl
---> Random Forest ['8.578474644819895 minutos \n', {'max_depth': 15, 'max_features': 6, 'n_estimators': 178}, -0.007706618667233989]
---> Vecino mas cercano ['0.07779370546340943 minutos \n', {'n_neighbors': 58}, 0.029770419867504505]
---> Vecino mas cercano gridSearch ['0.10423741340637208 minutos \n', {'n_neighbors': 58}, 0.029770419867504505]
---> SVR ['0.22676839431126913 minutos \n', {'svr__kernel': 'linear', 'svr__epsilon': 0.2, 'svr__C': 0.5}, -0.02460367275281905]
---> SVR_grid ['0.2576395948727926 minutos \n', {'svr__C': 0.5, 'svr__epsilon': 0.2, 'svr__kernel': 'linear'}, -0.02460367275281905]
---> arbol_decision ['0.1726161003112793 minutos \n', {'max_features': 'log2', 'max_depth': 34}, -0.01359219332370177]
---> arbol_decision_grid ['0.3288692752520243 minutos \n', {'max_depth': 1, 'max_features': 'sqrt'}, -0.01043921007568799]
---> Boosting ['30.871597770849863 minutos \n', {'max_depth': 87, 'n_estimators': 2}, 0.01467140449934301]
-2020-06-11 05:17:47.630590 --------- dfAtributosNormalizado_30_dias_4_celdas.pkl
---> Random Forest ['20.74106943209966 minutos \n', {'max_depth': 8, 'max_features': 9, 'n_estimators': 53}, -0.6281111417153507]
---> Vecino mas cercano ['0.14653446674346923 minutos \n', {'n_neighbors': 4}, -0.05773800773914005]
---> Vecino mas cercano gridSearch ['0.14672643343607586 minutos \n', {'n_neighbors': 4}, -0.05773800773914005]
---> SVR ['0.8158834179242452 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.06272873174957883]
---> SVR_grid ['0.8524817148844401 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.06272873174957883]
---> arbol_decision ['0.3584280212720235 minutos \n', {'max_features': 'sqrt', 'max_depth': 44}, -0.11717225975964685]
---> arbol_decision_grid ['0.7692792455355326 minutos \n', {'max_depth': 2, 'max_features': 'sqrt'}, -0.10833444774173422]
---> Boosting ['73.49436889489492 minutos \n', {'max_depth': 33, 'n_estimators': 5}, -9.492589220237516]
-2020-06-11 06:55:07.177900 --------- dfAtributosNormalizado_30_dias_4_celdas.pkl
---> Random Forest ['41.93779552380244 minutos \n', {'max_depth': 31, 'max_features': 26, 'n_estimators': 166}, -0.6260198567325783]
---> Vecino mas cercano ['0.1913668711980184 minutos \n', {'n_neighbors': 5}, -0.3699804363391096]
---> Vecino mas cercano gridSearch ['0.18655774593353272 minutos \n', {'n_neighbors': 5}, -0.3699804363391096]
---> SVR ['1.3648789167404174 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 10}, -0.11298193393275247]
---> SVR_grid ['1.3952648957570395 minutos \n', {'svr__C': 10, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.11298193393275247]
---> arbol_decision ['0.8400532484054566 minutos \n', {'max_features': 'log2', 'max_depth': 6}, -0.2764104104873663]
---> arbol_decision_grid ['1.4285669724146526 minutos \n', {'max_depth': 4, 'max_features': 'sqrt'}, -0.1885686797933553]
---> Boosting ['139.38670045932133 minutos \n', {'max_depth': 1, 'n_estimators': 5}, -1.6727586476254779]
-2020-06-11 10:01:51.126350 --------- dfAtributosNormalizado_15_dias_5_celdas.pkl
---> Random Forest ['12.95512451728185 minutos \n', {'max_depth': 67, 'max_features': 3, 'n_estimators': 182}, 0.014696871306771886]
---> Vecino mas cercano ['0.1315903623898824 minutos \n', {'n_neighbors': 59}, 0.022061446685872625]
---> Vecino mas cercano gridSearch ['0.15821032126744589 minutos \n', {'n_neighbors': 59}, 0.022061446685872625]
---> SVR ['0.17864090998967488 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.03448705039853295]
---> SVR_grid ['0.1820496400197347 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.03448705039853295]
---> arbol_decision ['0.28223815361658733 minutos \n', {'max_features': 'log2', 'max_depth': 1}, -0.028887443555276615]
---> arbol_decision_grid ['0.5052052060763041 minutos \n', {'max_depth': 19, 'max_features': 'sqrt'}, 0.11614523088843742]
---> Boosting ['50.14562864700953 minutos \n', {'max_depth': 28, 'n_estimators': 1}, -0.003694165462025112]
-2020-06-11 11:06:23.485879 --------- dfAtributosNormalizado_15_dias_5_celdas.pkl
---> Random Forest ['40.35809989372889 minutos \n', {'max_depth': 96, 'max_features': 809, 'n_estimators': 2}, -0.2229654362245319]
---> Vecino mas cercano ['0.21008614699045816 minutos \n', {'n_neighbors': 4}, -0.0270312926947955]
---> Vecino mas cercano gridSearch ['0.21344029506047565 minutos \n', {'n_neighbors': 4}, -0.0270312926947955]
---> SVR ['0.5115831732749939 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 0.5}, -0.06426640721622726]
---> SVR_grid ['0.5184512257575988 minutos \n', {'svr__C': 0.5, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.06426640721622726]
---> arbol_decision ['0.6156740705172221 minutos \n', {'max_features': 'log2', 'max_depth': 6}, -0.11105510899943613]
---> arbol_decision_grid ['1.2437304377555847 minutos \n', {'max_depth': 13, 'max_features': 'log2'}, -0.1372346776190457]
---> Boosting ['135.85204921960832 minutos \n', {'max_depth': 95, 'n_estimators': 1}, -3.041436452989381]
-2020-06-11 14:05:54.910419 --------- dfAtributosNormalizado_15_dias_5_celdas.pkl
---> Random Forest ['80.13615761200587 minutos \n', {'max_depth': 39, 'max_features': 27, 'n_estimators': 102}, -0.5142557831721303]
---> Vecino mas cercano ['0.2742102305094401 minutos \n', {'n_neighbors': 6}, -0.28157510678294173]
---> Vecino mas cercano gridSearch ['0.28185898860295616 minutos \n', {'n_neighbors': 6}, -0.28157510678294173]
---> SVR ['0.8557572762171427 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.11263065293511487]
---> SVR_grid ['0.8510971228281657 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.11263065293511487]
---> arbol_decision ['1.131832512219747 minutos \n', {'max_features': 'sqrt', 'max_depth': 1}, -0.19248433256276182]
---> arbol_decision_grid ['2.580961998303731 minutos \n', {'max_depth': 1, 'max_features': 'sqrt'}, -0.20199251531326068]
---> Boosting ['289.79293082555137 minutos \n', {'max_depth': 3, 'n_estimators': 15}, -1.4416561104792627]
-2020-06-11 20:21:49.276994 --------- dfAtributosNormalizado_60_dias_4_celdas.pkl
---> Random Forest ['8.984708019097646 minutos \n', {'max_depth': 59, 'max_features': 1, 'n_estimators': 94}, 0.013123640015791582]
---> Vecino mas cercano ['0.07788420915603637 minutos \n', {'n_neighbors': 58}, 0.029770419867504505]
---> Vecino mas cercano gridSearch ['0.0879601001739502 minutos \n', {'n_neighbors': 58}, 0.029770419867504505]
---> SVR ['0.26089518864949546 minutos \n', {'svr__kernel': 'linear', 'svr__epsilon': 0.2, 'svr__C': 0.5}, -0.02460367275281905]
---> SVR_grid ['0.25669017632802327 minutos \n', {'svr__C': 0.5, 'svr__epsilon': 0.2, 'svr__kernel': 'linear'}, -0.02460367275281905]
---> arbol_decision ['0.1478790322939555 minutos \n', {'max_features': 'log2', 'max_depth': 3}, 0.0331017696024774]
---> arbol_decision_grid ['0.32164575656255084 minutos \n', {'max_depth': 10, 'max_features': 'log2'}, 0.036788223724418645]
---> Boosting ['33.9848934451739 minutos \n', {'max_depth': 35, 'n_estimators': 3}, 0.0009111282760407846]
-2020-06-11 21:05:56.678005 --------- dfAtributosNormalizado_60_dias_4_celdas.pkl
---> Random Forest ['24.083116404215495 minutos \n', {'max_depth': 5, 'max_features': 34, 'n_estimators': 123}, -0.7875592260236044]
---> Vecino mas cercano ['0.13840352694193522 minutos \n', {'n_neighbors': 4}, -0.05773800773914005]
---> Vecino mas cercano gridSearch ['0.132918643951416 minutos \n', {'n_neighbors': 4}, -0.05773800773914005]
---> SVR ['0.8363358736038208 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.06272873174957883]
---> SVR_grid ['0.8552820126215617 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.06272873174957883]
---> arbol_decision ['0.3497727195421855 minutos \n', {'max_features': 'log2', 'max_depth': 1}, -0.08538873278083177]
---> arbol_decision_grid ['0.7690784255663554 minutos \n', {'max_depth': 1, 'max_features': 'sqrt'}, -0.05979777619415305]
---> Boosting ['83.01529140472412 minutos \n', {'max_depth': 1, 'n_estimators': 4}, -4.304510629839248]
-2020-06-11 22:56:07.525257 --------- dfAtributosNormalizado_60_dias_4_celdas.pkl
---> Random Forest ['38.22201888958613 minutos \n', {'max_depth': 62, 'max_features': 3, 'n_estimators': 41}, -0.5555327551252025]
---> Vecino mas cercano ['0.19526031017303466 minutos \n', {'n_neighbors': 5}, -0.3699804363391096]
---> Vecino mas cercano gridSearch ['0.19773071606953938 minutos \n', {'n_neighbors': 5}, -0.3699804363391096]
---> SVR ['1.3670220057169595 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 10}, -0.11298193393275247]
---> SVR_grid ['1.3756067832310994 minutos \n', {'svr__C': 10, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.11298193393275247]
---> arbol_decision ['0.649310040473938 minutos \n', {'max_features': 'log2', 'max_depth': 37}, -0.3557324005226571]
---> arbol_decision_grid ['1.4351590156555176 minutos \n', {'max_depth': 4, 'max_features': 'sqrt'}, -0.1921227854160838]
---> Boosting ['137.74350363413492 minutos \n', {'max_depth': 24, 'n_estimators': 2}, -1.8613176219544272]
-2020-06-12 01:57:18.703178 --------- dfAtributosNormalizado_15_dias_0_celdas.pkl
---> Random Forest ['0.3271119952201843 minutos \n', {'max_depth': 27, 'max_features': 1, 'n_estimators': 183}, 0.029474708386369952]
---> Vecino mas cercano ['0.011514715353647868 minutos \n', {'n_neighbors': 55}, 0.013223592676343265]
---> Vecino mas cercano gridSearch ['0.0076250394185384115 minutos \n', {'n_neighbors': 55}, 0.013223592676343265]
---> SVR ['0.008180507024129232 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.005043974183109756]
---> SVR_grid ['0.01014568010965983 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.005043974183109756]
---> arbol_decision ['0.01189341942469279 minutos \n', {'max_features': 'log2', 'max_depth': 29}, 0.013701844268968142]
---> arbol_decision_grid ['0.01952527364095052 minutos \n', {'max_depth': 27, 'max_features': 'sqrt'}, 0.07473098313407062]
---> Boosting ['0.5726203958193461 minutos \n', {'max_depth': 86, 'n_estimators': 1}, 0.00027452323133386747]
-2020-06-12 01:58:16.874582 --------- dfAtributosNormalizado_15_dias_0_celdas.pkl
---> Random Forest ['0.8680907289187113 minutos \n', {'max_depth': 52, 'max_features': 7, 'n_estimators': 13}, -0.8159262006591801]
---> Vecino mas cercano ['0.01575752894083659 minutos \n', {'n_neighbors': 59}, -5.944239367337188]
---> Vecino mas cercano gridSearch ['0.013371551036834716 minutos \n', {'n_neighbors': 59}, -5.944239367337188]
---> SVR ['0.015028707186381022 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.05485011071588286]
---> SVR_grid ['0.013818458716074625 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.05485011071588286]
---> arbol_decision ['0.02154239018758138 minutos \n', {'max_features': 'sqrt', 'max_depth': 13}, -0.41215616097204605]
---> arbol_decision_grid ['0.04252845048904419 minutos \n', {'max_depth': 25, 'max_features': 'sqrt'}, -0.43775170065381097]
---> Boosting ['1.4548199415206908 minutos \n', {'max_depth': 7, 'n_estimators': 107}, -0.6524150690202998]
-2020-06-12 02:00:43.606245 --------- dfAtributosNormalizado_15_dias_0_celdas.pkl
---> Random Forest ['1.6383910576502483 minutos \n', {'max_depth': 91, 'max_features': 5, 'n_estimators': 107}, -0.5919166531594954]
---> Vecino mas cercano ['0.018868422508239745 minutos \n', {'n_neighbors': 59}, -3.5650945505499356]
---> Vecino mas cercano gridSearch ['0.024030764897664387 minutos \n', {'n_neighbors': 59}, -3.5650945505499356]
---> SVR ['0.024727988243103027 minutos \n', {'svr__kernel': 'linear', 'svr__epsilon': 0.2, 'svr__C': 10}, -0.10189844544382658]
---> SVR_grid ['0.03115229606628418 minutos \n', {'svr__C': 10, 'svr__epsilon': 0.2, 'svr__kernel': 'linear'}, -0.10189844544382658]
---> arbol_decision ['0.04223003387451172 minutos \n', {'max_features': 'sqrt', 'max_depth': 11}, -0.746338539433871]
---> arbol_decision_grid ['0.06431183417638144 minutos \n', {'max_depth': 6, 'max_features': None}, -0.4001399480259581]
---> Boosting ['2.892497205734253 minutos \n', {'max_depth': 12, 'n_estimators': 16}, -0.550509588477438]
-2020-06-12 02:05:27.838943 --------- dfAtributosNormalizado_60_dias_3_celdas.pkl
---> Random Forest ['4.603123295307159 minutos \n', {'max_depth': 15, 'max_features': 2, 'n_estimators': 86}, 0.049674484363015525]
---> Vecino mas cercano ['0.04388370513916016 minutos \n', {'n_neighbors': 56}, 0.02762582970557581]
---> Vecino mas cercano gridSearch ['0.05622775554656982 minutos \n', {'n_neighbors': 56}, 0.02762582970557581]
---> SVR ['0.2642544706662496 minutos \n', {'svr__kernel': 'linear', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.027913370584956465]
---> SVR_grid ['0.2637086351712545 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'linear'}, -0.027913370584956465]
---> arbol_decision ['0.08421776692072551 minutos \n', {'max_features': 'log2', 'max_depth': 28}, 0.0020851403718086248]
---> arbol_decision_grid ['0.16694269180297852 minutos \n', {'max_depth': 1, 'max_features': 'log2'}, 0.0485409859275695]
---> Boosting ['15.498171909650166 minutos \n', {'max_depth': 2, 'n_estimators': 4}, -0.011594393597252672]
-2020-06-12 02:26:26.714816 --------- dfAtributosNormalizado_60_dias_3_celdas.pkl
---> Random Forest ['14.190619174639384 minutos \n', {'max_depth': 43, 'max_features': 36, 'n_estimators': 77}, -0.5368374522708843]
---> Vecino mas cercano ['0.0774168054262797 minutos \n', {'n_neighbors': 6}, -0.17307146360638936]
---> Vecino mas cercano gridSearch ['0.0859770139058431 minutos \n', {'n_neighbors': 6}, -0.17307146360638936]
---> SVR ['0.5261556108792623 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.06006191482185319]
---> SVR_grid ['0.5181233167648316 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.06006191482185319]
---> arbol_decision ['0.1921967585881551 minutos \n', {'max_features': 'sqrt', 'max_depth': 47}, -0.16548572296781677]
---> arbol_decision_grid ['0.39706464211146036 minutos \n', {'max_depth': 1, 'max_features': 'sqrt'}, -0.05759528161079079]
---> Boosting ['40.259294136365256 minutos \n', {'max_depth': 63, 'n_estimators': 9}, -1.4427783786985895]
-2020-06-12 03:22:41.565169 --------- dfAtributosNormalizado_60_dias_3_celdas.pkl
---> Random Forest ['24.129156426588693 minutos \n', {'max_depth': 3, 'max_features': 379, 'n_estimators': 192}, -0.6249460661946583]
---> Vecino mas cercano ['0.09046348730723063 minutos \n', {'n_neighbors': 14}, -0.3248316011451814]
---> Vecino mas cercano gridSearch ['0.12163283427556355 minutos \n', {'n_neighbors': 14}, -0.3248316011451814]
---> SVR ['1.0499804059664408 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.10152466718021136]
---> SVR_grid ['1.0336724360783895 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.10152466718021136]
---> arbol_decision ['0.43457479079564415 minutos \n', {'max_features': 'sqrt', 'max_depth': 1}, -0.618973285426078]
---> arbol_decision_grid ['0.8180853684743246 minutos \n', {'max_depth': 1, 'max_features': 'sqrt'}, -0.4836403254194897]
---> Boosting ['73.98955491781234 minutos \n', {'max_depth': 4, 'n_estimators': 132}, -1.6049080401878224]
-2020-06-12 05:04:21.643827 --------- dfAtributosNormalizado_45_dias_3_celdas.pkl
---> Random Forest ['4.864546124140421 minutos \n', {'max_depth': 46, 'max_features': 4, 'n_estimators': 147}, -0.00848372193980107]
---> Vecino mas cercano ['0.05823233524958293 minutos \n', {'n_neighbors': 56}, 0.02762582970557581]
---> Vecino mas cercano gridSearch ['0.0522149403889974 minutos \n', {'n_neighbors': 56}, 0.02762582970557581]
---> SVR ['0.2757452885309855 minutos \n', {'svr__kernel': 'linear', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.027913370584956465]
---> SVR_grid ['0.2553955237070719 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'linear'}, -0.027913370584956465]
---> arbol_decision ['0.09145721197128295 minutos \n', {'max_features': 'log2', 'max_depth': 1}, -0.008746983678855735]
---> arbol_decision_grid ['0.1593740979830424 minutos \n', {'max_depth': 3, 'max_features': 'log2'}, 0.006277207621468772]
---> Boosting ['16.605116244157156 minutos \n', {'max_depth': 3, 'n_estimators': 25}, -0.06541473968489153]
-2020-06-12 05:26:43.410598 --------- dfAtributosNormalizado_45_dias_3_celdas.pkl
---> Random Forest ['12.122084005673726 minutos \n', {'max_depth': 61, 'max_features': 13, 'n_estimators': 170}, -0.24598644327698133]
---> Vecino mas cercano ['0.06710023482640584 minutos \n', {'n_neighbors': 6}, -0.17307146360638936]
---> Vecino mas cercano gridSearch ['0.08115877310434977 minutos \n', {'n_neighbors': 6}, -0.17307146360638936]
---> SVR ['0.527047340075175 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.06006191482185319]
---> SVR_grid ['0.5191182732582093 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.06006191482185319]
---> arbol_decision ['0.19142614205678304 minutos \n', {'max_features': 'sqrt', 'max_depth': 6}, -0.21279383953210584]
---> arbol_decision_grid ['0.3939874569574992 minutos \n', {'max_depth': 14, 'max_features': 'log2'}, -0.08714400872769397]
---> Boosting ['38.7757075270017 minutos \n', {'max_depth': 1, 'n_estimators': 168}, -1.1834213552536708]
-2020-06-12 06:19:24.125574 --------- dfAtributosNormalizado_45_dias_3_celdas.pkl
---> Random Forest ['24.168822328249615 minutos \n', {'max_depth': 63, 'max_features': 6, 'n_estimators': 121}, -0.5988573834667374]
---> Vecino mas cercano ['0.12389790217081706 minutos \n', {'n_neighbors': 14}, -0.3248316011451814]
---> Vecino mas cercano gridSearch ['0.10067779620488485 minutos \n', {'n_neighbors': 14}, -0.3248316011451814]
---> SVR ['1.0209868232409158 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.10152466718021136]
---> SVR_grid ['1.0188900550206503 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.10152466718021136]
---> arbol_decision ['0.4280929803848267 minutos \n', {'max_features': 'log2', 'max_depth': 11}, -0.2577498085698385]
---> arbol_decision_grid ['0.833148185412089 minutos \n', {'max_depth': 2, 'max_features': 'log2'}, -0.18324661132919612]
---> Boosting ['81.83947761058808 minutos \n', {'max_depth': 1, 'n_estimators': 112}, -0.7471089226044871]
-2020-06-12 08:08:56.211183 --------- dfAtributosNormalizado_0_dias_4_celdas.pkl
---> Random Forest ['10.349450739224752 minutos \n', {'max_depth': 12, 'max_features': 227, 'n_estimators': 6}, 0.0057656358449890074]
---> Vecino mas cercano ['0.09635836283365885 minutos \n', {'n_neighbors': 58}, 0.029770419867504505]
---> Vecino mas cercano gridSearch ['0.09142561356226603 minutos \n', {'n_neighbors': 58}, 0.029770419867504505]
---> SVR ['0.2521245042483012 minutos \n', {'svr__kernel': 'linear', 'svr__epsilon': 0.2, 'svr__C': 0.5}, -0.02460367275281905]
---> SVR_grid ['0.26155813137690226 minutos \n', {'svr__C': 0.5, 'svr__epsilon': 0.2, 'svr__kernel': 'linear'}, -0.02460367275281905]
---> arbol_decision ['0.18040744860967 minutos \n', {'max_features': 'log2', 'max_depth': 44}, 0.07963068069073564]
---> arbol_decision_grid ['0.32327813704808556 minutos \n', {'max_depth': 48, 'max_features': 'sqrt'}, 0.012788430519015515]
---> Boosting ['29.88816527525584 minutos \n', {'max_depth': 21, 'n_estimators': 1}, -0.009397115556723512]
-2020-06-12 08:50:22.816896 --------- dfAtributosNormalizado_0_dias_4_celdas.pkl
---> Random Forest ['22.418743284543357 minutos \n', {'max_depth': 13, 'max_features': 448, 'n_estimators': 2}, -0.4623064499429976]
---> Vecino mas cercano ['0.1419675588607788 minutos \n', {'n_neighbors': 4}, -0.05773800773914005]
---> Vecino mas cercano gridSearch ['0.1390978455543518 minutos \n', {'n_neighbors': 4}, -0.05773800773914005]
---> SVR ['0.8354593714078268 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.06272873174957883]
---> SVR_grid ['0.8368231693903605 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.06272873174957883]
---> arbol_decision ['0.4228343844413757 minutos \n', {'max_features': 'log2', 'max_depth': 40}, -0.18092630501739135]
---> arbol_decision_grid ['0.7704318364461263 minutos \n', {'max_depth': 29, 'max_features': 'log2'}, -0.2216614795059631]
---> Boosting ['79.3048619111379 minutos \n', {'max_depth': 63, 'n_estimators': 5}, -9.563302811784345]
-2020-06-12 10:35:15.077203 --------- dfAtributosNormalizado_0_dias_4_celdas.pkl
---> Random Forest ['52.479936142762504 minutos \n', {'max_depth': 62, 'max_features': 35, 'n_estimators': 158}, -0.6495843427882869]
---> Vecino mas cercano ['0.18818879922231038 minutos \n', {'n_neighbors': 5}, -0.3699804363391096]
---> Vecino mas cercano gridSearch ['0.19317574898401896 minutos \n', {'n_neighbors': 5}, -0.3699804363391096]
---> SVR ['1.360599112510681 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 10}, -0.11298193393275247]
---> SVR_grid ['1.3788758317629497 minutos \n', {'svr__C': 10, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.11298193393275247]
---> arbol_decision ['0.7342914700508117 minutos \n', {'max_features': 'sqrt', 'max_depth': 1}, -0.14526581005157213]
---> arbol_decision_grid ['1.4232128620147706 minutos \n', {'max_depth': 17, 'max_features': 'sqrt'}, -0.40149123156599253]
---> Boosting ['152.9142910997073 minutos \n', {'max_depth': 21, 'n_estimators': 1}, -1.9817838315989889]
-2020-06-12 14:05:55.487755 --------- dfAtributosNormalizado_0_dias_2_celdas.pkl
---> Random Forest ['2.449539883931478 minutos \n', {'max_depth': 85, 'max_features': 1, 'n_estimators': 161}, 0.015780782653245506]
---> Vecino mas cercano ['0.024135788281758625 minutos \n', {'n_neighbors': 45}, 0.018989196262394592]
---> Vecino mas cercano gridSearch ['0.024916736284891765 minutos \n', {'n_neighbors': 45}, 0.018989196262394592]
---> SVR ['0.1257540265719096 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.03474429641123555]
---> SVR_grid ['0.11880772113800049 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.03474429641123555]
---> arbol_decision ['0.05107521613438924 minutos \n', {'max_features': None, 'max_depth': 1}, -0.0014212137235409816]
---> arbol_decision_grid ['0.07463382879892985 minutos \n', {'max_depth': 1, 'max_features': 'log2'}, 0.028759673468344737]
---> Boosting ['7.399722826480866 minutos \n', {'max_depth': 50, 'n_estimators': 2}, -0.007160422941713818]
-2020-06-12 14:16:11.637350 --------- dfAtributosNormalizado_0_dias_2_celdas.pkl
---> Random Forest ['5.713925882180532 minutos \n', {'max_depth': 39, 'max_features': 16, 'n_estimators': 199}, -0.8030539611954188]
---> Vecino mas cercano ['0.04926730394363403 minutos \n', {'n_neighbors': 9}, -3.6456533631383268]
---> Vecino mas cercano gridSearch ['0.042233967781066896 minutos \n', {'n_neighbors': 9}, -3.6456533631383268]
---> SVR ['0.31769169171651207 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.05785493531122081]
---> SVR_grid ['0.3083514968554179 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.05785493531122081]
---> arbol_decision ['0.11024626890818277 minutos \n', {'max_features': 'log2', 'max_depth': 1}, -0.3741752929777836]
---> arbol_decision_grid ['0.19920146067937214 minutos \n', {'max_depth': 9, 'max_features': 'sqrt'}, -0.07567318693586227]
---> Boosting ['20.140745536486307 minutos \n', {'max_depth': 1, 'n_estimators': 191}, -2.297165193010301]
-2020-06-12 14:43:04.574082 --------- dfAtributosNormalizado_0_dias_2_celdas.pkl
---> Random Forest ['10.558913493156433 minutos \n', {'max_depth': 60, 'max_features': 4, 'n_estimators': 187}, -0.9291157697194666]
---> Vecino mas cercano ['0.0714748740196228 minutos \n', {'n_neighbors': 1}, -0.4045194879533886]
---> Vecino mas cercano gridSearch ['0.06471256812413534 minutos \n', {'n_neighbors': 1}, -0.4045194879533886]
---> SVR ['0.46355217695236206 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.1118636958163866]
---> SVR_grid ['0.44670035044352213 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.1118636958163866]
---> arbol_decision ['0.20216592152913412 minutos \n', {'max_features': 'log2', 'max_depth': 43}, -0.7271401862055606]
---> arbol_decision_grid ['0.4118055542310079 minutos \n', {'max_depth': 15, 'max_features': 'sqrt'}, -0.5771676296777086]
---> Boosting ['36.36765950123469 minutos \n', {'max_depth': 1, 'n_estimators': 146}, -1.390147992726051]
-2020-06-12 15:31:39.847344 --------- dfAtributosNormalizado_15_dias_2_celdas.pkl
---> Random Forest ['2.2780492981274922 minutos \n', {'max_depth': 60, 'max_features': 3, 'n_estimators': 195}, -0.02305998467908249]
---> Vecino mas cercano ['0.02150271733601888 minutos \n', {'n_neighbors': 45}, 0.018989196262394592]
---> Vecino mas cercano gridSearch ['0.02251325050989787 minutos \n', {'n_neighbors': 45}, 0.018989196262394592]
---> SVR ['0.12511488596598308 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.03474429641123555]
---> SVR_grid ['0.11203407049179077 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.03474429641123555]
---> arbol_decision ['0.04699831008911133 minutos \n', {'max_features': 'sqrt', 'max_depth': 17}, 0.26046601516876605]
---> arbol_decision_grid ['0.07893166939417522 minutos \n', {'max_depth': 2, 'max_features': 'log2'}, 0.002817562575214424]
---> Boosting ['6.812770915031433 minutos \n', {'max_depth': 1, 'n_estimators': 23}, -0.008206978215384964]
-2020-06-12 15:41:09.764652 --------- dfAtributosNormalizado_15_dias_2_celdas.pkl
---> Random Forest ['5.259301070372263 minutos \n', {'max_depth': 41, 'max_features': 6, 'n_estimators': 160}, -0.8859831926144857]
---> Vecino mas cercano ['0.03439454634984334 minutos \n', {'n_neighbors': 9}, -3.6456533631383268]
---> Vecino mas cercano gridSearch ['0.041647374629974365 minutos \n', {'n_neighbors': 9}, -3.6456533631383268]
---> SVR ['0.30907183488210044 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 1.0}, -0.05785493531122081]
---> SVR_grid ['0.3126043121019999 minutos \n', {'svr__C': 1.0, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.05785493531122081]
---> arbol_decision ['0.11041216850280762 minutos \n', {'max_features': 'log2', 'max_depth': 3}, -0.19453888405929734]
---> arbol_decision_grid ['0.20008716185887654 minutos \n', {'max_depth': 2, 'max_features': 'sqrt'}, -0.16771567426388936]
---> Boosting ['17.490318993727367 minutos \n', {'max_depth': 1, 'n_estimators': 17}, -1.5080252613388858]
-2020-06-12 16:04:55.269694 --------- dfAtributosNormalizado_15_dias_2_celdas.pkl
---> Random Forest ['9.447887587547303 minutos \n', {'max_depth': 2, 'max_features': 53, 'n_estimators': 185}, -0.8330328269120182]
---> Vecino mas cercano ['0.05755545298258464 minutos \n', {'n_neighbors': 1}, -0.4045194879533886]
---> Vecino mas cercano gridSearch ['0.055447959899902345 minutos \n', {'n_neighbors': 1}, -0.4045194879533886]
---> SVR ['0.4486879269282023 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.1118636958163866]
---> SVR_grid ['0.45100813706715903 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.1118636958163866]
---> arbol_decision ['0.1967798113822937 minutos \n', {'max_features': 'log2', 'max_depth': 4}, -0.5567083825692107]
---> arbol_decision_grid ['0.38451911211013795 minutos \n', {'max_depth': 22, 'max_features': 'log2'}, -0.9185457118380989]
---> Boosting ['35.18751083612442 minutos \n', {'max_depth': 1, 'n_estimators': 34}, -0.967060476642453]
-2020-06-12 16:51:09.083045 --------- dfAtributosNormalizado_30_dias_2_celdas.pkl
---> Random Forest ['2.41765319108963 minutos \n', {'max_depth': 1, 'max_features': 31, 'n_estimators': 164}, -0.01185819469695154]
---> Vecino mas cercano ['0.02660519282023112 minutos \n', {'n_neighbors': 45}, 0.018989196262394592]
---> Vecino mas cercano gridSearch ['0.02866443395614624 minutos \n', {'n_neighbors': 45}, 0.018989196262394592]
---> SVR ['0.11930928230285645 minutos \n', {'svr__kernel': 'rbf', 'svr__epsilon': 0.2, 'svr__C': 100}, -0.03474429641123555]
---> SVR_grid ['0.11975639661153158 minutos \n', {'svr__C': 100, 'svr__epsilon': 0.2, 'svr__kernel': 'rbf'}, -0.03474429641123555]
---> arbol_decision ['0.04086345434188843 minutos \n', {'max_features': 'log2', 'max_depth': 10}, 0.027690015889682673]
---> arbol_decision_grid ['0.07341514428456625 minutos \n', {'max_depth': 29, 'max_features': 'log2'}, 0.06727815583004465]
---> Boosting ['7.334643805027008 minutos \n', {'max_depth': 1, 'n_estimators': 16}, -0.0073854096077055065]
+2020-06-16 17:44:27.277524 --------- dfAtributosNormalizado_0_dias_0_celdas.pkl
+--> Random Forest GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=RandomForestRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [None, 10, 50, 100],
+                         'max_features': ['auto', 'sqrt', 'log2'],
+                         'n_estimators': [100, 500, 1000]})
+Tiempo empleado: 1.9427347898483276--> Vecino mas cercano GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=KNeighborsRegressor(), n_jobs=-1,
+             param_grid={'n_neighbors': [13, 6, 4, 10, 3, 7, 11, 15, 9, 8],
+                         'weights': ['uniform', 'distance']})
+Tiempo empleado: 0.007924266656239827--> SVR GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=SVR(), n_jobs=-1,
+             param_grid={'C': [0.5, 1.0, 10, 100], 'epsilon': [0.2],
+                         'gamma': ['scale', 'auto'],
+                         'kernel': ('linear', 'rbf', 'poly', 'sigmoid')})
+Tiempo empleado: 0.03283767302831014--> arbol_decision GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=DecisionTreeRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [4, 25, 91, 56, 164, 22, 122, 12, 19, 179,
+                                       44, 127, 110, 63, 166, 37, 137, 148, 153,
+                                       6],
+                         'max_features': ['auto', 'sqrt', 'log2', None]})
+Tiempo empleado: 0.02974158525466919--> Boosting GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [159, 33, 42, 122, 99],
+                         'n_estimators': [232, 219, 367, 397, 297]})
+Tiempo empleado: 2.3748752236366273--> Adaboost GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=AdaBoostRegressor(), n_jobs=-1,
+             param_grid={'loss': ['linear', 'square', 'exponential'],
+                         'n_estimators': [122, 292, 135, 470, 480, 435, 325, 75,
+                                          345, 73],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 1.4989526828130086--> GradientBoostingRegressor GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [40, 14, 37, 15, 32, 45, 6, 27, 31, 16],
+                         'max_features': ['auto', 'sqrt', 'log2', None],
+                         'n_estimators': [5, 44, 40, 29, 12],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 3.233403046925863--> MLP GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=MLPRegressor(),
+             param_grid={'alpha': [1e-05, 0.0001, 0.001],
+                         'max_iter': [1000, 2000, 5000],
+                         'random_state': [0, 1, 10]})
+Tiempo empleado: 57.803896347681682020-06-16 18:51:22.926486 --------- dfAtributosNormalizado_0_dias_0_celdas.pkl
+--> Random Forest GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=RandomForestRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [None, 10, 50, 100],
+                         'max_features': ['auto', 'sqrt', 'log2'],
+                         'n_estimators': [100, 500, 1000]})
+Tiempo empleado: 3.89306104183197--> Vecino mas cercano GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=KNeighborsRegressor(), n_jobs=-1,
+             param_grid={'n_neighbors': [10, 3, 9, 11, 16, 5, 6, 7, 15, 8],
+                         'weights': ['uniform', 'distance']})
+Tiempo empleado: 0.010495626926422119--> SVR GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=SVR(), n_jobs=-1,
+             param_grid={'C': [0.5, 1.0, 10, 100], 'epsilon': [0.2],
+                         'gamma': ['scale', 'auto'],
+                         'kernel': ('linear', 'rbf', 'poly', 'sigmoid')})
+Tiempo empleado: 0.07311826546986898--> arbol_decision GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=DecisionTreeRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [128, 96, 158, 29, 185, 121, 103, 152,
+                                       173, 41, 176, 175, 66, 3, 63, 62, 102,
+                                       67, 160, 126],
+                         'max_features': ['auto', 'sqrt', 'log2', None]})
+Tiempo empleado: 0.03996563752492269--> Boosting GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [140, 18, 87, 177, 64],
+                         'n_estimators': [431, 23, 390, 118, 273]})
+Tiempo empleado: 3.584601660569509--> Adaboost GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=AdaBoostRegressor(), n_jobs=-1,
+             param_grid={'loss': ['linear', 'square', 'exponential'],
+                         'n_estimators': [126, 29, 401, 219, 338, 120, 429, 71,
+                                          132, 41],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 1.6806307514508565--> GradientBoostingRegressor GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [42, 25, 36, 38, 35, 21, 23, 32, 44, 47],
+                         'max_features': ['auto', 'sqrt', 'log2', None],
+                         'n_estimators': [14, 4, 49, 23, 43],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 7.00622189839681--> MLP GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=MLPRegressor(),
+             param_grid={'alpha': [1e-05, 0.0001, 0.001],
+                         'max_iter': [1000, 2000, 5000],
+                         'random_state': [0, 1, 10]})
+Tiempo empleado: 24.7198460221290582020-06-16 19:32:23.541775 --------- dfAtributosNormalizado_0_dias_0_celdas.pkl
+--> Random Forest GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=RandomForestRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [None, 10, 50, 100],
+                         'max_features': ['auto', 'sqrt', 'log2'],
+                         'n_estimators': [100, 500, 1000]})
+Tiempo empleado: 8.638386901219686--> Vecino mas cercano GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=KNeighborsRegressor(), n_jobs=-1,
+             param_grid={'n_neighbors': [4, 7, 6, 9, 10, 18, 3, 13, 8, 14],
+                         'weights': ['uniform', 'distance']})
+Tiempo empleado: 0.021799004077911376--> SVR GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=SVR(), n_jobs=-1,
+             param_grid={'C': [0.5, 1.0, 10, 100], 'epsilon': [0.2],
+                         'gamma': ['scale', 'auto'],
+                         'kernel': ('linear', 'rbf', 'poly', 'sigmoid')})
+Tiempo empleado: 0.17861850261688234--> arbol_decision GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=DecisionTreeRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [157, 55, 28, 126, 97, 175, 68, 12, 189,
+                                       22, 56, 61, 144, 149, 159, 191, 87, 45,
+                                       104, 198],
+                         'max_features': ['auto', 'sqrt', 'log2', None]})
+Tiempo empleado: 0.11446491877237956--> Boosting GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [181, 137, 161, 104, 52],
+                         'n_estimators': [409, 298, 30, 93, 115]})
+Tiempo empleado: 7.620260095596313--> Adaboost GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=AdaBoostRegressor(), n_jobs=-1,
+             param_grid={'loss': ['linear', 'square', 'exponential'],
+                         'n_estimators': [455, 413, 48, 471, 93, 345, 169, 166,
+                                          276, 9],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 5.192585976918538--> GradientBoostingRegressor GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [24, 28, 3, 13, 10, 6, 23, 26, 46, 21],
+                         'max_features': ['auto', 'sqrt', 'log2', None],
+                         'n_estimators': [43, 5, 44, 10, 30],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 12.008785502115886--> MLP GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=MLPRegressor(),
+             param_grid={'alpha': [1e-05, 0.0001, 0.001],
+                         'max_iter': [1000, 2000, 5000],
+                         'random_state': [0, 1, 10]})
+Tiempo empleado: 103.798523414134982020-06-16 21:49:58.153895 --------- dfAtributosNormalizado_14_dias_0_celdas.pkl
+--> Random Forest GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=RandomForestRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [None, 10, 50, 100],
+                         'max_features': ['auto', 'sqrt', 'log2'],
+                         'n_estimators': [100, 500, 1000]})
+Tiempo empleado: 1.4500937263170879--> Vecino mas cercano GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=KNeighborsRegressor(), n_jobs=-1,
+             param_grid={'n_neighbors': [5, 12, 13, 11, 7, 6, 8, 4, 14, 15],
+                         'weights': ['uniform', 'distance']})
+Tiempo empleado: 0.006175402800242106--> SVR GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=SVR(), n_jobs=-1,
+             param_grid={'C': [0.5, 1.0, 10, 100], 'epsilon': [0.2],
+                         'gamma': ['scale', 'auto'],
+                         'kernel': ('linear', 'rbf', 'poly', 'sigmoid')})
+Tiempo empleado: 0.03863442341486613--> arbol_decision GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=DecisionTreeRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [29, 63, 187, 43, 98, 199, 100, 95, 8, 5,
+                                       177, 39, 163, 6, 45, 22, 131, 112, 30,
+                                       111],
+                         'max_features': ['auto', 'sqrt', 'log2', None]})
+Tiempo empleado: 0.020511674880981445--> Boosting GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [106, 109, 58, 146, 118],
+                         'n_estimators': [179, 445, 62, 353, 10]})
+Tiempo empleado: 1.3053961634635924--> Adaboost GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=AdaBoostRegressor(), n_jobs=-1,
+             param_grid={'loss': ['linear', 'square', 'exponential'],
+                         'n_estimators': [133, 172, 186, 76, 90, 355, 142, 66,
+                                          479, 96],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 0.9091028690338134--> GradientBoostingRegressor GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [38, 41, 46, 31, 33, 3, 16, 42, 30, 37],
+                         'max_features': ['auto', 'sqrt', 'log2', None],
+                         'n_estimators': [49, 40, 46, 42, 36],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 4.101903188228607--> MLP GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=MLPRegressor(),
+             param_grid={'alpha': [1e-05, 0.0001, 0.001],
+                         'max_iter': [1000, 2000, 5000],
+                         'random_state': [0, 1, 10]})
+Tiempo empleado: 56.43201578458152020-06-16 22:54:14.092244 --------- dfAtributosNormalizado_14_dias_0_celdas.pkl
+--> Random Forest GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=RandomForestRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [None, 10, 50, 100],
+                         'max_features': ['auto', 'sqrt', 'log2'],
+                         'n_estimators': [100, 500, 1000]})
+Tiempo empleado: 3.118574380874634--> Vecino mas cercano GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=KNeighborsRegressor(), n_jobs=-1,
+             param_grid={'n_neighbors': [7, 12, 8, 14, 6, 9, 5, 16, 11, 15],
+                         'weights': ['uniform', 'distance']})
+Tiempo empleado: 0.009068608283996582--> SVR GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=SVR(), n_jobs=-1,
+             param_grid={'C': [0.5, 1.0, 10, 100], 'epsilon': [0.2],
+                         'gamma': ['scale', 'auto'],
+                         'kernel': ('linear', 'rbf', 'poly', 'sigmoid')})
+Tiempo empleado: 0.08392094373703003--> arbol_decision GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=DecisionTreeRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [123, 139, 125, 114, 148, 183, 108, 95,
+                                       143, 105, 35, 63, 68, 177, 33, 42, 164,
+                                       119, 120, 37],
+                         'max_features': ['auto', 'sqrt', 'log2', None]})
+Tiempo empleado: 0.04867025216420492--> Boosting GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [71, 163, 110, 69, 197],
+                         'n_estimators': [205, 480, 21, 444, 101]})
+Tiempo empleado: 4.187260194619497--> Adaboost GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=AdaBoostRegressor(), n_jobs=-1,
+             param_grid={'loss': ['linear', 'square', 'exponential'],
+                         'n_estimators': [359, 459, 478, 219, 121, 456, 101,
+                                          159, 493, 186],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 3.9033069610595703--> GradientBoostingRegressor GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [23, 4, 17, 14, 35, 40, 5, 11, 26, 8],
+                         'max_features': ['auto', 'sqrt', 'log2', None],
+                         'n_estimators': [49, 38, 19, 27, 36],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 8.103768340746562--> MLP GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=MLPRegressor(),
+             param_grid={'alpha': [1e-05, 0.0001, 0.001],
+                         'max_iter': [1000, 2000, 5000],
+                         'random_state': [0, 1, 10]})
+Tiempo empleado: 27.4396125952402732020-06-16 23:41:07.953040 --------- dfAtributosNormalizado_14_dias_0_celdas.pkl
+--> Random Forest GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=RandomForestRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [None, 10, 50, 100],
+                         'max_features': ['auto', 'sqrt', 'log2'],
+                         'n_estimators': [100, 500, 1000]})
+Tiempo empleado: 6.4320722103118895--> Vecino mas cercano GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=KNeighborsRegressor(), n_jobs=-1,
+             param_grid={'n_neighbors': [9, 13, 18, 12, 7, 10, 3, 17, 15, 5],
+                         'weights': ['uniform', 'distance']})
+Tiempo empleado: 0.02467343807220459--> SVR GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=SVR(), n_jobs=-1,
+             param_grid={'C': [0.5, 1.0, 10, 100], 'epsilon': [0.2],
+                         'gamma': ['scale', 'auto'],
+                         'kernel': ('linear', 'rbf', 'poly', 'sigmoid')})
+Tiempo empleado: 0.14826757907867433--> arbol_decision GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=DecisionTreeRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [125, 50, 134, 144, 67, 98, 137, 77, 185,
+                                       112, 66, 157, 142, 70, 90, 21, 63, 43,
+                                       140, 17],
+                         'max_features': ['auto', 'sqrt', 'log2', None]})
+Tiempo empleado: 0.095951509475708--> Boosting GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [198, 25, 99, 131, 93],
+                         'n_estimators': [346, 487, 56, 38, 151]})
+Tiempo empleado: 6.680780812104543--> Adaboost GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=AdaBoostRegressor(), n_jobs=-1,
+             param_grid={'loss': ['linear', 'square', 'exponential'],
+                         'n_estimators': [207, 373, 229, 44, 156, 467, 247, 236,
+                                          301, 385],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 5.317141306400299--> GradientBoostingRegressor GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [43, 49, 17, 11, 20, 29, 33, 3, 21, 46],
+                         'max_features': ['auto', 'sqrt', 'log2', None],
+                         'n_estimators': [22, 10, 41, 35, 46],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 14.034018429120382--> MLP GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=MLPRegressor(),
+             param_grid={'alpha': [1e-05, 0.0001, 0.001],
+                         'max_iter': [1000, 2000, 5000],
+                         'random_state': [0, 1, 10]})
+Tiempo empleado: 107.65654687881472020-06-17 02:01:31.497939 --------- dfAtributosNormalizado_60_dias_2_celdas.pkl
+--> Random Forest GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=RandomForestRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [None, 10, 50, 100],
+                         'max_features': ['auto', 'sqrt', 'log2'],
+                         'n_estimators': [100, 500, 1000]})
+Tiempo empleado: 11.467883233229319--> Vecino mas cercano GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=KNeighborsRegressor(), n_jobs=-1,
+             param_grid={'n_neighbors': [132, 18, 180, 36, 57, 49, 183, 64, 56,
+                                         110],
+                         'weights': ['uniform', 'distance']})
+Tiempo empleado: 0.022925742467244468--> SVR GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=SVR(), n_jobs=-1,
+             param_grid={'C': [0.5, 1.0, 10, 100], 'epsilon': [0.2],
+                         'gamma': ['scale', 'auto'],
+                         'kernel': ('linear', 'rbf', 'poly', 'sigmoid')})
+Tiempo empleado: 0.10184380213419596--> arbol_decision GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=DecisionTreeRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [100, 34, 97, 133, 110, 98, 92, 86, 43,
+                                       198, 191, 93, 71, 67, 27, 95, 158, 96,
+                                       155, 17],
+                         'max_features': ['auto', 'sqrt', 'log2', None]})
+Tiempo empleado: 0.134076456228892--> Boosting GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [15, 190, 170, 129, 90],
+                         'n_estimators': [112, 301, 19, 86, 209]})
+Tiempo empleado: 11.121474937597911--> Adaboost GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=AdaBoostRegressor(), n_jobs=-1,
+             param_grid={'loss': ['linear', 'square', 'exponential'],
+                         'n_estimators': [170, 473, 256, 157, 76, 424, 50, 48,
+                                          427, 68],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 5.91564404964447--> GradientBoostingRegressor GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [39, 5, 45, 3, 20, 8, 13, 29, 33, 49],
+                         'max_features': ['auto', 'sqrt', 'log2', None],
+                         'n_estimators': [35, 34, 32, 16, 12],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 23.683443049589794--> MLP GridSearchCV(cv=KFold(n_splits=5, random_state=None, shuffle=False),
+             estimator=MLPRegressor(),
+             param_grid={'alpha': [1e-05, 0.0001, 0.001],
+                         'max_iter': [1000, 2000, 5000],
+                         'random_state': [0, 1, 10]})
+Tiempo empleado: 146.031144901116682020-06-17 05:20:00.470733 --------- dfAtributosNormalizado_60_dias_2_celdas.pkl
+--> Random Forest GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=RandomForestRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [None, 10, 50, 100],
+                         'max_features': ['auto', 'sqrt', 'log2'],
+                         'n_estimators': [100, 500, 1000]})
+Tiempo empleado: 32.07166738907496--> Vecino mas cercano GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=KNeighborsRegressor(), n_jobs=-1,
+             param_grid={'n_neighbors': [189, 97, 169, 9, 87, 154, 100, 174,
+                                         197, 129],
+                         'weights': ['uniform', 'distance']})
+Tiempo empleado: 0.04248266220092774--> SVR GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=SVR(), n_jobs=-1,
+             param_grid={'C': [0.5, 1.0, 10, 100], 'epsilon': [0.2],
+                         'gamma': ['scale', 'auto'],
+                         'kernel': ('linear', 'rbf', 'poly', 'sigmoid')})
+Tiempo empleado: 0.24345330794652303--> arbol_decision GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=DecisionTreeRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [155, 176, 107, 116, 91, 178, 122, 15, 61,
+                                       12, 6, 65, 153, 92, 102, 86, 152, 154,
+                                       191, 131],
+                         'max_features': ['auto', 'sqrt', 'log2', None]})
+Tiempo empleado: 0.4269905765851339--> Boosting GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [153, 88, 103, 156, 127],
+                         'n_estimators': [201, 227, 360, 94, 218]})
+Tiempo empleado: 55.615578226248424--> Adaboost GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=AdaBoostRegressor(), n_jobs=-1,
+             param_grid={'loss': ['linear', 'square', 'exponential'],
+                         'n_estimators': [157, 38, 371, 155, 495, 265, 484, 437,
+                                          278, 451],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 19.611560769875844--> GradientBoostingRegressor GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [8, 45, 28, 6, 15, 43, 33, 22, 5, 30],
+                         'max_features': ['auto', 'sqrt', 'log2', None],
+                         'n_estimators': [45, 10, 6, 22, 33],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 61.809078927834825--> MLP GridSearchCV(cv=KFold(n_splits=10, random_state=None, shuffle=False),
+             estimator=MLPRegressor(),
+             param_grid={'alpha': [1e-05, 0.0001, 0.001],
+                         'max_iter': [1000, 2000, 5000],
+                         'random_state': [0, 1, 10]})
+Tiempo empleado: 48.3992831985155762020-06-17 08:58:13.951075 --------- dfAtributosNormalizado_60_dias_2_celdas.pkl
+--> Random Forest GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=RandomForestRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [None, 10, 50, 100],
+                         'max_features': ['auto', 'sqrt', 'log2'],
+                         'n_estimators': [100, 500, 1000]})
+Tiempo empleado: 66.70633787314097--> Vecino mas cercano GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=KNeighborsRegressor(), n_jobs=-1,
+             param_grid={'n_neighbors': [105, 116, 199, 4, 181, 183, 122, 165,
+                                         29, 141],
+                         'weights': ['uniform', 'distance']})
+Tiempo empleado: 0.06347738107045492--> SVR GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=SVR(), n_jobs=-1,
+             param_grid={'C': [0.5, 1.0, 10, 100], 'epsilon': [0.2],
+                         'gamma': ['scale', 'auto'],
+                         'kernel': ('linear', 'rbf', 'poly', 'sigmoid')})
+Tiempo empleado: 0.5576482852300008--> arbol_decision GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=DecisionTreeRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [112, 118, 76, 192, 163, 131, 145, 84,
+                                       161, 75, 164, 117, 149, 176, 121, 37, 78,
+                                       80, 103, 30],
+                         'max_features': ['auto', 'sqrt', 'log2', None]})
+Tiempo empleado: 0.899396546681722--> Boosting GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [138, 36, 43, 142, 135],
+                         'n_estimators': [92, 493, 428, 386, 187]})
+Tiempo empleado: 173.85633364518483--> Adaboost GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=AdaBoostRegressor(), n_jobs=-1,
+             param_grid={'loss': ['linear', 'square', 'exponential'],
+                         'n_estimators': [343, 111, 217, 274, 81, 26, 356, 264,
+                                          434, 214],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 35.72860110998154--> GradientBoostingRegressor GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=GradientBoostingRegressor(), n_jobs=-1,
+             param_grid={'max_depth': [34, 38, 5, 24, 36, 10, 3, 20, 45, 35],
+                         'max_features': ['auto', 'sqrt', 'log2', None],
+                         'n_estimators': [29, 13, 44, 6, 11],
+                         'random_state': [None, 1, 5, 10]})
+Tiempo empleado: 110.00446271101633--> MLP GridSearchCV(cv=KFold(n_splits=20, random_state=None, shuffle=False),
+             estimator=MLPRegressor(),
+             param_grid={'alpha': [1e-05, 0.0001, 0.001],
+                         'max_iter': [1000, 2000, 5000],
+                         'random_state': [0, 1, 10]})
+Tiempo empleado: 136.1918162027995

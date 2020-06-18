@@ -359,6 +359,12 @@ def boosting(atributos,resultadon,n,tscv):
 
 
 
+# In[ ]:
+
+
+
+
+
 # In[115]:
 
 
