@@ -2,7 +2,13 @@
 
 \section{Introducción}
 
-En el siguiente apéndice se incluye la evolución temporal que ha tenido del proyecto durante la realización del mismo, además de aspectos relevantes del diseño y económicos que afectarán a su viabilidad.	
+En el siguiente apéndice se realizará una estimación de tiempo, trabajo y dinero que será necesario invertir para al realización de este proyecto.
+
+En una primer apartado se tratará sobre la evolución temporal que ha tenido el proyecto, indicando los principales cambios y objetivos de cada \emph{Sprint}, así como una estimación del tiempo que se estimaba, seria necesario invertir antes de la realización del mismo.
+
+En la segunda parte se centra en la viabilidad del proyecto tanto en el ámbito económico (estimación de costes y beneficios) como en el legal (licencias software, etc.). 
+
+%En el siguiente apéndice se incluye la evolución temporal que ha tenido del proyecto durante la realización del mismo, además de aspectos relevantes de diseño y económicos que afectarán a su viabilidad.	
 
 \section{Planificación temporal}
 
@@ -259,10 +265,68 @@ Las \emph{issues} para este \emph{Sprint} se pueden ver \href{https://github.com
 %Estimación horas
 En un principio se estimaron XX horas y finalmente se realizaron XX.
 
+\subsection{Resumen}
+
 \section{Estudio de viabilidad}
 
 \subsection{Viabilidad económica}
 
+\subsection{Costes}
+\subsubsection{Coste software}
+Todas las herramientas software utilizadas son de uso gratuito por lo que el coste de este apartado es cero.
+\subsubsection{Coste hardware}
+El coste de dispositivos es muy bajo. Unicamente se ha utilizado un ordenador personal valorado en 800 euros. Suponiendo una amortización de 5 años, el coste amortizado seria:
+
+\begin{equation}
+\frac{800}{12 * 5} * 5 = 66,67  \text{\euro}
+\end{equation}
+
+\textcolor{red}{Alpha¿?}
+
+\subsubsection{Coste de personal}
+
+Se considera que el proyecto se ha realizado por un desarrollador trabajando 6 horas diarias durante 5 meses:
+\tablaSmallSinColores{Costes de personal}{l c c}{Costes de personal}
+{ \multicolumn{1}{l}{Concepto} & Coste \\}{ 
+	Salario bruto del trabajador & 1200 € \\
+	Contingencias comunes (23,6\%) & 283,2 € \\
+	Desempleo (5,5\%) & 66 € \\
+	Fogasa (0,2\%) & 2,4 € \\
+	Formación profesional (0,6\%) & 7,2 € \\
+	\cline{1-2}
+	Coste total mensual & 1558,80 € \\
+} 
+
+El coste del empleado seria de 1558,80 euros mensuales. Si aplicamos esto por los 5 meses de trabajo el coste total del personal ascendería a 7794€.
+
+\subsection{Beneficios}
+El proyecto esta realizado para ser disfrutado de manera gratuita y sin publicidad, por lo que a corto plazo no se obtendrían beneficios. Se podría plantear la posibilidad de agregar algunas funcionalidades extras a futuro, siendo estas de pago a través de algún tipo de suscripción mensual.
+
 \subsection{Viabilidad legal}
 
+Para la realización del proyecto se han utilizado multitud de biblioteca de Python de dominio público. A continuación se expondrán las principales herramientas utilizadas.
+
+
+\begin{table}[H]
+	\centering
+	\caption{Licencias de bibliotecas y herramientas utilizadas}
+	\label{tabla:Licencias}
+	\rowcolors {2}{gray!35}{}
+	\begin{tabular}{l l l l}
+		\toprule
+		Librería     & Versión & Descripción                                                     & Licencia                \\ 	\midrule	
+		VsCode        & 1.46.1  & \begin{tabular}[c]{@{}l@{}}Editor de código.\\  \end{tabular} & MIT\\ 
+		Jupyter Notebook & 	6.0.3 & \begin{tabular}[c]{@{}l@{}}Aplicación para el desarrollo de \\código en múltiples lenguajes.\\  \end{tabular} & BSD\\
+		Scikit-Learn & 0.22.1  & \begin{tabular}[c]{@{}l@{}}Biblioteca para aprendizaje\\ automático en Python.\end{tabular}	               & BSD                     \\
+		Flask       & 1.1.1     &  \begin{tabular}[c]{@{}l@{}}Biblioteca para crear\\ aplicaciones web en Python. \end{tabular}               & BSD    \\
+		Jinja2       & 2.11.1     &  \begin{tabular}[c]{@{}l@{}} Motor para integrar Python \\ con documentos HTML. \end{tabular}               & BSD                     \\
+		Folium       & 0.11.0     &  \begin{tabular}[c]{@{}l@{}}Biblioteca para generar mapas \\en Python \end{tabular}               & MIT                     \\
+		tmux       & 3.1b     &  \begin{tabular}[c]{@{}l@{}}Multiplexador de terminales. \end{tabular}               & ISC                     \\
+		Bootstrap    & 3.3.7.1    & \begin{tabular}[c]{@{}l@{}}Biblioteca para desarrollar\\ aplicaciones web responsive.\end{tabular}                      & MIT  	\\
+		JQuery    & 3.2.1    & \begin{tabular}[c]{@{}l@{}}Biblioteca para optimizar\\ JavaScript.\end{tabular}
+		& MIT                 \\
+		Morris.js    & 0.5.1    & \begin{tabular}[c]{@{}l@{}}Biblioteca para crear\\ gráficos en Javascript y HTML.\end{tabular}                     
+		& MIT \\ \bottomrule
+	\end{tabular}
+\end{table}
 
