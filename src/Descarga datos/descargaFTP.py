@@ -72,7 +72,7 @@ def comprobar_fichero(fichero):
     '''
     Comprueba la existencia del fichero en local.
 
-    Recibe:
+    Parametros:
         - fichero --> Nombre del archivo a comprobar
     Devuelve:
         - False --> En caso de no existir.
@@ -88,7 +88,7 @@ def lanza_comando(dia,tamano):
     '''
     Se lanza el comando de descarga.
 
-    Recibe:
+    Parametros:
         - dia --> dia que se quiere descargar
         - tamano --> tamano del fichero
     '''
@@ -112,7 +112,7 @@ def crop_datos(data):
     """
     Recorta la zona correspondiente a la costa de chile
 
-    Recibe:
+    Parametros:
         - data --> fichero a recortar
 
     Devuelve:
@@ -129,7 +129,7 @@ def filtrar_datos(data,options_data):
     Elimina todas aquellas variables que no queremos
     Elimina todas las profundidades excepto 3.
     
-    Recibe:
+    Parametros:
         - data --> archivo inicial 
         - options_data --> diccionario con las variables
     Devuelve:
@@ -148,7 +148,8 @@ def filtrar_datos(data,options_data):
 def tratar_fichero(fichero):
     """
     LLama a las funciones de recorte y eliminacion de las variables no deseadas
-    Recibe:
+    
+    Parametros:
         - fichero --> archivo inicial 
     Devuelve:
         - datos_filtrados --> archivo tratado
