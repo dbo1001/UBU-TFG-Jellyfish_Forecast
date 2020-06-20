@@ -1,11 +1,53 @@
 \apendice{Documentación técnica de programación}
 
 \section{Introducción}
+En este apéndice se explicarán todos los aspectos relevantes del proyecto con el objetivo de facilitar la comprensión del mismo si otro desarrollador quisiera continuar con el trabajo o entenderlo más a fondo.
 
 \section{Estructura de directorios}
 
+El proyecto está alojado en dos repositorios diferentes. El motivo, es el de conseguir un despliegue automático a través de la plataforma \emph{heroku}. Por lo que nos encontramos con:
+
+\subsection{Web Jellyfish Forecast}
+Es el repositorio\footnote{Web Jellyfish Forecast. \url{https://github.com/psnti/WebJellyfishForecast}} en el que se alojan todos los ficheros necesarios para el funcionamiento de la aplicación web.
+
+Contiene los siguientes directorios:
+\begin{itemize}
+	\item \textbf{Documentos}: Se guardan ,el dataframe en el que estan la relación de playas con sus coordenadas así como un fichero excel con los avistamientos, necesario para realizar el historial de avistamientos.
+	\item \textbf{static}: Aloja los ficheros css y javascript así como las imágenes necesarios para el buen funcionamiento de la aplicación.
+	\item \textbf{templates}: Contiene los ficheros html.
+\end{itemize}
+
+Tambien contiene los siguientes archivos:
+\begin{itemize}
+	\item \textbf{Procfile}: Archivo necesario para el despliegue en \emph{Heroku} que contiene el comando que debe ejecutar la app en el arranque.
+	\item \textbf{app.py}: Archivo python con la funcionalidad de la aplicación.
+	\item \textbf{requirements.txt}: Listado de bibliotecas que se deben instalar en la máquina antes de ejecutar la aplicación.
+\end{itemize}
+
+\subsection{Jellyfish Forecast}
+Es el repositorio\footnote{Jellyfish Forecast. \url{https://github.com/psnti/Jellyfish_Forecast}} en el que se alojan el resto de archivos del proyecto.
+
+Contiene los siguientes directorios:
+\begin{itemize}
+	\item \textbf{Web}: Contiene el boceto de la aplicación realizado antes del desarrollo de la misma asi como una referencia al anterior repositorio.
+	\item \textbf{docs/latex}: Aloja la documentación del proyecto.
+	\item \textbf{src}: Contiene todo el código utilizado para la descarga y tratamiento de los datos así como el entrenamiento del modelo.
+\end{itemize}
+
 \section{Manual del programador}
+
+Este apartado está destinado a la explicación de la instalación de todo lo necesario para poder ejecutar el proyecto o programadores que quieran trabajar en la mejora del mismo.
+
+
+
+
 
 \section{Compilación, instalación y ejecución del proyecto}
 
+
+
+
+
 \section{Pruebas del sistema}
+
+

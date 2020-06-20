@@ -2,11 +2,58 @@
 
 \section{Introducción}
 
+Este apéndice recoge todo lo que un usuario debe saber para poder ejecutar la aplicación. Cabe destacar que para un cualquier usuario no serie necesario la instalación de ninguna herramienta pues la aplicación está desplegada\footnote{Página web Jellyfish Forecast. \url{https://jellyfish-forecast.herokuapp.com/}} y puede visitarse desde cualquier navegador. A pesar de ello, se explicará como instalar y ejecutar la aplicación desde un servidor local.
+
 \section{Requisitos de usuarios}
+Para la ejecución de la aplicación se deberá tener instalado Python (el desarrollo se ha realizado con la versión 3.7.6). Posteriormente se instalarán los paquetes recogidos en el fichero requirements.txt. La realización del proyecto ha sido en una máquina con sistema operativo W10, pero debería poder ejecutarse en otros sistemas sin problemas.
 
 \section{Instalación}
 
+Para la instalación de el proyecto se deberán seguir los siguientes pasos:
+
+\begin{itemize}
+	\item Clonar o descargar el proyecto.
+	\item Opcionalmente se puede instalar un entorno virtual para la ejecución. En dicho caso se ejecutaría el siguiente comando:
+	\begin{verbatim}
+	python -m venv env
+	env\Scripts\active.bat
+	\end{verbatim}
+	\item Instalar las dependencias recogidas en el fichero requirements.txt ejecutando desde la carpeta raíz del repositorio el comando:
+	\begin{verbatim}
+	pip install -r requirements.txt
+	\end{verbatim}
+	\item Ejecutar el archivo ``app.py``
+	\item Acceder desde un navegador a la dirección: http://127.0.0.1:1000/
+\end{itemize}
+
 \section{Manual del usuario}
 
+Una vez dentro de la web ya sea ejecutándolo en un servidor local, o desde
+pagina desplegada,las acciones se realizan de la misma manera.
 
-%conexion de jupyter en remoto "ssh -p 22 -N -f -L localhost:9006:localhost:8888 pst0004@10.168.168.11"
+En primer lugar nos encontramos con una página de inicio meramente informativa.
+
+\imagen{pagina_inicio_web.png}{Página de inicio}\label{pagina_inicio}
+
+Desde ahí, podremos acceder a la pestaña de <<Mapas>> donde se encuentra la funcionalidad de la aplicación.
+
+\imagen{pagina_mapas_web.png}{Página de consulta}\label{pagina_mapas_web}
+\textcolor{red}{cambiar imagen una vez metido exportar}
+
+Para realizar una predicción, deberemos introducir una fecha y una playa. En caso de seleccionar unicamente una playa sin fecha, aparecerá un mensaje de error indicándonoslo.
+
+\imagen{pagina_error_fecha.png}{Error en la consulta}\label{pagina_error_fecha}
+\textcolor{red}{cambiar imagen una vez metido exportar}
+
+Una vez seleccionadas ambas opciones correctamente, al hacer click en <<Consultar>> nos aparecerán dos gráficos y el mapa realizará un zoom a la playa seleccionada. Estos gráficos se tratan, de la predicción realizada y el historial de avistamientos de la playa seleccionada. 
+
+\imagen{pagina_consulta.png}{Pagina de consulta con gráficos}\label{pagina_consulta}
+\textcolor{red}{cambiar imagen una vez metido exportar y con gráfico de verdad}
+
+Una vez realizada la predicción, existe la opción de exportar dicha predicción a un fichero de tipo .xlsx
+
+\textcolor{red}{imagen fichero exportado}
+
+Por último, nos encontramos la pestaña de contacto donde se sitúan enlaces a la página de la Universidad, el repositorio y enlaces de contacto.
+
+\imagen{pagina_contacto.png}{Pagina de contacto}\label{pagina_contacto}
