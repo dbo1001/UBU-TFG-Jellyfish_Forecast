@@ -4,7 +4,7 @@
 
 En este apéndice se tratará la manera en la que se han implementado los datos dentro de la aplicación así como los principales procedimientos utilizados y el diseño estructural de la misma.
 
-\section{Diseño de datos}
+\section{Diseño de datos} \label{diseño_datos}
 
 Para hablar de los datos utilizados en este proyecto, es necesario referirnos a conjuntos de datos. Para ello, se definirán la estructura de mismos y las trasformaciones realizadas antes de trabajar con ellos.
 
@@ -49,9 +49,11 @@ Una vez pre-procesados ambos conjuntos de datos, se unen para trabajar con un ú
 
 A continuación se muestra un diagrama de flujo del uso de la aplicación a la hora de consultar una predicción.
 
-\begin{center}
-\includegraphics[scale=0.26]{diagramaFlujo.png}
-\end{center}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{diagramaFlujo.png}
+	\caption{Diagrama de flujo}\label{fig:diagrama}
+\end{figure}
 
 \section{Diseño arquitectónico}
 

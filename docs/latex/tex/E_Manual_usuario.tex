@@ -2,29 +2,30 @@
 
 \section{Introducción}
 
-Este apéndice recoge todo lo que un usuario debe saber para poder ejecutar la aplicación. Cabe destacar que para un cualquier usuario no serie necesario la instalación de ninguna herramienta pues la aplicación está desplegada\footnote{Página web Jellyfish Forecast. \url{https://jellyfish-forecast.herokuapp.com/}} y puede visitarse desde cualquier navegador. A pesar de ello, se explicará como instalar y ejecutar la aplicación desde un servidor local.
+Este apéndice recoge todo lo que un usuario debe saber para poder ejecutar la aplicación. Cabe destacar que para un cualquier usuario no seria necesario la instalación de ninguna herramienta pues la aplicación está desplegada\footnote{Página web Jellyfish Forecast. \url{https://jellyfish-forecast.herokuapp.com/}} y puede visitarse desde cualquier navegador. A pesar de ello, se explicará como instalar y ejecutar la aplicación desde un servidor local.
 
 \section{Requisitos de usuarios}
 Para la ejecución de la aplicación se deberá tener instalado Python (el desarrollo se ha realizado con la versión 3.7.6). Posteriormente se instalarán los paquetes recogidos en el fichero requirements.txt. La realización del proyecto ha sido en una máquina con sistema operativo W10, pero debería poder ejecutarse en otros sistemas sin problemas.
 
 \section{Instalación}
 
-Para la instalación de el proyecto se deberán seguir los siguientes pasos:
+Para la instalación de el proyecto se deberán seguir los siguientes pasos. Estos pasos son los mismos que los recogidos en el apéndice anterior \ref{Descarga} con un menor detalle:
 
-\begin{itemize}
-	\item Clonar o descargar el proyecto.
-	\item Opcionalmente se puede instalar un entorno virtual para la ejecución. En dicho caso se ejecutaría el siguiente comando:
+\begin{enumerate}
+	\item En primer lugar se ha de acceder al repositorio\footnote{Web Jellyfish Forecast. \url{https://github.com/psnti/WebJellyfishForecast}}.
+	\item Descargar el contenido desde \textbf{Clone or Download}
+	\imagen{clone_download.png}{Descargar repositorio}\label{clone}.
+	\item Descomprimir el fichero .zip en la ruta deseada.
+	\item Antes de instalar las bibliotecas utilizadas en el proyecto crearemos un entorno virtual y accederemos a el:
 	\begin{verbatim}
 	python -m venv env
 	env\Scripts\active.bat
 	\end{verbatim}
-	\item Instalar las dependencias recogidas en el fichero requirements.txt ejecutando desde la carpeta raíz del repositorio el comando:
+	\item Para la instalación de la biblioteca necesarias, contamos con el archivo requirements.txt. Ejecutando el siguiente comando, se instalarán todas las dependencias del proyecto en  nuestro entorno virtual.
 	\begin{verbatim}
 	pip install -r requirements.txt
 	\end{verbatim}
-	\item Ejecutar el archivo ``app.py``
-	\item Acceder desde un navegador a la dirección: http://127.0.0.1:1000/
-\end{itemize}
+\end{enumerate}
 
 \section{Manual del usuario}
 
