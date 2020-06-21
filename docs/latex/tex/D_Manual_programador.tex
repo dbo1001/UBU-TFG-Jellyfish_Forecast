@@ -38,15 +38,11 @@ Contiene los siguientes directorios:
 
 Este apartado está destinado a la explicación de la instalación de todo lo necesario para poder ejecutar el proyecto o programadores que quieran trabajar en la mejora del mismo.
 
-Para la ejecución del proyecto es indispensable la instalación de Python (el desarrollo se ha realizado con la versión 3.7.6). Posteriormente se instalarán los paquetes recogidos en el fichero requirements.txt.
+Para la ejecución del proyecto es indispensable la instalación de Python (el desarrollo se ha realizado con la versión 3.7.6). Posteriormente se instalarán los paquetes recogidos en el fichero requirements.txt como se indica en el apartado \ref{D4}.
 
-Ancaonda
+En cuanto a la generación del modelo la mayoría del código está elaborado con \emph{jupyter notebook} por lo que es necesaria nu instalación. La manera mas sencilla es instalando \emph{Anaconda}\footnote{Anaconda. \url{https://www.anaconda.com/products/individual}}.
 
-
-
-
-
-\section{Compilación, instalación y ejecución del proyecto}
+\section{Compilación, instalación y ejecución del proyecto}\label{D4}
 
 En este apartado se indicará el proceso de obtener proyecto desde el repositorio hasta su despliegue en la plataforma de \emph{Heroku}.
 
@@ -145,7 +141,22 @@ Si nos movemos a la carpeta ``src/Avistamientos'' nos encontramos con los \emph{
 
 \section{Pruebas del sistema}
 
-\textcolor{red}{meter pruebas con selenium}\\
+\subsection{Pruebas de funcionamiento}
+A parte de las pruebas por parte de los usuarios, se han realizado pruebas automáticas utilizando la herramienta \emph{Selenium}.
+
+Se ha utilizado la biblioteca para Python con el driver correspondiente para Google Chrome. Elegí esta opción en vez de utilizar la extensión disponible debido a tener una breve experiencia con esta biblioteca. 
+
+La versión de Chrome con la que se ha utilizado ha sido la 83.0.4103.106 con el driver correspondiente para esta versión. Si se prueba en el futuro, es probable que la versión del navegador sea diferente. Habria que descargar la versión correspondiente del driver, e introducirla en la carpeta ``test/chromedriver'' del repositorio \emph{WebJellyfishForecast}.
+
+Para ejecutar las pruebas, accederemos el entorno virtual como se ha explicado en el punto anterior y ejecutaremos el fichero \emph{test.py}.
+\begin{verbatim}
+Python test/test.py
+\end{verbatim}
+
+Esta ejecución genera un fichero ``test.log'' con las salida de los test.
+
+
+\subsection{Pruebas del modelo}
 \textcolor{red}{diferentes algoritmos}
 
 
