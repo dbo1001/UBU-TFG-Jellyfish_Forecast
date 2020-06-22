@@ -10,7 +10,7 @@ def carga_datos():
     global datos 
     datos = dict()
     datos['user'] = 'psantidriantuda'
-    datos['passwd'] = 'Kir@2110' 
+    datos['passwd'] = 'UBUinformatic@2020' 
     datos['latitud']  = ['-60','-10']
     datos['longitud']  = ['-120','-60']
     datos['destino'] = 'D:\##DatosCopernicus'

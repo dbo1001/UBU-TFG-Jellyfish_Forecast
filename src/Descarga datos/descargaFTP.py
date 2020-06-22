@@ -16,7 +16,7 @@ def carga_datos():
     """
     datos['FTP'] = 'my.cmems-du.eu' # direccion FTP
     datos['user'] = 'psantidriantuda' # usuario de la cuenta FTP
-    datos['passwd'] = 'Kir@2110' # contrasena de la cuenta FTP
+    datos['passwd'] = 'UBUinformatic@2020' # contrasena de la cuenta FTP
     datos['latitud'] = [-60, -10] # valores maximo y minimo de la latitud para las coordenadas GPS
     datos['longitud'] = [-120, -60] # valores maximo y minimo de la longitud para las coordenadas GPS
     datos['destino'] = os.getcwd() + '/descargas' #'C:/Users/pablo/Downloads' #'D:\##DatosCopernicus' # ruta en la que se descargaran los archivo ".nc"

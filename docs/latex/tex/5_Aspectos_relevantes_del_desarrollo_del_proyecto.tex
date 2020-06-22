@@ -20,7 +20,13 @@ Para la descarga de estos datos, se encontraban disponibles dos alternativas. Po
 
 En un principio se priorizó la opción de la descarga a través de la API ya que podían descargarse los datos ya tratados reduciendo el trabajo previo al análisis. Finalmente se descartó esta idea por la lentitud de respuesta del servicio, así como diferentes errores que se producían, haciendo que la descarga de la totalidad de los datos no estuviese asegurada. Por este motivo se descargaron los datos a través del servidor FTP y posteriormente, eran tratados eliminando las variables y zonas geográficas que no eran necesarias.
 
-\textcolor{red}{Colocar enlace de donde se han sacado los datso asi como una cuenta de acceso.}
+Si se desea acceder a la plataforma de \emph{Copernicus}, se proporciona la cuenta con que se ha utilizado para la realización del proyecto:
+\begin{itemize}
+	\item \textbf{Usuario:} psantidriantuda
+	\item \textbf{Contraseña:} UBUinformatic@2020
+	\item \textbf{Web:} \href{https://resources.marine.copernicus.eu/?option=com_csw&task=results}{https://resources.marine.copernicus.eu/?option=com\_csw\&task=results}
+\end{itemize}
+
 
 \section{Ejecución remota}
 Para la ejecución de los scripts utilizados para la descarga de los datos, la ejecución del modelo y la realización de las diferentes pruebas, se ha utilizado un equipo de cómputo de la Universidad mediante una conexión ssh y una VPN. Todo esto ha hecho que surjan diferentes problemas.
@@ -41,7 +47,9 @@ Tras haber descargado los datos oceánicos, disponemos de dos fuentes de datos. 
 
 Los datos oceánicos están agrupados por cuadrantes separados cada \num{0,0833}  grados (1/12). Por esto se redondearon las coordenadas de los avistamientos para coincidir con estos pasos. 
 
-A continuación se enlazan en un solo DataFrame (\textcolor{green}{Describir dataframe}) los avistamientos con la variables oceánicas recogidas de ese cuadrante y en la fecha del avistamiento quedando la siguiente estructura de datos como la que encontramos en la figura \ref{est_datos}.
+A continuación se enlazan en un solo \emph{DataFrame} los avistamientos con la variables oceánicas recogidas de ese cuadrante y en la fecha del avistamiento quedando la siguiente estructura de datos como la que encontramos en la figura \ref{est_datos}.
+
+Un \emph{DataFrame} se trata de una estructura de datos de dos dimensiones similar a una tabla de una hoja de cálculo, en la que podemos guardar datos de diferentes tipos ordenados en filas y columnas.
 
 \imagenflotante{estructura_datos.png}{Estructura de datos resultante.}\label{est_datos}
 
@@ -52,8 +60,6 @@ Esta estructura inicial, contiene poca información, pues no se puede predecir c
 Tras unir todos los cuadrantes nos encontramos que ciertas celdas no contenían información. Esto se debe principalmente por dos causas: Las profundidades se toman a 0,5 y 10 metros, esto hace que en los cuadrantes más cercanos a las costas existiesen zonas con una profundidad inferior. También debido a la forma de la línea de costa, existen zonas en las que ya sean cuadrantes inferiores o superiores, están situados tierra adentro.
 
 La solución que se buscó a este problema, fue la de utilizar los datos del cuadrante más cercano por la izquierda que tenga información válida.
-
-\textcolor{red}{CrossCorelation}
 
 \section{Despliegue de la aplicación web}
 Al tratarse se una aplicación web, un aspecto importante es el despliegue de la misma en un servidor al que poder acceder desde cualquier lugar. Como se ha mencionado en la sección de herramientas (\ref{HerokuHerrramientas}), se ha utilizado la aplicación \emph{Heroku}.
