@@ -12,7 +12,7 @@ Es el repositorio\footnote{Web Jellyfish Forecast. \url{https://github.com/psnti
 
 Contiene los siguientes directorios:
 \begin{itemize}
-	\item \textbf{Documentos}: Se guardan ,el dataframe en el que estan la relación de playas con sus coordenadas así como un fichero excel con los avistamientos, necesario para realizar el historial de avistamientos.
+	\item \textbf{Documentos}: Se guardan, el dataframe en el que estan la relación de playas con sus coordenadas así como un fichero excel con los avistamientos, necesario para realizar el historial de avistamientos.
 	\item \textbf{static}: Aloja los ficheros css y javascript así como las imágenes necesarios para el buen funcionamiento de la aplicación.
 	\item \textbf{templates}: Contiene los ficheros html.
 \end{itemize}
@@ -40,7 +40,7 @@ Este apartado está destinado a la explicación de la instalación de todo lo ne
 
 Para la ejecución del proyecto es indispensable la instalación de Python (el desarrollo se ha realizado con la versión 3.7.6). Posteriormente se instalarán los paquetes recogidos en el fichero requirements.txt como se indica en el apartado \ref{D4}.
 
-En cuanto a la generación del modelo la mayoría del código está elaborado con \emph{jupyter notebook} por lo que es necesaria nu instalación. La manera mas sencilla es instalando \emph{Anaconda}\footnote{Anaconda. \url{https://www.anaconda.com/products/individual}}.
+En cuanto a la generación del modelo la mayoría del código está elaborado con \emph{jupyter notebook} por lo que es necesaria su instalación. La manera más sencilla es instalando \emph{Anaconda}\footnote{Anaconda. \url{https://www.anaconda.com/products/individual}}.
 
 \section{Compilación, instalación y ejecución del proyecto}\label{D4}
 
@@ -51,7 +51,7 @@ En este apartado se indicará el proceso de obtener proyecto desde el repositori
 \begin{enumerate}
 	\item En primer lugar se ha de acceder al repositorio\footnote{Web Jellyfish Forecast. \url{https://github.com/psnti/WebJellyfishForecast}}.
 	\item Descargar el contenido desde \textbf{Clone or Download}
-	\imagen{clone_download.png}{Descargar repositorio}\label{clone}.
+	\imagen{clone_download.png}{Descargar repositorio}\label{clone}
 	\item Descomprimir el fichero .zip en la ruta deseada.
 	\item Antes de instalar las bibliotecas utilizadas en el proyecto crearemos un entorno virtual y accederemos a el:
 	\begin{verbatim}
@@ -111,7 +111,7 @@ Una vez tengamos estos archivos deberemos seguir los siguientes pasos:
 	\item Añadimos un nombre para nuestra aplicación y ya tendremos nuestra app creada.
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[width=0.6\textwidth]{nombre_app.png}
+		\includegraphics[width=0.9\textwidth]{nombre_app.png}
 		\caption{Nombrar nueva app en \emph{Heroku}}\label{fig:new_app}
 	\end{figure}
 	\item A la hora de realizar el despliegue tendremos dos opciones: asociar la aplicación a un repositorio existente de \emph{GitHub}, o crear un nuevo repositorio en \emph{Heroku}. En el caso de este proyecto se eligió la opción de asociarlo a un repositorio en \emph{GitHub}. 
@@ -133,10 +133,10 @@ En la carpeta ``scr/Descarga datos'' podremos encontrar dos scripts diferentes p
 
 Si nos movemos a la carpeta ``src/Avistamientos'' nos encontramos con los \emph{notebooks} utilizados para la generación del modelo predictivo.
 \begin{itemize}
-	\item En la carpeta ``\textbf{\#ExcelsAvistamientosIniciales}'' encontraremos los conjuntos de datos de los avistamientos. La versión mas reciente es ``Datos\_Physalia\_20171010.xls''.
-	\item El archivo GenerarEstructura.ipynb realiza todo el trabajo de tratar los conjuntos de datos, unirles y generar una estructura que posteriormente se utilizará para entrenar al modelo. Estas estructuras se guardan en dos formatos distintos. En la carpeta ``Exccels'' están los archivos con formato .xlsx para consulta, pues son más fáciles de visualizar. Por otro lado, en la carpeta ``pkls'' se encuentran los archivos con formato .pkl que son con los que se trabaja pues su lectura y guardado son mas eficientes de leer y guardar.
+	\item En la carpeta ``\textbf{\#ExcelsAvistamientosIniciales}'' encontraremos los conjuntos de datos de los avistamientos. La versión más reciente es ``Datos\_Physalia\_20171010.xls''.
+	\item El archivo GenerarEstructura.ipynb realiza todo el trabajo de tratar los conjuntos de datos, unirles y generar una estructura que posteriormente se utilizará para entrenar al modelo. Estas estructuras se guardan en dos formatos distintos. En la carpeta ``Excels'' están los archivos con formato .xlsx para consulta, pues son más fáciles de visualizar. Por otro lado, en la carpeta ``pkls'' se encuentran los archivos con formato .pkl que son con los que se trabaja pues su lectura y guardado son más eficientes de leer y guardar.
 	\item La carpeta ``PruebasGeneracionEstructuraDatos'' contiene varios \emph{notebooks} con pruebas de las diferentes transformaciones que se han realizado a la estructura de datos. 
-	\item Por ultimo, ``GeneracionModelo'' contiene algunas pruebas que se realizaron a la hora del aprendizaje con \emph{scikitLearn} y tres \emph{notebooks} con las  pruebas realizadas con diferentes algoritmos.
+	\item Por ultimo, ``GeneracionModelo'' contiene algunas pruebas que se realizaron a la hora del aprendizaje con \emph{Scikit-learn} y tres \emph{notebooks} con las  pruebas realizadas con diferentes algoritmos.
 \end{itemize}
 
 \section{Pruebas del sistema}
@@ -146,7 +146,7 @@ A parte de las pruebas por parte de los usuarios, se han realizado pruebas autom
 
 Se ha utilizado la biblioteca para Python con el driver correspondiente para Google Chrome. Elegí esta opción en vez de utilizar la extensión disponible debido a tener una breve experiencia con esta biblioteca. 
 
-La versión de Chrome con la que se ha utilizado ha sido la 83.0.4103.106 con el driver correspondiente para esta versión. Si se prueba en el futuro, es probable que la versión del navegador sea diferente. Habria que descargar la versión correspondiente del driver, e introducirla en la carpeta ``test/chromedriver'' del repositorio \emph{WebJellyfishForecast}.
+La versión de Chrome con la que se ha utilizado ha sido la 83.0.4103.106 con el driver correspondiente para esta versión. Si se prueba en el futuro, es probable que la versión del navegador sea diferente. Habría que descargar la versión correspondiente del driver, e introducirla en la carpeta ``test/chromedriver'' del repositorio \emph{WebJellyfishForecast}.
 
 Para ejecutar las pruebas, accederemos el entorno virtual como se ha explicado en el punto anterior y ejecutaremos el fichero \emph{test.py}.
 \begin{verbatim}
