@@ -155,13 +155,21 @@ Python test/test.py
 
 Esta ejecución genera un fichero ``test.log'' con las salida de los test.
 
-
 \subsection{Pruebas del modelo}
-\textcolor{red}{diferentes algoritmos}
 
+A parte de las pruebas de la aplicación web, se realizan pruebas comparativas entre diferentes algoritmos de aprendizaje sobre nuestro conjunto de instancias.
+
+\textcolor{green}{imagen comparativa}
+
+En la figura \ref{comparativa_modelos} podemos observar como el modelo que mejores resultados nos aporta, es el de arboles de decisión. Se ha utilizado como parámetro de puntuación el coeficiente de determinación o \(R^2\). Este es una medida de la calidad del ajuste del modelo.
+
+Este modelo nos ha otorgado un coeficiente de determinación de 0,25. Esto nos indica que el modelo no realiza una predicción suficientemente precisa de los avistamientos por lo que habría que realizar un mayor tratamiento de los datos previamente a el entrenamiento].
+
+Se ha realizado una prueba con la playa que contaba la el mayor número de d;ias con avistamientos. El resultado de la predicción respecto a los datos reales se puede observar en la figura \ref{fig:comparativa}
+ 
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=1\textwidth]{comparativaModelo.png}
+	\includegraphics[width=0.8\textwidth]{comparativaModelo.png}
 	\caption{Comparativa entre predicción y realidad}\label{fig:comparativa}
 \end{figure}
