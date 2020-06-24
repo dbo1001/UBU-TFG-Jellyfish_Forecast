@@ -57,7 +57,7 @@ Un resumen de todo el proceso del KDD se puede observar en la Figura~\ref{fasesK
 	\label{fasesKDD}
 \end{figure}
 
-\textcolor{green}{Añadir subsección de la obtención de los datos}
+
 \subsection{Preprocesamiento de los datos}
 Se trata del primer paso una vez obtenido el conjunto de datos a utilizar. Estos datos en bruto no pueden ser utilizados en los algoritmos de minería sin un tratamiento previo. El conjunto de datos inicial debe ser transformado a un formato estándar para poder ser analizado.
 
@@ -125,88 +125,33 @@ Tres ejemplos de esto podrían ser los reflejados en la figura \ref{series_no_es
 
 En el caso de la figura \ref{serie_si_estacionaria}, encontramos una serie con media, varianza y co-varianza constante por lo que si que podríamos hablar de una serie estacionaria. 
 
-\subsection{Evaluación del modelo}
+\subsection{Creación del modelo}
 
+\subsubsection{Time Series}
+Si continuamos hablando del uso de las series temporales, tenemos que ver como se aplican a la hora de entrenar un modelo. Lo que se trata de hacer, es similar a la validación cruzada con el inconveniente de que no se pueden utilizar datos del futuro para predecir el pasado. Por esto, se divide el conjunto de datos en conjuntos más pequeños y para cada uno de ellos, el conjunto actual lo utilizas de \emph{test}, mientras que los conjuntos anteriores se entrena el modelo. Esto lo podemos ver de manera más clara en la figura \ref{timeseriesimage}.
 
+\begin{figure}%[!h]
+	\centering
+	\includegraphics[width=1\textwidth]{timeseries.png}
+	\caption[Divisiones en series temporales]{Divisiones en series temporales~\cite{timeseriesimage}.}\label{timeseriesimage}
+\end{figure}
 
-%Algunos conceptos teóricos de \LaTeX \footnote{Créditos a los proyectos de Álvaro López Cantero: Configurador de Presupuestos y Roberto Izquierdo Amo: PLQuiz}.
-%
-%
-%
-%\section{Secciones}
-%
-%Las secciones se incluyen con el comando section.
-%
-%\subsection{Subsecciones}
-%
-%Además de secciones tenemos subsecciones.
-%
-%\subsubsection{Subsubsecciones}
-%
-%Y subsecciones. 
-%
-%
-%\section{Referencias}
-%
-%Las referencias se incluyen en el texto usando cite \cite{wiki:latex}. Para citar webs, artículos o libros \cite{koza92}.
-%
-%
-%\section{Imágenes}
-%
-%Se pueden incluir imágenes con los comandos standard de \LaTeX, pero esta plantilla dispone de comandos propios como por ejemplo el siguiente:
-%
-%\imagen{escudoInfor}{Autómata para una expresión vacía}
-%
-%
-%
-%\section{Listas de items}
-%
-%Existen tres posibilidades:
-%
-%\begin{itemize}
-%	\item primer item.
-%	\item segundo item.
-%\end{itemize}
-%
-%\begin{enumerate}
-%	\item primer item.
-%	\item segundo item.
-%\end{enumerate}
-%
-%\begin{description}
-%	\item[Primer item] más información sobre el primer item.
-%	\item[Segundo item] más información sobre el segundo item.
-%\end{description}
-%	
-%\begin{itemize}
-%\item 
-%\end{itemize}
-%
-%\section{Tablas}
-%
-%Igualmente se pueden usar los comandos específicos de \LaTeX o bien usar alguno de los comandos de la plantilla.
-%
-%\tablaSmall{Herramientas y tecnologías utilizadas en cada parte del proyecto}{l c c c c}{herramientasportipodeuso}
-%{ \multicolumn{1}{l}{Herramientas} & App AngularJS & API REST & BD & Memoria \\}{ 
-%HTML5 & X & & &\\
-%CSS3 & X & & &\\
-%BOOTSTRAP & X & & &\\
-%JavaScript & X & & &\\
-%AngularJS & X & & &\\
-%Bower & X & & &\\
-%PHP & & X & &\\
-%Karma + Jasmine & X & & &\\
-%Slim framework & & X & &\\
-%Idiorm & & X & &\\
-%Composer & & X & &\\
-%JSON & X & X & &\\
-%PhpStorm & X & X & &\\
-%MySQL & & & X &\\
-%PhpMyAdmin & & & X &\\
-%Git + BitBucket & X & X & X & X\\
-%Mik\TeX{} & & & & X\\
-%\TeX{}Maker & & & & X\\
-%Astah & & & & X\\
-%Balsamiq Mockups & X & & &\\
-%VersionOne & X & X & X & X\\
-%} 
+\subsubsection{Árboles de decisión}
+
+Los arboles de decisión son una técnica de aprendizaje automático supervisado. Esta técnica de \emph{machine learning} crea modelos en forma de árbol  desglosando el conjunto de datos en subconjuntos más pequeños generando paralelamente un árbol de decisión. El resultado obtenido es un árbol con nodos de decisión y nodos hojas. en los primeros se ramifica el árbol en dos o mas ramas diferentes, mientras que en los nodos hojas se toma una decisión final.
+
+\subsubsection{Optimización de parámetros}
+
+A la hora de entrenar el modelo, existen multitud de parámetros que se pueden modificar, variando el rendimiento del mismo. Para lograr una buena configuración de parámetros es necesario un buen conocimiento del modelo, cosa que muchas veces no es posible.
+
+Una solución a este problema es la de probar diferentes combinaciones de parámetros para elegir la que mejor resultado devuelva. En la biblioteca de aprendizaje automático utilizada, podemos encontrar la función \emph{GridSearchCV}. Su uso es sencillo, se trata de definir una serie de valores que queremos que pruebe para cada parámetro y prueba todas sus combinaciones.
+
+En la figura \ref{parametros} podemos observar la gran diferencia de rendimiento que aporta la optimización de parámetros utilizando como medida el coeficiente de determinación.
+
+\begin{figure}%[!h]
+	\centering
+	\includegraphics[width=1\textwidth]{gridsearch.png}
+	\caption[Diferencia de rendimiento con optimización de parámetros]{Diferencia de rendimiento con optimización de parámetros.}\label{parametros}
+\end{figure}
+
+A parte de esta función, existe otra similar. Se trata de \emph{RandomizedSearchCV}. A diferencia que \emph{GridSearch}, esta realiza pruebas combinando los parámetros indicados de manera aleatoria hasta un numero de iteraciones que le indiquemos. Arroja unos resultados casi idénticos a \emph{GridSearch} en la mayoria de ocasiones con un coste computacional y temporal menor por lo que es una buena alternativa a esta.
