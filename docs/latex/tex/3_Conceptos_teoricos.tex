@@ -50,7 +50,7 @@ Posteriormente, es cuando podremos utilizar algoritmos de clasificación o regre
 
 Un resumen de todo el proceso del KDD se puede observar en la Figura~\ref{fasesKDD}.
 
-\begin{figure}%[!h]
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.9\textwidth]{esquemaMineria.png}
 	\caption[Fases del proceso de KDD]{Fases del proceso de KDD~\cite{mineria_tecnicas_herramientas}.}
@@ -73,13 +73,13 @@ Como se ha comentado anteriormente, la minería de datos se trata de obtener pat
 En nuestro caso, se pretende conseguir un modelo capaz de encontrar relaciones entre el estado de la mar y la aparición de medusas en la costa. Para ello el modelo debe ser capaz de aprender a partir de los datos de entrada. Se pueden definir dos tipos de aprendizaje principales: supervisado y no supervisado.
 
 \subsubsection{Aprendizaje supervisado}
-Se trata de modelo que se elaboran a partir de conjuntos de datos etiquetados, es decir cada instancia tiene un atributo que es el valor a predecir. Este atributo será una clase ([mucho/poco], [alto/bajo]...) si se trata de un problema de clasificación, mientras que si se trata de un problema de regresión será un valor numérico.
+Se trata de modelo que se elaboran a partir de conjuntos de datos etiquetados, es decir cada instancia tiene un atributo que es el valor a predecir. Este atributo será una clase ([mucho/poco], [alto/bajo]...) si se trata de un problema de clasificación, mientras que si se trata de un problema de regresión, será un valor numérico.
 
 Una vez entrenado el modelo, éste podrá etiquetar o predecir el valor de para nuevas instancias.
 En este caso tenemos un problema de regresión pues se intenta entrenar un modelo que prediga el número de avistamientos de medusas.
 
 \subsubsection{Aprendizaje no supervisado}
-En este caso, el entrenamiento del modelo no se hace con datos etiquetados sino que se les asignan características. A partir de los datos de entrada, se agrupa a los datos en conjuntos en función de estas características. Estos grupos se denominan \emph{clusters} de instancias.
+En este caso, el entrenamiento del modelo no se hace con datos etiquetados pues solo contamos con los datos de entrada y no con los de salida que corresponden con esa entrada. A partir de este estructura, se agrupa a los datos en conjuntos en función de sus características. Estos grupos se denominan \emph{clusters} de instancias.
 
 \subsubsection{Series temporales}
 Las series temporales son sucesiones de datos que han sido tomados o medidos  secuencialmente a lo largo del tiempo~\cite{SeriesTempUBU}.
@@ -127,8 +127,8 @@ En el caso de la figura \ref{serie_si_estacionaria}, encontramos una serie con m
 
 \subsection{Creación del modelo}
 
-\subsubsection{Time Series}
-Si continuamos hablando del uso de las series temporales, tenemos que ver como se aplican a la hora de entrenar un modelo. Lo que se trata de hacer, es similar a la validación cruzada con el inconveniente de que no se pueden utilizar datos del futuro para predecir el pasado. Por esto, se divide el conjunto de datos en conjuntos más pequeños y para cada uno de ellos, el conjunto actual lo utilizas de \emph{test}, mientras que los conjuntos anteriores se entrena el modelo. Esto lo podemos ver de manera más clara en la figura \ref{timeseriesimage}.
+\subsubsection{Time Series}\label{series_temporales_titutlo}
+Si continuamos hablando del uso de las series temporales, tenemos que ver como se aplican a la hora de entrenar un modelo. Lo que se trata de hacer, es similar a la validación cruzada con el inconveniente de que no se pueden utilizar datos del futuro para predecir el pasado. Por esto, se divide el conjunto de datos en conjuntos más pequeños y para cada uno de ellos, el conjunto actual lo utilizas de \emph{test}, mientras que con los conjuntos anteriores se entrena el modelo. Esto lo podemos ver de manera más clara en la figura \ref{timeseriesimage}.
 
 \begin{figure}%[!h]
 	\centering
@@ -136,9 +136,11 @@ Si continuamos hablando del uso de las series temporales, tenemos que ver como s
 	\caption[Divisiones en series temporales]{Divisiones en series temporales~\cite{timeseriesimage}.}\label{timeseriesimage}
 \end{figure}
 
+Aclarar que aunque los datos de afluencias de medusas con los que contamos pueden ser considerados una serie temporal, no se han aplicado técnicas propias de estas. Únicamente se han utilizado técnicas que se aplican a las series temporales a las hora de evaluar el modelo. Estos algoritmos de las series temporales no se ven en detalle en la carrera, por lo que se investigó sobre ellos, y finalmente solo se aplicaron a la hora de entrenar los modelos.
+
 \subsubsection{Árboles de decisión}
 
-Los arboles de decisión son una técnica de aprendizaje automático supervisado. Esta técnica de \emph{machine learning} crea modelos en forma de árbol  desglosando el conjunto de datos en subconjuntos más pequeños generando paralelamente un árbol de decisión. El resultado obtenido es un árbol con nodos de decisión y nodos hojas. en los primeros se ramifica el árbol en dos o mas ramas diferentes, mientras que en los nodos hojas se toma una decisión final.
+Los arboles de decisión son una técnica de aprendizaje automático supervisado. Esta técnica de \emph{machine learning} crea modelos en forma de árbol  desglosando el conjunto de datos en subconjuntos más pequeños generando paralelamente un árbol de decisión. El resultado obtenido es un árbol con nodos de decisión y nodos hojas. En los primeros se ramifica el árbol en dos o más ramas diferentes, mientras que en los nodos hojas se toma una decisión final.
 
 \subsubsection{Optimización de parámetros}
 
@@ -154,4 +156,4 @@ En la figura \ref{parametros} podemos observar la gran diferencia de rendimiento
 	\caption[Diferencia de rendimiento con optimización de parámetros]{Diferencia de rendimiento con optimización de parámetros.}\label{parametros}
 \end{figure}
 
-A parte de esta función, existe otra similar. Se trata de \emph{RandomizedSearchCV}. A diferencia que \emph{GridSearch}, esta realiza pruebas combinando los parámetros indicados de manera aleatoria hasta un numero de iteraciones que le indiquemos. Arroja unos resultados casi idénticos a \emph{GridSearch} en la mayoria de ocasiones con un coste computacional y temporal menor por lo que es una buena alternativa a esta.
+A parte de esta función, existe otra similar. Se trata de \emph{RandomizedSearchCV}. A diferencia que \emph{GridSearch}, esta realiza pruebas combinando los parámetros indicados de manera aleatoria hasta un numero de iteraciones que le indiquemos. En nuestro caso, arroja unos resultados casi idénticos a \emph{GridSearch} en la mayoria de ocasiones con un coste computacional y temporal menor por lo que es una buena alternativa a esta.

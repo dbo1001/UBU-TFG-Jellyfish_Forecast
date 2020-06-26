@@ -29,7 +29,7 @@ Si se desea acceder a la plataforma de \emph{Copernicus}, se proporciona la cuen
 
 
 \section{Ejecución remota}
-Para la ejecución de los scripts utilizados para la descarga de los datos, la ejecución del modelo y la realización de las diferentes pruebas, se ha utilizado un equipo de cómputo de la Universidad mediante una conexión ssh y una VPN. Todo esto ha hecho que surjan diferentes problemas.
+Para la ejecución de los scripts utilizados para la descarga de los datos, la ejecución del modelo y la realización de las diferentes pruebas, se ha utilizado un equipo de cómputo de la Universidad mediante una conexión ssh y una VPN. El uso de esta máquina fue necesario por el gran tamaño de los datos descargados en un primer momento, así como para el entrenamiento de los modelos, ya que fueron tareas con largos tiempos de ejecución y me permitía no tener mi equipo encendido durante tanto tiempo.Todo esto ha hecho que surjan diferentes problemas.
 
 En primer lugar no se disponía de permisos de administrador para instalar las diferentes bibliotecas necesarias. Esto se solucionó mediante la instalación de la distribución local Anaconda que nos permite ser instalada para un único usuario. Con esto, se creó un entorno virtual en el que poder instalar todas las bibliotecas necesarias.
 
@@ -47,25 +47,34 @@ Tras haber descargado los datos oceánicos, disponemos de dos fuentes de datos. 
 
 Los datos oceánicos están agrupados por cuadrantes separados cada \num{0,0833}  grados (1/12). Por esto se redondearon las coordenadas de los avistamientos para coincidir con estos pasos. 
 
-A continuación se enlazan en un solo \emph{DataFrame} los avistamientos con la variables oceánicas recogidas de ese cuadrante y en la fecha del avistamiento quedando la siguiente estructura de datos como la que encontramos en la figura \ref{est_datos}.
+A continuación se enlazan en un solo \emph{DataFrame} los avistamientos con la variables oceánicas recogidas de ese cuadrante y en la fecha del avistamiento quedando la siguiente estructura de datos como la que encontramos en la figura \ref{dataframe_datos}.
 
 Un \emph{DataFrame} se trata de una estructura de datos de dos dimensiones similar a una tabla de una hoja de cálculo, en la que podemos guardar datos de diferentes tipos ordenados en filas y columnas.
 
-\imagenflotante{estructura_datos.png}{Estructura de datos resultante.}\label{est_datos}
+\begin{figure}%[!h]
+	\centering
+	\includegraphics[width=1\textwidth]{estructura_datos.png}
+	\caption[Estructura de datos resultante.]{Estructura de datos resultante.}\label{dataframe_datos}
+\end{figure}
+
 
 Esta estructura inicial, contiene poca información, pues no se puede predecir con exactitud la aparición de medusas observando únicamente el cuadrante más próximo a las playas. Por ello se añadieron más lecturas de los cuadrantes adyacentes mar adentro. Estos nuevos cuadrantes fueron incluidos a la estructura inicial modificando el nombre con una etiqueta al final de las mismas para poder identificarlos. El resultado de como se organizan estas etiquetas se puede observar en la figura \ref{croquis_cuadrantes}.
 
-\imagenflotante{croquis_cuadrantes.png}{Croquis de referencia sobre los cuadrantes y el nombre de las variables asociadas.}\label{croquis_cuadrantes}
+\begin{figure}%[!h]
+	\centering
+	\includegraphics[width=1\textwidth]{croquis_cuadrantes.png}
+	\caption[Croquis de referencia sobre los cuadrantes y el nombre de las variables asociadas.]{Croquis de referencia sobre los cuadrantes y el nombre de las variables asociadas.}\label{croquis_cuadrantes}
+\end{figure}
 
-Tras unir todos los cuadrantes nos encontramos que ciertas celdas no contenían información. Esto se debe principalmente por dos causas: Las profundidades se toman a 0,5 y 10 metros, esto hace que en los cuadrantes más cercanos a las costas existiesen zonas con una profundidad inferior. También debido a la forma de la línea de costa, existen zonas en las que ya sean cuadrantes inferiores o superiores, están situados tierra adentro.
+Tras unir todos los cuadrantes nos encontramos que ciertas celdas no contenían información. Esto se debe principalmente por dos causas: Las profundidades se toman a 0, 5 y 10 metros, esto hace que en los cuadrantes más cercanos a las costas existiesen zonas con una profundidad inferior. También debido a la forma de la línea de costa, existen zonas en las que ya sean cuadrantes inferiores o superiores, están situados tierra adentro.
 
 La solución que se buscó a este problema, fue la de utilizar los datos del cuadrante más cercano por la izquierda que tenga información válida.
 
 \section{Despliegue de la aplicación web}
 Al tratarse se una aplicación web, un aspecto importante es el despliegue de la misma en un servidor al que poder acceder desde cualquier lugar. Como se ha mencionado en la sección de herramientas (\ref{HerokuHerrramientas}), se ha utilizado la aplicación \emph{Heroku}.
 
-Esta nos ofrece hosting gratuito, además de desplegarse automáticamente cada vez de que se realiza un \emph{push} en el repositorio, si este está asociado a la cuenta de heroku. Por este motivo, se tuvo que realizar un segundo repositorio en Github en el que incluir unicamente la parte de la aplicación web, ya que para poder realizar el autodespliegue los archivos deben estar en el directorio raíz de nuestro repositorio.
+Esta nos ofrece hosting gratuito, además de desplegarse automáticamente cada vez de que se realiza un \emph{push} en el repositorio, si este está asociado a la cuenta de heroku. Por este motivo, se tuvo que realizar un segundo repositorio en Github en el que incluir únicamente la parte de la aplicación web, ya que para poder realizar el autodespliegue los archivos deben estar en el directorio raíz de nuestro repositorio.
 
-Se añadió una referencia desde el repositorio principal a este segundo ya que \emph{Git} lo permite, además de incluir el enlace también en el archivo README. El repositorio se encuentra en \href{https://github.com/psnti/WebJellyfishForecast}{https://github.com/psnti/WebJellyfishForecast}.
+Se añadió una referencia desde el repositorio principal a este segundo ya que \emph{Git} lo permite, además de incluir el enlace también en el archivo README. El repositorio se encuentra en \url{https://github.com/psnti/WebJellyfishForecast}.
 
 
