@@ -55,7 +55,7 @@ En este apartado se indicará el proceso de obtener proyecto desde el repositori
 	\item Descomprimir el fichero .zip en la ruta deseada.
 	\item Antes de instalar las bibliotecas utilizadas en el proyecto crearemos un entorno virtual y accederemos a el:
 	\begin{verbatim}
-	python -m venv env
+	Python -m venv env
 	env\Scripts\active.bat
 	\end{verbatim}
 	\item Para la instalación de la biblioteca necesarias, contamos con el archivo requirements.txt. Ejecutando el siguiente comando, se instalarán todas las dependencias del proyecto en  nuestro entorno virtual.
@@ -129,7 +129,7 @@ Una vez tengamos estos archivos deberemos seguir los siguientes pasos:
 
 La generación del modelo y las pruebas están recogidas en el segundo repositorio\footnote{Jellyfish Forecast. \url{https://github.com/psnti/Jellyfish_Forecast}}. La forma de descargarlo e instalar todas las bibliotecas necesarias es igual a lo explicado en el anterior repositorio.
 
-En la carpeta ``scr/Descarga datos'' podremos encontrar dos scripts diferentes para poder descargar los datos oceánicos de origen desde \emph{Copernicus}. Uno lo hace a través de una API. Esta opción se descartó, pues en el momento de descargar los datos era bastante nueva y originaba errores, además de tardar demasiado en generar los paquetes de datos. El otro, descarga los datos a través de un FTP. Esta opción descarga un volumen mucho mayor pues se descargan los datos de cada dia y de todo el mundo, por lo que tras descargar cada archivo, el script realiza un \emph{crop} dejando unicamente el área de Chile y las variables que nos interesan para el estudio como se explica en el apartado \ref{diseño_datos}
+En la carpeta ``scr/Descarga datos'' podremos encontrar dos scripts diferentes para poder descargar los datos oceánicos de origen desde \emph{Copernicus}. Uno lo hace a través de una API. Esta opción se descartó, pues en el momento de descargar los datos era bastante nueva y originaba errores, además de tardar demasiado en generar los paquetes de datos. El otro, descarga los datos a través de un FTP. Esta opción descarga un volumen mucho mayor pues se descargan los datos de cada día y de todo el mundo, por lo que tras descargar cada archivo, el script realiza un \emph{crop} dejando unicamente el área de Chile y las variables que nos interesan para el estudio como se explica en el apartado \ref{diseño_datos}
 
 Si nos movemos a la carpeta ``src/Avistamientos'' nos encontramos con los \emph{notebooks} utilizados para la generación del modelo predictivo.
 \begin{itemize}
@@ -146,7 +146,7 @@ A parte de las pruebas por parte de los usuarios, se han realizado pruebas autom
 
 Se ha utilizado la biblioteca para Python con el driver correspondiente para Google Chrome. Elegí esta opción en vez de utilizar la extensión disponible debido a tener una breve experiencia con esta biblioteca. 
 
-La versión de Chrome con la que se ha utilizado ha sido la 83.0.4103.106 con el driver correspondiente para esta versión. Si se prueba en el futuro, es probable que la versión del navegador sea diferente. Habría que descargar la versión correspondiente del driver, e introducirla en la carpeta ``test/chromedriver'' del repositorio \emph{WebJellyfishForecast}.
+La versión de Chrome con la que se ha utilizado ha sido la 83.0.4103.106 con el driver correspondiente para esta versión. Si se prueba en el futuro, es probable que la versión del navegador sea diferente. Habría que descargar la versión correspondiente del driver\footnote{Web para descarga del ChromeDriver. \url{https://chromedriver.chromium.org/downloads}}, e introducirla en la carpeta ``test/chromedriver'' del repositorio \emph{WebJellyfishForecast}.
 
 Para ejecutar las pruebas, accederemos el entorno virtual como se ha explicado en el punto anterior y ejecutaremos el fichero \emph{test.py}.
 \begin{verbatim}
@@ -155,19 +155,23 @@ Python test/test.py
 
 Esta ejecución genera un fichero ``test.log'' con las salida de los test.
 
-También se han realizado pruebas del correcto funcionamiento de la aplicación en diferentes navegadores web. Se ha comprobado en Google Chrome, Firefox y Opera.
+También se han realizado pruebas del correcto funcionamiento de la aplicación en diferentes navegadores web. Google Chrome, Firefox y Opera soportan toda las funcionalidad de la aplicación, mientras que en Microsoft Edge no se cargan los mapas.\label{pruebas_navegadores}
 
 \subsection{Pruebas del modelo}
 
-A parte de las pruebas de la aplicación web, se realizan pruebas comparativas entre diferentes algoritmos de aprendizaje sobre nuestro conjunto de instancias.
+Además de las pruebas de la aplicación web, se realizan pruebas comparativas entre diferentes algoritmos de aprendizaje sobre nuestro conjunto de instancias.
 
-\textcolor{green}{imagen comparativa}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\textwidth]{grafico_compartiva_modelos.png}
+	\caption{Comparativa diferentes modelos}\label{fig:comparativa_modelos}
+\end{figure}
 
-En la figura \ref{comparativa_modelos} podemos observar como el modelo que mejores resultados nos aporta, es el de arboles de decisión. Se ha utilizado como parámetro de puntuación el coeficiente de determinación o \(R^2\). Este es una medida de la calidad del ajuste del modelo.
+En la figura \ref{fig:comparativa_modelos} podemos observar como el modelo que mejores resultados nos aporta, es el de arboles de decisión. Se ha utilizado como parámetro de puntuación el coeficiente de determinación o \(R^2\). Este es una medida de la calidad del ajuste del modelo.
 
-Este modelo nos ha otorgado un coeficiente de determinación de 0,25. Esto nos indica que el modelo no realiza una predicción suficientemente precisa de los avistamientos por lo que habría que realizar un mayor tratamiento de los datos previamente a el entrenamiento].
+Este modelo nos ha otorgado un coeficiente de determinación de 0,25. Esto nos indica que el modelo no realiza una predicción suficientemente precisa de los avistamientos por lo que habría que realizar un mayor tratamiento de los datos previamente a el entrenamiento del mismo.
 
-Se ha realizado una prueba con la playa que contaba la el mayor número de d;ias con avistamientos. El resultado de la predicción respecto a los datos reales se puede observar en la figura \ref{fig:comparativa}
+Se ha realizado una prueba con la playa que contaba con el mayor número de días con avistamientos. El resultado de la predicción respecto a los datos reales se puede observar en la figura \ref{fig:comparativa}
  
 \begin{figure}[!h]
 	\centering

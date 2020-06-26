@@ -57,7 +57,21 @@ A continuación se muestra un diagrama de flujo del uso de la aplicación a la h
 
 \section{Diseño arquitectónico}
 
-\textcolor{red}{PREGUNTAR MVC??}
+La arquitectura de la aplicación se puede considerar como un patrón Modelo-Vista-Controlador (MVC) \cite{mvc} en lo que nos encontramos tres elementos principales:
+
+\begin{itemize}
+	\item \textbf{Modelo:} Contiene un representación de los datos que utiliza el sistema y la lógica de negocio del mismo. Los datos suelen consultarse a una base de datos, en nuestro caso, los datos de consulta se encuentran en una serie de \emph{dataframes}.
+	\item \textbf{Vista:} Se trata de la interfaz de usuario. Todo lo relacionado con la representación gráfica es responsabilidad de la vista.
+	\item \textbf{Controlador:} Como su propio nombre indica es el encargado de controlar los eventos generados por el usuario. Es el encargado de solicitar los datos al modelo y enviárselos a la vista.
+\end{itemize}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{mvc.jpg}
+	\caption{Representación del patrón Modelo-Vista-Controlador}\label{fig:mvc}
+\end{figure}
+
+
 
 \section{Diseño de interfaces}
 
