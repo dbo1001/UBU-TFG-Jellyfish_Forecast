@@ -33,8 +33,8 @@
 \nonzeroparskip
 
 % Huérfanas y viudas
-\widowpenalty=5000
-\clubpenalty=10000
+\widowpenalty100000
+\clubpenalty100000
 
 % Imagenes
 \usepackage{graphicx}
@@ -363,7 +363,7 @@
 
 % Datos de portada
 \title{Jellyfish Forecast\\
-	\large Predicción de afluencia de medusas}
+	\large Predicción de afluencia de medusas\\a las costas}
 \author{Pablo Santidrián Tudanca}
 \tutor{José Francisco Díez Pastor y Álvar Arnaiz González}
 \date{\today}
@@ -432,9 +432,9 @@ D. Álvar Arnaiz González
 \begin{abstract}
 Los afloramientos de medusa son eventos que causan numerosos problemas ambientales y socio-económicos. Las picaduras de estos animales gelatinosos pueden ser muy dolorosas, provocando lesiones o incluso la muerte. Por este motivo, es importante conocer las causas de estos brotes y conseguir predecirlos.
 
-En este proyecto se pretende aplicar técnicas de minería de datos con el fin de generar un modelo capaz de predecir los brotes en función de las condiciones oceánicas en las costas de Chile.
+En este proyecto se pretende aplicar técnicas de minería de datos con el fin de generar un modelo capaz de predecir los brotes en función de las condiciones oceánicas en las costas de Chile. Para conseguirlo, se realiza la obtención de los datos oceánicos, su pre-procesamiento y finalmente el entrenamiento del modelo.
 
-Para representar los resultados obtenidos, se creó una aplicación web disponible en \href{https://jellyfish-forecast.herokuapp.com/}{https://jellyfish-forecast.herokuapp.com/}.
+Para representar los resultados obtenidos, se diseñó e implementó una aplicación cliente/servidor que permite la consulta de las predicciones realizadas por el modelo, así como los registros históricos de los que se disponen. Esta aplicación web esta disponible en: \href{https://jellyfish-forecast.herokuapp.com/}{https://jellyfish-forecast.herokuapp.com/}.
 \end{abstract}
 
 \renewcommand*\abstractname{Descriptores}
@@ -449,9 +449,9 @@ Para representar los resultados obtenidos, se creó una aplicación web disponib
 \begin{abstract}
 Jellyfish outbreaks are events that cause many environmental and socio-economic problems. Jellyfish stings could be highly painful, causing injury or even deaht. For this reason is important to know the causes of these outcrops and to predict them.
 
-This proyect pretends to apply data minning techniques in order to create a model able to predict new outbreaks based on oceans conditions on the coast of Chile.
+This proyect pretends to apply data minning techniques in order to create a model able to predict new outbreaks based on oceans conditions on the coast of Chile. To achieve this, the ocean data was obtained from a FTP server, pre-processed and finally, the model was trained.
 
-To present the results, a web application was created available at \href{https://jellyfish-forecast.herokuapp.com/}{https://jellyfish-forecast.herokuapp.com/}.
+To present the results, a client/server application was designed and implemented that enables the model predictions to be consulted, as well as the historical records available. The web application is available at/: \href{https://jellyfish-forecast.herokuapp.com/}{https://jellyfish-forecast.herokuapp.com/}.
 \end{abstract}
 
 \renewcommand*\abstractname{Keywords}

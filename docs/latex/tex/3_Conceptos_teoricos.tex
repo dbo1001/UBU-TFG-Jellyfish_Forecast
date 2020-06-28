@@ -23,7 +23,7 @@ Consta de un flotador lleno de gas para mantener la flotabilidad y que tiene for
 
 \begin{figure}%[!h]
 	\centering
-	\includegraphics[width=0.9\textwidth]{carabela.jpg}
+	\includegraphics[width=0.7\textwidth]{carabela.jpg}
 	\caption[Partes del cuerpo de una fragata portuguesa]{Partes del cuerpo de una fragata portuguesa~\cite{esquema-carabela}.}
 	\label{esquema_carabela}
 \end{figure}
@@ -128,7 +128,7 @@ En el caso de la figura \ref{serie_si_estacionaria}, encontramos una serie con m
 \subsection{Creación del modelo}
 
 \subsubsection{Time Series}\label{series_temporales_titutlo}
-Si continuamos hablando del uso de las series temporales, tenemos que ver como se aplican a la hora de entrenar un modelo. Lo que se trata de hacer, es similar a la validación cruzada con el inconveniente de que no se pueden utilizar datos del futuro para predecir el pasado. Por esto, se divide el conjunto de datos en conjuntos más pequeños y para cada uno de ellos, el conjunto actual lo utilizas de \emph{test}, mientras que con los conjuntos anteriores se entrena el modelo. Esto lo podemos ver de manera más clara en la figura \ref{timeseriesimage}.
+Si continuamos hablando del uso de las series temporales, tenemos que ver como se aplican a la hora de entrenar un modelo. Lo que se trata de hacer, es similar a la validación cruzada con el inconveniente de que no se pueden utilizar datos del futuro para predecir el pasado. Por esto, se divide el conjunto de datos en conjuntos más pequeños y para cada uno de ellos, el conjunto actual lo utilizas de \emph{test}, mientras que con los conjuntos anteriores se entrena el modelo. Esto lo podemos ver de manera más clara en la figura~\ref{timeseriesimage}.
 
 \begin{figure}%[!h]
 	\centering
@@ -148,12 +148,12 @@ A la hora de entrenar el modelo, existen multitud de parámetros que se pueden m
 
 Una solución a este problema es la de probar diferentes combinaciones de parámetros para elegir la que mejor resultado devuelva. En la biblioteca de aprendizaje automático utilizada, podemos encontrar la función \emph{GridSearchCV}. Su uso es sencillo, se trata de definir una serie de valores que queremos que pruebe para cada parámetro y prueba todas sus combinaciones.
 
-En la figura \ref{parametros} podemos observar la gran diferencia de rendimiento que aporta la optimización de parámetros utilizando como medida el coeficiente de determinación.
+%En la figura \ref{parametros} podemos observar la gran diferencia de rendimiento que aporta la optimización de parámetros utilizando como medida el coeficiente de determinación.
 
-\begin{figure}%[!h]
-	\centering
-	\includegraphics[width=1\textwidth]{gridsearch.png}
-	\caption[Diferencia de rendimiento con optimización de parámetros]{Diferencia de rendimiento con optimización de parámetros.}\label{parametros}
-\end{figure}
+%\begin{figure}%[!h]
+%	\centering
+%	\includegraphics[width=1\textwidth]{gridsearch.png}
+%	\caption[Diferencia de rendimiento con optimización de parámetros]{Diferencia de rendimiento con optimización de parámetros.}\label{parametros}
+%\end{figure}
 
 A parte de esta función, existe otra similar. Se trata de \emph{RandomizedSearchCV}. A diferencia que \emph{GridSearch}, esta realiza pruebas combinando los parámetros indicados de manera aleatoria hasta un numero de iteraciones que le indiquemos. En nuestro caso, arroja unos resultados casi idénticos a \emph{GridSearch} en la mayoria de ocasiones con un coste computacional y temporal menor por lo que es una buena alternativa a esta.
