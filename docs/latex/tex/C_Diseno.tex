@@ -13,7 +13,7 @@ Para hablar de los datos utilizados en este proyecto, es necesario referirnos a 
 Los datos oceánicos fueron obtenidos de un servidor FTP de la organización \emph{Copernicus} como se explica en el apartado 5.1 de la memoria. Estos tienen un formato poco habitual (.nc), un formato de archivo para almacenar datos científicos multidimensionales. En el apartado 4.4 de la memoria se da una explicación más detallada.
 
 En este caso, nuestro dataset consta de 4 dimensiones o variables principales: Latitud, Longitud, Profundidad y Fecha.
-En la intersección de estas cuatro dimensiones, nos encontraremos una serie de variables que podemos observar en la figura \ref{dataset_inicial}. Estas variables corresponden a:
+En la intersección de estas cuatro dimensiones, nos encontraremos una serie de variables que podemos observar en la figura \ref{fig:dataset_inicial}. Estas variables corresponden a:
 \begin{itemize}
 	\setlength\itemsep{-1.5em}
 	\item \textbf{mlotst}: Profundidad de la capa mixta del océano.\\
@@ -29,11 +29,19 @@ En la intersección de estas cuatro dimensiones, nos encontraremos una serie de 
 	\item \textbf{vo}: Velocidad de la corriente hacia el norte.
 \end{itemize}
 
-\imagen{dataset_original.png}{Variables del dataset original}\label{dataset_inicial}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{dataset_original.png}
+	\caption{Variables del dataset original}\label{fig:dataset_inicial}
+\end{figure}
 
-Por otra parte, los datos de avistamientos de medusas fueron proporcionados por los tutores. Estos se encontraban en formato \emph{.xlsx}, y contenían los avistamientos de medusas por fecha y localización. En la figura \ref{avistamientos} se puede ver un pequeño ejemplo.
+Por otra parte, los datos de avistamientos de medusas fueron proporcionados por los tutores. Estos se encontraban en formato \emph{.xlsx}, y contenían los avistamientos de medusas por fecha y localización. En la figura \ref{fig:avistamientos} se puede ver un pequeño ejemplo.
 
-\imagen{avistamientos.png}{Variables del dataset original}\label{avistamientos}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=2cm,width=1.1\textwidth]{avistamientos.png}
+	\caption{Datos de avistamientos originales}\label{fig:avistamientos}
+\end{figure}
 
 \subsection{Preprocesamiento del conjunto de datos}
 
@@ -68,14 +76,12 @@ La arquitectura de la aplicación se puede considerar como un patrón Modelo-Vis
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.6\textwidth]{mvc.jpg}
-	\caption{Representación del patrón Modelo-Vista-Controlador}\label{fig:mvc}
+	\caption{Representación del patrón Modelo-Vista-Controlador~\cite{mvc}}\label{fig:mvc}
 \end{figure}
-
-
 
 \section{Diseño de interfaces}
 
-Anteriormente a la realización de la aplicación, se realizaron una serie de bocetos en los que se reflejaron las principales ideas. Para esto se utilizó la aplicación Pencil.
+Anteriormente a la realización de la aplicación, se realizaron una serie de bocetos en los que se reflejaron las principales ideas.
 
 \begin{figure}[!h]
 	\centering
