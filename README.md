@@ -21,12 +21,28 @@ Repositorio de la aplicación web: [WebJellyfishForecast](https://github.com/psn
 
 ---
 
-**Instalación**
+**Resumen**
+
+Los afloramientos de medusa son eventos que causan numerosos
+problemas ambientales y socio-económicos. Las picaduras de estos
+animales gelatinosos pueden ser muy dolorosas, provocando lesiones o
+incluso la muerte. Por este motivo, es importante conocer las causas
+de estos brotes y conseguir predecirlos.<br>
+En este proyecto se pretende aplicar técnicas de minería de datos
+con el fin de generar un modelo capaz de predecir los brotes en función
+de las condiciones oceánicas en las costas de Chile. Para conseguirlo,
+se realiza la obtención de los datos oceánicos, su pre-procesamiento y
+finalmente el entrenamiento del modelo.<br>
+Para representar los resultados obtenidos, se diseñó e implementó
+una aplicación cliente/servidor que permite la consulta de las
+predicciones realizadas por el modelo, así como los registros históricos
+de los que se disponen.
 
 ---
 
 **Demostración de funcionamiento**
 
+[![VideoFuncionamientoWeb](https://i9.ytimg.com/vi/J_LEeupW-w4/mqdefault.jpg?time=1593454703305&sqp=CKTf6PcF&rs=AOn4CLCWTHc3g_KSmiQfweMTlsp9HzZjmw)](https://youtu.be/J_LEeupW-w4)
 
 ---
 
