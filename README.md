@@ -1,4 +1,5 @@
 ![header](docs/latex/img/logo.png)
+---
 
 Trabajo de fin de grado sobre la predicción de las floraciones de medusas a las playas de Chile en función de las condiciones oceánicas. <br/>
 
@@ -10,18 +11,18 @@ Trabajo de fin de grado sobre la predicción de las floraciones de medusas a las
 Web del proyecto: [JellyFish Forecast](https://jellyfish-forecast.herokuapp.com)<br/>
 Repositorio de la aplicación web: [WebJellyfishForecast](https://github.com/psnti/WebJellyfishForecast)
 
----
 
-**Autor:**
+
+## Autor ✒️
 - [Pablo Santidrián Tudanca](www.linkedin.com/in/pablo-santidrian-tudanca)<br>
 
-**Tutores:**
+## Tutores 📖
 - [José Francisco Diez Pastor](https://github.com/joseFranciscoDiez)<br>
 - [Álvar Arnaiz Gonzalez](https://github.com/alvarag)
 
----
 
-**Resumen**
+
+## Resumen 📋
 
 Los afloramientos de medusa son eventos que causan numerosos
 problemas ambientales y socio-económicos. Las picaduras de estos
@@ -38,15 +39,13 @@ una aplicación cliente/servidor que permite la consulta de las
 predicciones realizadas por el modelo, así como los registros históricos
 de los que se disponen.
 
----
 
-**Demostración de funcionamiento**
 
+# Demostración de funcionamiento 🛠️
 [![VideoFuncionamientoWeb](https://i9.ytimg.com/vi/J_LEeupW-w4/mqdefault.jpg?time=1593454703305&sqp=CKTf6PcF&rs=AOn4CLCWTHc3g_KSmiQfweMTlsp9HzZjmw)](https://youtu.be/J_LEeupW-w4)
-
 ---
 
-**License**
+## Licencia 📄
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://badges.mit-license.org)
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright (c) 2019 - 2020 Pablo Santidrian Tudanca
