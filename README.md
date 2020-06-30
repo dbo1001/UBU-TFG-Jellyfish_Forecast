@@ -14,7 +14,7 @@ Repositorio de la aplicación web: [WebJellyfishForecast](https://github.com/psn
 
 
 ## Autor ✒️
-- [Pablo Santidrián Tudanca](www.linkedin.com/in/pablo-santidrian-tudanca)<br>
+- [Pablo Santidrián Tudanca](https://es.linkedin.com/in/pablo-santidrian-tudanca?challengeId=AQFld4j1d81QWwAAAXMGMieqkI7be0QQ51Of-wim9m8socTg8ffJ8BR8wbeEjPoxKRug_TePa1-Nm0PU3OVq44eFqJ0t_6c_9A&submissionId=944c89bd-4a61-1d16-7179-6bb8385b6176)<br>
 
 ## Tutores 📖
 - [José Francisco Diez Pastor](https://github.com/joseFranciscoDiez)<br>
