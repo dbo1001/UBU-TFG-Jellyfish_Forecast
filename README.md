@@ -42,7 +42,7 @@ de los que se disponen.
 
 
 # Demostración de funcionamiento 🛠️
-[![VideoFuncionamientoWeb](https://i9.ytimg.com/vi/J_LEeupW-w4/mqdefault.jpg?time=1593510980498&sqp=CPSX7PcF&rs=AOn4CLAvipHMv_3s1NbhAyHHcrwqiz_G4A)](https://youtu.be/J_LEeupW-w4)
+[![VideoFuncionamientoWeb](https://github.com/psnti/Jellyfish_Forecast/blob/master/docs/latex/img/pagina_inicio_web.png)](https://youtu.be/J_LEeupW-w4)
 ---
 
 ## Licencia 📄
